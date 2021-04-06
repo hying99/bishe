@@ -1,0 +1,2290 @@
+Clus run R_data_frame
+*********************
+
+Date: 2021/3/16 ÏÂÎç12:31
+File: new.out
+Attributes: 51 (input: 50, output: 1)
+Missing values: No
+
+[General]
+Verbose = 1
+Compatibility = MLJ08
+RandomSeed = 0
+ResourceInfoLoaded = No
+
+[Data]
+File = newtrain.arff
+TestSet = newtest.arff
+PruneSet = newvalid.arff
+PruneSetMax = Infinity
+XVal = 10
+RemoveMissingTarget = No
+NormalizeData = None
+
+[Attributes]
+Target = 51
+Clustering = 51
+Descriptive = 1-50
+Key = None
+Disable = None
+Weights = Normalize
+ClusteringWeights = 1.0
+ReduceMemoryNominalAttrs = Yes
+
+[Constraints]
+Syntactic = None
+MaxSize = Infinity
+MaxError = 0.0
+MaxDepth = Infinity
+
+[Output]
+ShowModels = {Default, Pruned, Others}
+TrainErrors = Yes
+ValidErrors = Yes
+TestErrors = Yes
+AllFoldModels = Yes
+AllFoldErrors = No
+AllFoldDatasets = No
+UnknownFrequency = No
+BranchFrequency = No
+ShowInfo = {Count}
+PrintModelAndExamples = No
+WriteErrorFile = No
+WritePredictions = {Test}
+ModelIDFiles = No
+WriteCurves = No
+OutputPythonModel = No
+OutputDatabaseQueries = No
+
+[Nominal]
+MEstimate = 1.0
+
+[Model]
+MinimalWeight = 5.0
+MinimalNumberExamples = 0
+MinimalKnownWeight = 0.0
+ParamTuneNumberFolds = 10
+ClassWeights = 0.0
+NominalSubsetTests = Yes
+
+[Tree]
+Heuristic = VarianceReduction
+PruningMethod = Default
+FTest = 0.005
+BinarySplit = Yes
+ConvertToRules = No
+AlternativeSplits = No
+Optimize = {}
+MSENominal = No
+SplitSampling = None
+InductionOrder = DepthFirst
+
+[Hierarchical]
+Type = DAG
+Distance = WeightedEuclidean
+WType = ExpAvgParentWeight
+WParam = 0.75
+HSeparator = /
+EmptySetIndicator = n
+OptimizeErrorMeasure = PooledAUPRC
+DefinitionFile = None
+NoRootPredictions = No
+PruneInSig = 0.0
+Bonferroni = No
+SingleLabel = No
+CalculateErrors = Yes
+ClassificationThreshold = [0.0,2.0,4.0,6.0,8.0,10.0,12.0,14.0,16.0,18.0,20.0,22.0,24.0,26.0,28.0,30.0,32.0,34.0,36.0,38.0,40.0,42.0,44.0,46.0,48.0,50.0,52.0,54.0,56.0,58.0,60.0,62.0,64.0,66.0,68.0,70.0,72.0,74.0,76.0,78.0,80.0,82.0,84.0,86.0,88.0,90.0,92.0,94.0,96.0,98.0,100.0]
+RecallValues = None
+EvalClasses = evalclasses.txt
+MEstimate = No
+
+Run: 01
+*******
+
+Statistics
+----------
+
+FTValue (FTest): 0.005
+Induction Time: 0.218 sec
+Pruning Time: 0 sec
+Model information
+     Default: Nodes = 1 (Leaves: 1)
+     Original: Nodes = 51 (Leaves: 26)
+     Pruned: Nodes = 51 (Leaves: 26)
+
+Training error
+--------------
+
+Number of examples: 537
+Hierarchical accuracy by class
+   Pruned         : precision: 0.312106, recall: 1, coverage: 1, TP: 37375, FP: 82376, nbPos: 37375
+      GO0002376[0], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0006955[1], def: 0.0484, prec: 0.0484, rec: 1, TP: 26, FP: 511, nbPos: 26
+      GO0045087[2;3], def: 0.0354, prec: 0.0354, rec: 1, TP: 19, FP: 518, nbPos: 19
+      GO0008152[0], def: 0.9739, prec: 0.9739, rec: 1, TP: 523, FP: 14, nbPos: 523
+      GO0006807[1], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0034641[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0006139[2;3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0034654[3;4], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0032774[4;6], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0097659[5;7], def: 0.9628, prec: 0.9628, rec: 1, TP: 517, FP: 20, nbPos: 517
+      GO0006351[4;8], def: 0.9628, prec: 0.9628, rec: 1, TP: 517, FP: 20, nbPos: 517
+      GO0006366[5;9], def: 0.1583, prec: 0.1583, rec: 1, TP: 85, FP: 452, nbPos: 85
+      GO0090304[3;4], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0006259[3;5], def: 0.1136, prec: 0.1136, rec: 1, TP: 61, FP: 476, nbPos: 61
+      GO0006260[4;6], def: 0.0503, prec: 0.0503, rec: 1, TP: 27, FP: 510, nbPos: 27
+      GO0006281[4;6], def: 0.1136, prec: 0.1136, rec: 1, TP: 61, FP: 476, nbPos: 61
+      GO0006310[4;6], def: 0.0354, prec: 0.0354, rec: 1, TP: 19, FP: 518, nbPos: 19
+      GO0016070[3;5], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0006396[4;6], def: 0.1359, prec: 0.1359, rec: 1, TP: 73, FP: 464, nbPos: 73
+      GO0006397[5;7], def: 0.1341, prec: 0.1341, rec: 1, TP: 72, FP: 465, nbPos: 72
+      GO0000398[6;10], def: 0.0726, prec: 0.0726, rec: 1, TP: 39, FP: 498, nbPos: 39
+      GO0008380[5;7], def: 0.1024, prec: 0.1024, rec: 1, TP: 55, FP: 482, nbPos: 55
+      GO0000375[6;8], def: 0.0726, prec: 0.0726, rec: 1, TP: 39, FP: 498, nbPos: 39
+      GO0000377[7;9], def: 0.0726, prec: 0.0726, rec: 1, TP: 39, FP: 498, nbPos: 39
+      GO0034470[5;7], def: 0.0317, prec: 0.0317, rec: 1, TP: 17, FP: 520, nbPos: 17
+      GO0006364[6;8], def: 0.0317, prec: 0.0317, rec: 1, TP: 17, FP: 520, nbPos: 17
+      GO0016071[4;6], def: 0.1359, prec: 0.1359, rec: 1, TP: 73, FP: 464, nbPos: 73
+      GO0034660[4;6], def: 0.0317, prec: 0.0317, rec: 1, TP: 17, FP: 520, nbPos: 17
+      GO0016072[5;7], def: 0.0317, prec: 0.0317, rec: 1, TP: 17, FP: 520, nbPos: 17
+      GO0043603[3], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0006518[3;4], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0043043[4;5], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0006412[4;6], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0043604[4], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0044271[3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO1901564[2], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO1901566[3], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0009056[1], def: 0.0633, prec: 0.0633, rec: 1, TP: 34, FP: 503, nbPos: 34
+      GO0044248[2], def: 0.0633, prec: 0.0633, rec: 1, TP: 34, FP: 503, nbPos: 34
+      GO0044265[3;4], def: 0.0615, prec: 0.0615, rec: 1, TP: 33, FP: 504, nbPos: 33
+      GO0043632[4;5], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0019941[5;6], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0006511[6;7], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0043161[5;8], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO1901575[2], def: 0.0615, prec: 0.0615, rec: 1, TP: 33, FP: 504, nbPos: 33
+      GO0009057[3], def: 0.0615, prec: 0.0615, rec: 1, TP: 33, FP: 504, nbPos: 33
+      GO0030163[3;4], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0010498[4;6], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0009058[1], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0044249[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0018130[3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0019438[3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0034645[3;4], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO1901576[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0009059[3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO1901362[3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0032259[1], def: 0.0503, prec: 0.0503, rec: 1, TP: 27, FP: 510, nbPos: 27
+      GO0044237[1], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0006725[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0006793[2], def: 0.4674, prec: 0.4674, rec: 1, TP: 251, FP: 286, nbPos: 251
+      GO0006796[3], def: 0.4674, prec: 0.4674, rec: 1, TP: 251, FP: 286, nbPos: 251
+      GO0016310[4], def: 0.4674, prec: 0.4674, rec: 1, TP: 251, FP: 286, nbPos: 251
+      GO0006468[5;6], def: 0.2533, prec: 0.2533, rec: 1, TP: 136, FP: 401, nbPos: 136
+      GO0016311[4], def: 0.0149, prec: 0.0149, rec: 1, TP: 8, FP: 529, nbPos: 8
+      GO0044260[2;3], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0044267[3;4], def: 0.2626, prec: 0.2626, rec: 1, TP: 141, FP: 396, nbPos: 141
+      GO0006464[4;5], def: 0.257, prec: 0.257, rec: 1, TP: 138, FP: 399, nbPos: 138
+      GO0018193[5;6], def: 0.0372, prec: 0.0372, rec: 1, TP: 20, FP: 517, nbPos: 20
+      GO0018205[6;7], def: 0.0317, prec: 0.0317, rec: 1, TP: 17, FP: 520, nbPos: 17
+      GO0016925[7;8], def: 0.0317, prec: 0.0317, rec: 1, TP: 17, FP: 520, nbPos: 17
+      GO0070647[5;6], def: 0.1471, prec: 0.1471, rec: 1, TP: 79, FP: 458, nbPos: 79
+      GO0032446[6;7], def: 0.1471, prec: 0.1471, rec: 1, TP: 79, FP: 458, nbPos: 79
+      GO0016567[7;8], def: 0.1471, prec: 0.1471, rec: 1, TP: 79, FP: 458, nbPos: 79
+      GO0000209[8;9], def: 0.0242, prec: 0.0242, rec: 1, TP: 13, FP: 524, nbPos: 13
+      GO0046483[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0044238[1], def: 0.9683, prec: 0.9683, rec: 1, TP: 520, FP: 17, nbPos: 520
+      GO0005975[2], def: 0.0261, prec: 0.0261, rec: 1, TP: 14, FP: 523, nbPos: 14
+      GO0019538[2;3], def: 0.27, prec: 0.27, rec: 1, TP: 145, FP: 392, nbPos: 145
+      GO0006508[3;4], def: 0.1657, prec: 0.1657, rec: 1, TP: 89, FP: 448, nbPos: 89
+      GO0051603[4;5], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0036211[3;4], def: 0.257, prec: 0.257, rec: 1, TP: 138, FP: 399, nbPos: 138
+      GO0071704[1], def: 0.9683, prec: 0.9683, rec: 1, TP: 520, FP: 17, nbPos: 520
+      GO0043170[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0043412[3], def: 0.257, prec: 0.257, rec: 1, TP: 138, FP: 399, nbPos: 138
+      GO1901360[2], def: 0.9646, prec: 0.9646, rec: 1, TP: 518, FP: 19, nbPos: 518
+      GO0009987[0], def: 0.9739, prec: 0.9739, rec: 1, TP: 523, FP: 14, nbPos: 523
+      GO0007154[1], def: 0.0372, prec: 0.0372, rec: 1, TP: 20, FP: 517, nbPos: 20
+      GO0007165[1;3], def: 0.3557, prec: 0.3557, rec: 1, TP: 191, FP: 346, nbPos: 191
+      GO0007166[2;4], def: 0.0298, prec: 0.0298, rec: 1, TP: 16, FP: 521, nbPos: 16
+      GO0007186[2;4], def: 0.0931, prec: 0.0931, rec: 1, TP: 50, FP: 487, nbPos: 50
+      GO0035556[2;4], def: 0.162, prec: 0.162, rec: 1, TP: 87, FP: 450, nbPos: 87
+      GO0016043[1], def: 0.1229, prec: 0.1229, rec: 1, TP: 66, FP: 471, nbPos: 66
+      GO0006996[2], def: 0.0912, prec: 0.0912, rec: 1, TP: 49, FP: 488, nbPos: 49
+      GO0048285[3], def: 0.0912, prec: 0.0912, rec: 1, TP: 49, FP: 488, nbPos: 49
+      GO0000280[4], def: 0.0912, prec: 0.0912, rec: 1, TP: 49, FP: 488, nbPos: 49
+      GO0051276[3], def: 0.0428, prec: 0.0428, rec: 1, TP: 23, FP: 514, nbPos: 23
+      GO0007062[2;4], def: 0.0428, prec: 0.0428, rec: 1, TP: 23, FP: 514, nbPos: 23
+      GO0022402[1], def: 0.0912, prec: 0.0912, rec: 1, TP: 49, FP: 488, nbPos: 49
+      GO1903047[2], def: 0.0912, prec: 0.0912, rec: 1, TP: 49, FP: 488, nbPos: 49
+      GO0044764[1], def: 0.1322, prec: 0.1322, rec: 1, TP: 71, FP: 466, nbPos: 71
+      GO0016032[2;3], def: 0.1322, prec: 0.1322, rec: 1, TP: 71, FP: 466, nbPos: 71
+      GO0051716[1], def: 0.1453, prec: 0.1453, rec: 1, TP: 78, FP: 459, nbPos: 78
+      GO0033554[2], def: 0.1434, prec: 0.1434, rec: 1, TP: 77, FP: 460, nbPos: 77
+      GO0006974[3], def: 0.1434, prec: 0.1434, rec: 1, TP: 77, FP: 460, nbPos: 77
+      GO0022414[0], def: 0.121, prec: 0.121, rec: 1, TP: 65, FP: 472, nbPos: 65
+      GO0048609[1], def: 0.1173, prec: 0.1173, rec: 1, TP: 63, FP: 474, nbPos: 63
+      GO0022610[0], def: 0.1508, prec: 0.1508, rec: 1, TP: 81, FP: 456, nbPos: 81
+      GO0007155[1], def: 0.1508, prec: 0.1508, rec: 1, TP: 81, FP: 456, nbPos: 81
+      GO0023052[0], def: 0.0372, prec: 0.0372, rec: 1, TP: 20, FP: 517, nbPos: 20
+      GO0032501[0], def: 0.2737, prec: 0.2737, rec: 1, TP: 147, FP: 390, nbPos: 147
+      GO0003008[1], def: 0.0447, prec: 0.0447, rec: 1, TP: 24, FP: 513, nbPos: 24
+      GO0050877[2], def: 0.0428, prec: 0.0428, rec: 1, TP: 23, FP: 514, nbPos: 23
+      GO0007600[3], def: 0.0428, prec: 0.0428, rec: 1, TP: 23, FP: 514, nbPos: 23
+      GO0050953[4], def: 0.041, prec: 0.041, rec: 1, TP: 22, FP: 515, nbPos: 22
+      GO0007601[5], def: 0.041, prec: 0.041, rec: 1, TP: 22, FP: 515, nbPos: 22
+      GO0032502[0], def: 0.2719, prec: 0.2719, rec: 1, TP: 146, FP: 391, nbPos: 146
+      GO0048856[1], def: 0.2719, prec: 0.2719, rec: 1, TP: 146, FP: 391, nbPos: 146
+      GO0048513[2], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0048731[2], def: 0.1359, prec: 0.1359, rec: 1, TP: 73, FP: 464, nbPos: 73
+      GO0007399[3], def: 0.1359, prec: 0.1359, rec: 1, TP: 73, FP: 464, nbPos: 73
+      GO0050896[0], def: 0.1825, prec: 0.1825, rec: 1, TP: 98, FP: 439, nbPos: 98
+      GO0006950[1], def: 0.1713, prec: 0.1713, rec: 1, TP: 92, FP: 445, nbPos: 92
+      GO0006952[2], def: 0.054, prec: 0.054, rec: 1, TP: 29, FP: 508, nbPos: 29
+      GO0006954[3], def: 0.041, prec: 0.041, rec: 1, TP: 22, FP: 515, nbPos: 22
+      GO0042221[1], def: 0.0428, prec: 0.0428, rec: 1, TP: 23, FP: 514, nbPos: 23
+      GO0042493[2], def: 0.0354, prec: 0.0354, rec: 1, TP: 19, FP: 518, nbPos: 19
+      GO0051179[0], def: 0.432, prec: 0.432, rec: 1, TP: 232, FP: 305, nbPos: 232
+      GO0033036[1], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0008104[2], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0045184[2;3], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0015031[3;6], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0006886[3;7], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0051234[1], def: 0.432, prec: 0.432, rec: 1, TP: 232, FP: 305, nbPos: 232
+      GO0006810[2], def: 0.432, prec: 0.432, rec: 1, TP: 232, FP: 305, nbPos: 232
+      GO0006811[3], def: 0.1899, prec: 0.1899, rec: 1, TP: 102, FP: 435, nbPos: 102
+      GO0034220[4], def: 0.0428, prec: 0.0428, rec: 1, TP: 23, FP: 514, nbPos: 23
+      GO0016192[3], def: 0.0261, prec: 0.0261, rec: 1, TP: 14, FP: 523, nbPos: 14
+      GO0046907[2;3], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0055085[3], def: 0.1415, prec: 0.1415, rec: 1, TP: 76, FP: 461, nbPos: 76
+      GO0071702[3], def: 0.1732, prec: 0.1732, rec: 1, TP: 93, FP: 444, nbPos: 93
+      GO0015833[4;5], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0071705[3], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0042886[4], def: 0.1695, prec: 0.1695, rec: 1, TP: 91, FP: 446, nbPos: 91
+      GO0051649[2], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0051641[1], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0051704[0], def: 0.1341, prec: 0.1341, rec: 1, TP: 72, FP: 465, nbPos: 72
+      GO0044419[1], def: 0.1322, prec: 0.1322, rec: 1, TP: 71, FP: 466, nbPos: 71
+      GO0044403[2], def: 0.1322, prec: 0.1322, rec: 1, TP: 71, FP: 466, nbPos: 71
+      GO0065007[0], def: 0.9795, prec: 0.9795, rec: 1, TP: 526, FP: 11, nbPos: 526
+      GO0050789[1], def: 0.9795, prec: 0.9795, rec: 1, TP: 526, FP: 11, nbPos: 526
+      GO0019222[2], def: 0.9721, prec: 0.9721, rec: 1, TP: 522, FP: 15, nbPos: 522
+      GO0009889[3], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0009890[4], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0010558[5], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO1902679[6;7], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO1903507[7;8], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0045892[6;9], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0000122[7;10], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO2000113[6], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0031327[5], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0009891[4], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0010557[5], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO1902680[6;7], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO1903508[7;8], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0045893[6;9], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0045944[7;10], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0031328[5], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0010556[4], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO2000112[5], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0006355[5;8], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0006357[6;9], def: 0.2439, prec: 0.2439, rec: 1, TP: 131, FP: 406, nbPos: 131
+      GO2001141[5;6], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO1903506[6;7], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0031326[4], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0009892[3], def: 0.2048, prec: 0.2048, rec: 1, TP: 110, FP: 427, nbPos: 110
+      GO0010605[4], def: 0.2048, prec: 0.2048, rec: 1, TP: 110, FP: 427, nbPos: 110
+      GO0010629[5], def: 0.203, prec: 0.203, rec: 1, TP: 109, FP: 428, nbPos: 109
+      GO0051253[5;6], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0031324[4], def: 0.1993, prec: 0.1993, rec: 1, TP: 107, FP: 430, nbPos: 107
+      GO0045934[5], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0051172[4], def: 0.1974, prec: 0.1974, rec: 1, TP: 106, FP: 431, nbPos: 106
+      GO0009893[3], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0010604[4], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0010628[5], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0051254[5;6], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0031325[4], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0045935[5], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0051173[4], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0031323[3], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0019219[4], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0051252[4;5], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0051171[3], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0060255[3], def: 0.9721, prec: 0.9721, rec: 1, TP: 522, FP: 15, nbPos: 522
+      GO0010468[4], def: 0.9721, prec: 0.9721, rec: 1, TP: 522, FP: 15, nbPos: 522
+      GO0080090[3], def: 0.9702, prec: 0.9702, rec: 1, TP: 521, FP: 16, nbPos: 521
+      GO0048518[2], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0048522[3], def: 0.2384, prec: 0.2384, rec: 1, TP: 128, FP: 409, nbPos: 128
+      GO0008284[4], def: 0.0875, prec: 0.0875, rec: 1, TP: 47, FP: 490, nbPos: 47
+      GO0010942[4], def: 0.067, prec: 0.067, rec: 1, TP: 36, FP: 501, nbPos: 36
+      GO0043068[5], def: 0.067, prec: 0.067, rec: 1, TP: 36, FP: 501, nbPos: 36
+      GO0043065[6], def: 0.067, prec: 0.067, rec: 1, TP: 36, FP: 501, nbPos: 36
+      GO0048519[2], def: 0.2048, prec: 0.2048, rec: 1, TP: 110, FP: 427, nbPos: 110
+      GO0048523[3], def: 0.1993, prec: 0.1993, rec: 1, TP: 107, FP: 430, nbPos: 107
+      GO0008285[4], def: 0.1024, prec: 0.1024, rec: 1, TP: 55, FP: 482, nbPos: 55
+      GO0060548[4], def: 0.0894, prec: 0.0894, rec: 1, TP: 48, FP: 489, nbPos: 48
+      GO0043069[5], def: 0.0894, prec: 0.0894, rec: 1, TP: 48, FP: 489, nbPos: 48
+      GO0043066[6], def: 0.0894, prec: 0.0894, rec: 1, TP: 48, FP: 489, nbPos: 48
+      GO0048583[2], def: 0.0279, prec: 0.0279, rec: 1, TP: 15, FP: 522, nbPos: 15
+      GO0050794[2], def: 0.9777, prec: 0.9777, rec: 1, TP: 525, FP: 12, nbPos: 525
+      GO0010941[3], def: 0.0931, prec: 0.0931, rec: 1, TP: 50, FP: 487, nbPos: 50
+      GO0043067[4], def: 0.0931, prec: 0.0931, rec: 1, TP: 50, FP: 487, nbPos: 50
+      GO0042981[5], def: 0.0931, prec: 0.0931, rec: 1, TP: 50, FP: 487, nbPos: 50
+      GO0042127[3], def: 0.1061, prec: 0.1061, rec: 1, TP: 57, FP: 480, nbPos: 57
+      GO0051726[3], def: 0.0447, prec: 0.0447, rec: 1, TP: 24, FP: 513, nbPos: 24
+      GO0065009[1], def: 0.1955, prec: 0.1955, rec: 1, TP: 105, FP: 432, nbPos: 105
+      GO0044093[2], def: 0.1918, prec: 0.1918, rec: 1, TP: 103, FP: 434, nbPos: 103
+      GO0043085[3], def: 0.1918, prec: 0.1918, rec: 1, TP: 103, FP: 434, nbPos: 103
+      GO0051345[4], def: 0.1899, prec: 0.1899, rec: 1, TP: 102, FP: 435, nbPos: 102
+      GO0043547[5], def: 0.1899, prec: 0.1899, rec: 1, TP: 102, FP: 435, nbPos: 102
+      GO0050790[2], def: 0.1955, prec: 0.1955, rec: 1, TP: 105, FP: 432, nbPos: 105
+      GO0051336[3], def: 0.1937, prec: 0.1937, rec: 1, TP: 104, FP: 433, nbPos: 104
+      GO0043087[4], def: 0.1899, prec: 0.1899, rec: 1, TP: 102, FP: 435, nbPos: 102
+      GO0071840[0], def: 0.1229, prec: 0.1229, rec: 1, TP: 66, FP: 471, nbPos: 66
+Hierarchical error measures
+   Original: 
+      Average AUROC:            0.9626146298094391
+      Average AUPRC:            0.8281004512967773
+      Average AUPRC (weighted): 0.955370621869985
+      Pooled AUPRC:             0.9831189726108136
+      0: GO0002376[0], AUROC: 0.946307, AUPRC: 0.43126, Freq: 0.054004
+      1: GO0006955[1], AUROC: 0.93655, AUPRC: 0.389382, Freq: 0.048417
+      2: GO0045087[2;3], AUROC: 0.917141, AUPRC: 0.245339, Freq: 0.035382
+      3: GO0008152[0], AUROC: 0.944756, AUPRC: 0.998435, Freq: 0.973929
+      4: GO0006807[1], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      5: GO0034641[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      6: GO0006139[2;3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      7: GO0034654[3;4], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      8: GO0032774[4;6], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      9: GO0097659[5;7], AUROC: 0.943762, AUPRC: 0.997713, Freq: 0.962756
+      10: GO0006351[4;8], AUROC: 0.943762, AUPRC: 0.997713, Freq: 0.962756
+      11: GO0006366[5;9], AUROC: 0.979164, AUPRC: 0.908509, Freq: 0.158287
+      12: GO0090304[3;4], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      13: GO0006259[3;5], AUROC: 0.978148, AUPRC: 0.913428, Freq: 0.113594
+      14: GO0006260[4;6], AUROC: 0.992919, AUPRC: 0.90353, Freq: 0.050279
+      15: GO0006281[4;6], AUROC: 0.978148, AUPRC: 0.913428, Freq: 0.113594
+      16: GO0006310[4;6], AUROC: 0.99243, AUPRC: 0.768863, Freq: 0.035382
+      17: GO0016070[3;5], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      18: GO0006396[4;6], AUROC: 0.976972, AUPRC: 0.886181, Freq: 0.13594
+      19: GO0006397[5;7], AUROC: 0.977718, AUPRC: 0.88911, Freq: 0.134078
+      20: GO0000398[6;10], AUROC: 0.94689, AUPRC: 0.598134, Freq: 0.072626
+      21: GO0008380[5;7], AUROC: 0.957035, AUPRC: 0.75768, Freq: 0.102421
+      22: GO0000375[6;8], AUROC: 0.94689, AUPRC: 0.598134, Freq: 0.072626
+      23: GO0000377[7;9], AUROC: 0.94689, AUPRC: 0.598134, Freq: 0.072626
+      24: GO0034470[5;7], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      25: GO0006364[6;8], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      26: GO0016071[4;6], AUROC: 0.976972, AUPRC: 0.886181, Freq: 0.13594
+      27: GO0034660[4;6], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      28: GO0016072[5;7], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      29: GO0043603[3], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      30: GO0006518[3;4], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      31: GO0043043[4;5], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      32: GO0006412[4;6], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      33: GO0043604[4], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      34: GO0044271[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      35: GO1901564[2], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      36: GO1901566[3], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      37: GO0009056[1], AUROC: 0.959742, AUPRC: 0.725733, Freq: 0.063315
+      38: GO0044248[2], AUROC: 0.959742, AUPRC: 0.725733, Freq: 0.063315
+      39: GO0044265[3;4], AUROC: 0.957281, AUPRC: 0.68752, Freq: 0.061453
+      40: GO0043632[4;5], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      41: GO0019941[5;6], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      42: GO0006511[6;7], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      43: GO0043161[5;8], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      44: GO1901575[2], AUROC: 0.957281, AUPRC: 0.68752, Freq: 0.061453
+      45: GO0009057[3], AUROC: 0.957281, AUPRC: 0.68752, Freq: 0.061453
+      46: GO0030163[3;4], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      47: GO0010498[4;6], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      48: GO0009058[1], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      49: GO0044249[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      50: GO0018130[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      51: GO0019438[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      52: GO0034645[3;4], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      53: GO1901576[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      54: GO0009059[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      55: GO1901362[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      56: GO0032259[1], AUROC: 0.98671, AUPRC: 0.870456, Freq: 0.050279
+      57: GO0044237[1], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      58: GO0006725[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      59: GO0006793[2], AUROC: 0.956363, AUPRC: 0.954528, Freq: 0.467412
+      60: GO0006796[3], AUROC: 0.956363, AUPRC: 0.954528, Freq: 0.467412
+      61: GO0016310[4], AUROC: 0.956363, AUPRC: 0.954528, Freq: 0.467412
+      62: GO0006468[5;6], AUROC: 0.960879, AUPRC: 0.907368, Freq: 0.253259
+      63: GO0016311[4], AUROC: 0.959948, AUPRC: 0.193294, Freq: 0.014898
+      64: GO0044260[2;3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      65: GO0044267[3;4], AUROC: 0.960635, AUPRC: 0.912455, Freq: 0.26257
+      66: GO0006464[4;5], AUROC: 0.963541, AUPRC: 0.916506, Freq: 0.256983
+      67: GO0018193[5;6], AUROC: 0.952756, AUPRC: 0.571347, Freq: 0.037244
+      68: GO0018205[6;7], AUROC: 0.981561, AUPRC: 0.567038, Freq: 0.031657
+      69: GO0016925[7;8], AUROC: 0.981561, AUPRC: 0.567038, Freq: 0.031657
+      70: GO0070647[5;6], AUROC: 0.979562, AUPRC: 0.902163, Freq: 0.147114
+      71: GO0032446[6;7], AUROC: 0.979562, AUPRC: 0.902163, Freq: 0.147114
+      72: GO0016567[7;8], AUROC: 0.979562, AUPRC: 0.902163, Freq: 0.147114
+      73: GO0000209[8;9], AUROC: 0.951483, AUPRC: 0.231028, Freq: 0.024209
+      74: GO0046483[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      75: GO0044238[1], AUROC: 0.933032, AUPRC: 0.997688, Freq: 0.968343
+      76: GO0005975[2], AUROC: 0.947419, AUPRC: 0.226493, Freq: 0.026071
+      77: GO0019538[2;3], AUROC: 0.965447, AUPRC: 0.928027, Freq: 0.270019
+      78: GO0006508[3;4], AUROC: 0.987008, AUPRC: 0.940996, Freq: 0.165736
+      79: GO0051603[4;5], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      80: GO0036211[3;4], AUROC: 0.963541, AUPRC: 0.916506, Freq: 0.256983
+      81: GO0071704[1], AUROC: 0.933032, AUPRC: 0.997688, Freq: 0.968343
+      82: GO0043170[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      83: GO0043412[3], AUROC: 0.963541, AUPRC: 0.916506, Freq: 0.256983
+      84: GO1901360[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      85: GO0009987[0], AUROC: 0.944073, AUPRC: 0.998417, Freq: 0.973929
+      86: GO0007154[1], AUROC: 0.945164, AUPRC: 0.300861, Freq: 0.037244
+      87: GO0007165[1;3], AUROC: 0.974904, AUPRC: 0.954123, Freq: 0.35568
+      88: GO0007166[2;4], AUROC: 0.922865, AUPRC: 0.212085, Freq: 0.029795
+      89: GO0007186[2;4], AUROC: 0.90692, AUPRC: 0.40303, Freq: 0.09311
+      90: GO0035556[2;4], AUROC: 0.980102, AUPRC: 0.911162, Freq: 0.162011
+      91: GO0016043[1], AUROC: 0.971161, AUPRC: 0.870323, Freq: 0.122905
+      92: GO0006996[2], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      93: GO0048285[3], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      94: GO0000280[4], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      95: GO0051276[3], AUROC: 0.995178, AUPRC: 0.849799, Freq: 0.042831
+      96: GO0007062[2;4], AUROC: 0.995178, AUPRC: 0.849799, Freq: 0.042831
+      97: GO0022402[1], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      98: GO1903047[2], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      99: GO0044764[1], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      100: GO0016032[2;3], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      101: GO0051716[1], AUROC: 0.978088, AUPRC: 0.910607, Freq: 0.145251
+      102: GO0033554[2], AUROC: 0.977753, AUPRC: 0.909336, Freq: 0.143389
+      103: GO0006974[3], AUROC: 0.977753, AUPRC: 0.909336, Freq: 0.143389
+      104: GO0022414[0], AUROC: 0.970078, AUPRC: 0.886136, Freq: 0.121043
+      105: GO0048609[1], AUROC: 0.969928, AUPRC: 0.887862, Freq: 0.117318
+      106: GO0022610[0], AUROC: 0.977542, AUPRC: 0.889541, Freq: 0.150838
+      107: GO0007155[1], AUROC: 0.977542, AUPRC: 0.889541, Freq: 0.150838
+      108: GO0023052[0], AUROC: 0.945164, AUPRC: 0.300861, Freq: 0.037244
+      109: GO0032501[0], AUROC: 0.973417, AUPRC: 0.943634, Freq: 0.273743
+      110: GO0003008[1], AUROC: 0.939246, AUPRC: 0.478975, Freq: 0.044693
+      111: GO0050877[2], AUROC: 0.940746, AUPRC: 0.486223, Freq: 0.042831
+      112: GO0007600[3], AUROC: 0.940746, AUPRC: 0.486223, Freq: 0.042831
+      113: GO0050953[4], AUROC: 0.948632, AUPRC: 0.500879, Freq: 0.040968
+      114: GO0007601[5], AUROC: 0.948632, AUPRC: 0.500879, Freq: 0.040968
+      115: GO0032502[0], AUROC: 0.973715, AUPRC: 0.944179, Freq: 0.271881
+      116: GO0048856[1], AUROC: 0.973715, AUPRC: 0.944179, Freq: 0.271881
+      117: GO0048513[2], AUROC: 0.936227, AUPRC: 0.370502, Freq: 0.054004
+      118: GO0048731[2], AUROC: 0.979186, AUPRC: 0.888799, Freq: 0.13594
+      119: GO0007399[3], AUROC: 0.979186, AUPRC: 0.888799, Freq: 0.13594
+      120: GO0050896[0], AUROC: 0.975722, AUPRC: 0.913003, Freq: 0.182495
+      121: GO0006950[1], AUROC: 0.979617, AUPRC: 0.919764, Freq: 0.171322
+      122: GO0006952[2], AUROC: 0.946749, AUPRC: 0.405056, Freq: 0.054004
+      123: GO0006954[3], AUROC: 0.946293, AUPRC: 0.370417, Freq: 0.040968
+      124: GO0042221[1], AUROC: 0.92662, AUPRC: 0.290818, Freq: 0.042831
+      125: GO0042493[2], AUROC: 0.921815, AUPRC: 0.248396, Freq: 0.035382
+      126: GO0051179[0], AUROC: 0.971149, AUPRC: 0.956756, Freq: 0.43203
+      127: GO0033036[1], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      128: GO0008104[2], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      129: GO0045184[2;3], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      130: GO0015031[3;6], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      131: GO0006886[3;7], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      132: GO0051234[1], AUROC: 0.971149, AUPRC: 0.956756, Freq: 0.43203
+      133: GO0006810[2], AUROC: 0.971149, AUPRC: 0.956756, Freq: 0.43203
+      134: GO0006811[3], AUROC: 0.951544, AUPRC: 0.831467, Freq: 0.189944
+      135: GO0034220[4], AUROC: 0.923236, AUPRC: 0.282831, Freq: 0.042831
+      136: GO0016192[3], AUROC: 0.930552, AUPRC: 0.163061, Freq: 0.026071
+      137: GO0046907[2;3], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      138: GO0055085[3], AUROC: 0.960712, AUPRC: 0.833721, Freq: 0.141527
+      139: GO0071702[3], AUROC: 0.980517, AUPRC: 0.920836, Freq: 0.173184
+      140: GO0015833[4;5], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      141: GO0071705[3], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      142: GO0042886[4], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      143: GO0051649[2], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      144: GO0051641[1], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      145: GO0051704[0], AUROC: 0.980854, AUPRC: 0.882153, Freq: 0.134078
+      146: GO0044419[1], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      147: GO0044403[2], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      148: GO0065007[0], AUROC: 0.953249, AUPRC: 0.998965, Freq: 0.979516
+      149: GO0050789[1], AUROC: 0.953249, AUPRC: 0.998965, Freq: 0.979516
+      150: GO0019222[2], AUROC: 0.940485, AUPRC: 0.99819, Freq: 0.972067
+      151: GO0009889[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      152: GO0009890[4], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      153: GO0010558[5], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      154: GO1902679[6;7], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      155: GO1903507[7;8], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      156: GO0045892[6;9], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      157: GO0000122[7;10], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      158: GO2000113[6], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      159: GO0031327[5], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      160: GO0009891[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      161: GO0010557[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      162: GO1902680[6;7], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      163: GO1903508[7;8], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      164: GO0045893[6;9], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      165: GO0045944[7;10], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      166: GO0031328[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      167: GO0010556[4], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      168: GO2000112[5], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      169: GO0006355[5;8], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      170: GO0006357[6;9], AUROC: 0.980719, AUPRC: 0.953012, Freq: 0.243948
+      171: GO2001141[5;6], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      172: GO1903506[6;7], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      173: GO0031326[4], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      174: GO0009892[3], AUROC: 0.971961, AUPRC: 0.907683, Freq: 0.204842
+      175: GO0010605[4], AUROC: 0.971961, AUPRC: 0.907683, Freq: 0.204842
+      176: GO0010629[5], AUROC: 0.971009, AUPRC: 0.903886, Freq: 0.20298
+      177: GO0051253[5;6], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      178: GO0031324[4], AUROC: 0.974212, AUPRC: 0.91209, Freq: 0.199255
+      179: GO0045934[5], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      180: GO0051172[4], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      181: GO0009893[3], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      182: GO0010604[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      183: GO0010628[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      184: GO0051254[5;6], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      185: GO0031325[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      186: GO0045935[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      187: GO0051173[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      188: GO0031323[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      189: GO0019219[4], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      190: GO0051252[4;5], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      191: GO0051171[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      192: GO0060255[3], AUROC: 0.940485, AUPRC: 0.99819, Freq: 0.972067
+      193: GO0010468[4], AUROC: 0.940485, AUPRC: 0.99819, Freq: 0.972067
+      194: GO0080090[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      195: GO0048518[2], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      196: GO0048522[3], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      197: GO0008284[4], AUROC: 0.960747, AUPRC: 0.767177, Freq: 0.087523
+      198: GO0010942[4], AUROC: 0.961411, AUPRC: 0.78463, Freq: 0.067039
+      199: GO0043068[5], AUROC: 0.961411, AUPRC: 0.78463, Freq: 0.067039
+      200: GO0043065[6], AUROC: 0.961411, AUPRC: 0.78463, Freq: 0.067039
+      201: GO0048519[2], AUROC: 0.971961, AUPRC: 0.907683, Freq: 0.204842
+      202: GO0048523[3], AUROC: 0.974212, AUPRC: 0.91209, Freq: 0.199255
+      203: GO0008285[4], AUROC: 0.965051, AUPRC: 0.810628, Freq: 0.102421
+      204: GO0060548[4], AUROC: 0.957758, AUPRC: 0.73094, Freq: 0.089385
+      205: GO0043069[5], AUROC: 0.957758, AUPRC: 0.73094, Freq: 0.089385
+      206: GO0043066[6], AUROC: 0.957758, AUPRC: 0.73094, Freq: 0.089385
+      207: GO0048583[2], AUROC: 0.951533, AUPRC: 0.257915, Freq: 0.027933
+      208: GO0050794[2], AUROC: 0.958492, AUPRC: 0.998995, Freq: 0.977654
+      209: GO0010941[3], AUROC: 0.958932, AUPRC: 0.75965, Freq: 0.09311
+      210: GO0043067[4], AUROC: 0.958932, AUPRC: 0.75965, Freq: 0.09311
+      211: GO0042981[5], AUROC: 0.958932, AUPRC: 0.75965, Freq: 0.09311
+      212: GO0042127[3], AUROC: 0.963085, AUPRC: 0.802161, Freq: 0.106145
+      213: GO0051726[3], AUROC: 0.992974, AUPRC: 0.839925, Freq: 0.044693
+      214: GO0065009[1], AUROC: 0.988437, AUPRC: 0.955433, Freq: 0.195531
+      215: GO0044093[2], AUROC: 0.986925, AUPRC: 0.948365, Freq: 0.191806
+      216: GO0043085[3], AUROC: 0.986925, AUPRC: 0.948365, Freq: 0.191806
+      217: GO0051345[4], AUROC: 0.98686, AUPRC: 0.948154, Freq: 0.189944
+      218: GO0043547[5], AUROC: 0.98686, AUPRC: 0.948154, Freq: 0.189944
+      219: GO0050790[2], AUROC: 0.988437, AUPRC: 0.955433, Freq: 0.195531
+      220: GO0051336[3], AUROC: 0.988342, AUPRC: 0.955109, Freq: 0.193669
+      221: GO0043087[4], AUROC: 0.98686, AUPRC: 0.948154, Freq: 0.189944
+      222: GO0071840[0], AUROC: 0.971161, AUPRC: 0.870323, Freq: 0.122905
+   Pruned: 
+      Average AUROC:            0.9626146298094391
+      Average AUPRC:            0.8281004512967773
+      Average AUPRC (weighted): 0.955370621869985
+      Pooled AUPRC:             0.9831189726108136
+      0: GO0002376[0], AUROC: 0.946307, AUPRC: 0.43126, Freq: 0.054004
+      1: GO0006955[1], AUROC: 0.93655, AUPRC: 0.389382, Freq: 0.048417
+      2: GO0045087[2;3], AUROC: 0.917141, AUPRC: 0.245339, Freq: 0.035382
+      3: GO0008152[0], AUROC: 0.944756, AUPRC: 0.998435, Freq: 0.973929
+      4: GO0006807[1], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      5: GO0034641[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      6: GO0006139[2;3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      7: GO0034654[3;4], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      8: GO0032774[4;6], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      9: GO0097659[5;7], AUROC: 0.943762, AUPRC: 0.997713, Freq: 0.962756
+      10: GO0006351[4;8], AUROC: 0.943762, AUPRC: 0.997713, Freq: 0.962756
+      11: GO0006366[5;9], AUROC: 0.979164, AUPRC: 0.908509, Freq: 0.158287
+      12: GO0090304[3;4], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      13: GO0006259[3;5], AUROC: 0.978148, AUPRC: 0.913428, Freq: 0.113594
+      14: GO0006260[4;6], AUROC: 0.992919, AUPRC: 0.90353, Freq: 0.050279
+      15: GO0006281[4;6], AUROC: 0.978148, AUPRC: 0.913428, Freq: 0.113594
+      16: GO0006310[4;6], AUROC: 0.99243, AUPRC: 0.768863, Freq: 0.035382
+      17: GO0016070[3;5], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      18: GO0006396[4;6], AUROC: 0.976972, AUPRC: 0.886181, Freq: 0.13594
+      19: GO0006397[5;7], AUROC: 0.977718, AUPRC: 0.88911, Freq: 0.134078
+      20: GO0000398[6;10], AUROC: 0.94689, AUPRC: 0.598134, Freq: 0.072626
+      21: GO0008380[5;7], AUROC: 0.957035, AUPRC: 0.75768, Freq: 0.102421
+      22: GO0000375[6;8], AUROC: 0.94689, AUPRC: 0.598134, Freq: 0.072626
+      23: GO0000377[7;9], AUROC: 0.94689, AUPRC: 0.598134, Freq: 0.072626
+      24: GO0034470[5;7], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      25: GO0006364[6;8], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      26: GO0016071[4;6], AUROC: 0.976972, AUPRC: 0.886181, Freq: 0.13594
+      27: GO0034660[4;6], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      28: GO0016072[5;7], AUROC: 0.91448, AUPRC: 0.265478, Freq: 0.031657
+      29: GO0043603[3], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      30: GO0006518[3;4], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      31: GO0043043[4;5], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      32: GO0006412[4;6], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      33: GO0043604[4], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      34: GO0044271[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      35: GO1901564[2], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      36: GO1901566[3], AUROC: 0.964242, AUPRC: 0.777641, Freq: 0.087523
+      37: GO0009056[1], AUROC: 0.959742, AUPRC: 0.725733, Freq: 0.063315
+      38: GO0044248[2], AUROC: 0.959742, AUPRC: 0.725733, Freq: 0.063315
+      39: GO0044265[3;4], AUROC: 0.957281, AUPRC: 0.68752, Freq: 0.061453
+      40: GO0043632[4;5], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      41: GO0019941[5;6], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      42: GO0006511[6;7], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      43: GO0043161[5;8], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      44: GO1901575[2], AUROC: 0.957281, AUPRC: 0.68752, Freq: 0.061453
+      45: GO0009057[3], AUROC: 0.957281, AUPRC: 0.68752, Freq: 0.061453
+      46: GO0030163[3;4], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      47: GO0010498[4;6], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      48: GO0009058[1], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      49: GO0044249[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      50: GO0018130[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      51: GO0019438[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      52: GO0034645[3;4], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      53: GO1901576[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      54: GO0009059[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      55: GO1901362[3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      56: GO0032259[1], AUROC: 0.98671, AUPRC: 0.870456, Freq: 0.050279
+      57: GO0044237[1], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      58: GO0006725[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      59: GO0006793[2], AUROC: 0.956363, AUPRC: 0.954528, Freq: 0.467412
+      60: GO0006796[3], AUROC: 0.956363, AUPRC: 0.954528, Freq: 0.467412
+      61: GO0016310[4], AUROC: 0.956363, AUPRC: 0.954528, Freq: 0.467412
+      62: GO0006468[5;6], AUROC: 0.960879, AUPRC: 0.907368, Freq: 0.253259
+      63: GO0016311[4], AUROC: 0.959948, AUPRC: 0.193294, Freq: 0.014898
+      64: GO0044260[2;3], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      65: GO0044267[3;4], AUROC: 0.960635, AUPRC: 0.912455, Freq: 0.26257
+      66: GO0006464[4;5], AUROC: 0.963541, AUPRC: 0.916506, Freq: 0.256983
+      67: GO0018193[5;6], AUROC: 0.952756, AUPRC: 0.571347, Freq: 0.037244
+      68: GO0018205[6;7], AUROC: 0.981561, AUPRC: 0.567038, Freq: 0.031657
+      69: GO0016925[7;8], AUROC: 0.981561, AUPRC: 0.567038, Freq: 0.031657
+      70: GO0070647[5;6], AUROC: 0.979562, AUPRC: 0.902163, Freq: 0.147114
+      71: GO0032446[6;7], AUROC: 0.979562, AUPRC: 0.902163, Freq: 0.147114
+      72: GO0016567[7;8], AUROC: 0.979562, AUPRC: 0.902163, Freq: 0.147114
+      73: GO0000209[8;9], AUROC: 0.951483, AUPRC: 0.231028, Freq: 0.024209
+      74: GO0046483[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      75: GO0044238[1], AUROC: 0.933032, AUPRC: 0.997688, Freq: 0.968343
+      76: GO0005975[2], AUROC: 0.947419, AUPRC: 0.226493, Freq: 0.026071
+      77: GO0019538[2;3], AUROC: 0.965447, AUPRC: 0.928027, Freq: 0.270019
+      78: GO0006508[3;4], AUROC: 0.987008, AUPRC: 0.940996, Freq: 0.165736
+      79: GO0051603[4;5], AUROC: 0.976208, AUPRC: 0.708979, Freq: 0.054004
+      80: GO0036211[3;4], AUROC: 0.963541, AUPRC: 0.916506, Freq: 0.256983
+      81: GO0071704[1], AUROC: 0.933032, AUPRC: 0.997688, Freq: 0.968343
+      82: GO0043170[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      83: GO0043412[3], AUROC: 0.963541, AUPRC: 0.916506, Freq: 0.256983
+      84: GO1901360[2], AUROC: 0.939138, AUPRC: 0.997654, Freq: 0.964618
+      85: GO0009987[0], AUROC: 0.944073, AUPRC: 0.998417, Freq: 0.973929
+      86: GO0007154[1], AUROC: 0.945164, AUPRC: 0.300861, Freq: 0.037244
+      87: GO0007165[1;3], AUROC: 0.974904, AUPRC: 0.954123, Freq: 0.35568
+      88: GO0007166[2;4], AUROC: 0.922865, AUPRC: 0.212085, Freq: 0.029795
+      89: GO0007186[2;4], AUROC: 0.90692, AUPRC: 0.40303, Freq: 0.09311
+      90: GO0035556[2;4], AUROC: 0.980102, AUPRC: 0.911162, Freq: 0.162011
+      91: GO0016043[1], AUROC: 0.971161, AUPRC: 0.870323, Freq: 0.122905
+      92: GO0006996[2], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      93: GO0048285[3], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      94: GO0000280[4], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      95: GO0051276[3], AUROC: 0.995178, AUPRC: 0.849799, Freq: 0.042831
+      96: GO0007062[2;4], AUROC: 0.995178, AUPRC: 0.849799, Freq: 0.042831
+      97: GO0022402[1], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      98: GO1903047[2], AUROC: 0.991845, AUPRC: 0.945395, Freq: 0.091248
+      99: GO0044764[1], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      100: GO0016032[2;3], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      101: GO0051716[1], AUROC: 0.978088, AUPRC: 0.910607, Freq: 0.145251
+      102: GO0033554[2], AUROC: 0.977753, AUPRC: 0.909336, Freq: 0.143389
+      103: GO0006974[3], AUROC: 0.977753, AUPRC: 0.909336, Freq: 0.143389
+      104: GO0022414[0], AUROC: 0.970078, AUPRC: 0.886136, Freq: 0.121043
+      105: GO0048609[1], AUROC: 0.969928, AUPRC: 0.887862, Freq: 0.117318
+      106: GO0022610[0], AUROC: 0.977542, AUPRC: 0.889541, Freq: 0.150838
+      107: GO0007155[1], AUROC: 0.977542, AUPRC: 0.889541, Freq: 0.150838
+      108: GO0023052[0], AUROC: 0.945164, AUPRC: 0.300861, Freq: 0.037244
+      109: GO0032501[0], AUROC: 0.973417, AUPRC: 0.943634, Freq: 0.273743
+      110: GO0003008[1], AUROC: 0.939246, AUPRC: 0.478975, Freq: 0.044693
+      111: GO0050877[2], AUROC: 0.940746, AUPRC: 0.486223, Freq: 0.042831
+      112: GO0007600[3], AUROC: 0.940746, AUPRC: 0.486223, Freq: 0.042831
+      113: GO0050953[4], AUROC: 0.948632, AUPRC: 0.500879, Freq: 0.040968
+      114: GO0007601[5], AUROC: 0.948632, AUPRC: 0.500879, Freq: 0.040968
+      115: GO0032502[0], AUROC: 0.973715, AUPRC: 0.944179, Freq: 0.271881
+      116: GO0048856[1], AUROC: 0.973715, AUPRC: 0.944179, Freq: 0.271881
+      117: GO0048513[2], AUROC: 0.936227, AUPRC: 0.370502, Freq: 0.054004
+      118: GO0048731[2], AUROC: 0.979186, AUPRC: 0.888799, Freq: 0.13594
+      119: GO0007399[3], AUROC: 0.979186, AUPRC: 0.888799, Freq: 0.13594
+      120: GO0050896[0], AUROC: 0.975722, AUPRC: 0.913003, Freq: 0.182495
+      121: GO0006950[1], AUROC: 0.979617, AUPRC: 0.919764, Freq: 0.171322
+      122: GO0006952[2], AUROC: 0.946749, AUPRC: 0.405056, Freq: 0.054004
+      123: GO0006954[3], AUROC: 0.946293, AUPRC: 0.370417, Freq: 0.040968
+      124: GO0042221[1], AUROC: 0.92662, AUPRC: 0.290818, Freq: 0.042831
+      125: GO0042493[2], AUROC: 0.921815, AUPRC: 0.248396, Freq: 0.035382
+      126: GO0051179[0], AUROC: 0.971149, AUPRC: 0.956756, Freq: 0.43203
+      127: GO0033036[1], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      128: GO0008104[2], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      129: GO0045184[2;3], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      130: GO0015031[3;6], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      131: GO0006886[3;7], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      132: GO0051234[1], AUROC: 0.971149, AUPRC: 0.956756, Freq: 0.43203
+      133: GO0006810[2], AUROC: 0.971149, AUPRC: 0.956756, Freq: 0.43203
+      134: GO0006811[3], AUROC: 0.951544, AUPRC: 0.831467, Freq: 0.189944
+      135: GO0034220[4], AUROC: 0.923236, AUPRC: 0.282831, Freq: 0.042831
+      136: GO0016192[3], AUROC: 0.930552, AUPRC: 0.163061, Freq: 0.026071
+      137: GO0046907[2;3], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      138: GO0055085[3], AUROC: 0.960712, AUPRC: 0.833721, Freq: 0.141527
+      139: GO0071702[3], AUROC: 0.980517, AUPRC: 0.920836, Freq: 0.173184
+      140: GO0015833[4;5], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      141: GO0071705[3], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      142: GO0042886[4], AUROC: 0.979291, AUPRC: 0.915283, Freq: 0.16946
+      143: GO0051649[2], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      144: GO0051641[1], AUROC: 0.9698, AUPRC: 0.867414, Freq: 0.087523
+      145: GO0051704[0], AUROC: 0.980854, AUPRC: 0.882153, Freq: 0.134078
+      146: GO0044419[1], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      147: GO0044403[2], AUROC: 0.980702, AUPRC: 0.881212, Freq: 0.132216
+      148: GO0065007[0], AUROC: 0.953249, AUPRC: 0.998965, Freq: 0.979516
+      149: GO0050789[1], AUROC: 0.953249, AUPRC: 0.998965, Freq: 0.979516
+      150: GO0019222[2], AUROC: 0.940485, AUPRC: 0.99819, Freq: 0.972067
+      151: GO0009889[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      152: GO0009890[4], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      153: GO0010558[5], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      154: GO1902679[6;7], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      155: GO1903507[7;8], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      156: GO0045892[6;9], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      157: GO0000122[7;10], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      158: GO2000113[6], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      159: GO0031327[5], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      160: GO0009891[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      161: GO0010557[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      162: GO1902680[6;7], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      163: GO1903508[7;8], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      164: GO0045893[6;9], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      165: GO0045944[7;10], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      166: GO0031328[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      167: GO0010556[4], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      168: GO2000112[5], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      169: GO0006355[5;8], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      170: GO0006357[6;9], AUROC: 0.980719, AUPRC: 0.953012, Freq: 0.243948
+      171: GO2001141[5;6], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      172: GO1903506[6;7], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      173: GO0031326[4], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      174: GO0009892[3], AUROC: 0.971961, AUPRC: 0.907683, Freq: 0.204842
+      175: GO0010605[4], AUROC: 0.971961, AUPRC: 0.907683, Freq: 0.204842
+      176: GO0010629[5], AUROC: 0.971009, AUPRC: 0.903886, Freq: 0.20298
+      177: GO0051253[5;6], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      178: GO0031324[4], AUROC: 0.974212, AUPRC: 0.91209, Freq: 0.199255
+      179: GO0045934[5], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      180: GO0051172[4], AUROC: 0.973318, AUPRC: 0.908428, Freq: 0.197393
+      181: GO0009893[3], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      182: GO0010604[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      183: GO0010628[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      184: GO0051254[5;6], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      185: GO0031325[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      186: GO0045935[5], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      187: GO0051173[4], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      188: GO0031323[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      189: GO0019219[4], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      190: GO0051252[4;5], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      191: GO0051171[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      192: GO0060255[3], AUROC: 0.940485, AUPRC: 0.99819, Freq: 0.972067
+      193: GO0010468[4], AUROC: 0.940485, AUPRC: 0.99819, Freq: 0.972067
+      194: GO0080090[3], AUROC: 0.945657, AUPRC: 0.998233, Freq: 0.970205
+      195: GO0048518[2], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      196: GO0048522[3], AUROC: 0.980946, AUPRC: 0.953104, Freq: 0.238361
+      197: GO0008284[4], AUROC: 0.960747, AUPRC: 0.767177, Freq: 0.087523
+      198: GO0010942[4], AUROC: 0.961411, AUPRC: 0.78463, Freq: 0.067039
+      199: GO0043068[5], AUROC: 0.961411, AUPRC: 0.78463, Freq: 0.067039
+      200: GO0043065[6], AUROC: 0.961411, AUPRC: 0.78463, Freq: 0.067039
+      201: GO0048519[2], AUROC: 0.971961, AUPRC: 0.907683, Freq: 0.204842
+      202: GO0048523[3], AUROC: 0.974212, AUPRC: 0.91209, Freq: 0.199255
+      203: GO0008285[4], AUROC: 0.965051, AUPRC: 0.810628, Freq: 0.102421
+      204: GO0060548[4], AUROC: 0.957758, AUPRC: 0.73094, Freq: 0.089385
+      205: GO0043069[5], AUROC: 0.957758, AUPRC: 0.73094, Freq: 0.089385
+      206: GO0043066[6], AUROC: 0.957758, AUPRC: 0.73094, Freq: 0.089385
+      207: GO0048583[2], AUROC: 0.951533, AUPRC: 0.257915, Freq: 0.027933
+      208: GO0050794[2], AUROC: 0.958492, AUPRC: 0.998995, Freq: 0.977654
+      209: GO0010941[3], AUROC: 0.958932, AUPRC: 0.75965, Freq: 0.09311
+      210: GO0043067[4], AUROC: 0.958932, AUPRC: 0.75965, Freq: 0.09311
+      211: GO0042981[5], AUROC: 0.958932, AUPRC: 0.75965, Freq: 0.09311
+      212: GO0042127[3], AUROC: 0.963085, AUPRC: 0.802161, Freq: 0.106145
+      213: GO0051726[3], AUROC: 0.992974, AUPRC: 0.839925, Freq: 0.044693
+      214: GO0065009[1], AUROC: 0.988437, AUPRC: 0.955433, Freq: 0.195531
+      215: GO0044093[2], AUROC: 0.986925, AUPRC: 0.948365, Freq: 0.191806
+      216: GO0043085[3], AUROC: 0.986925, AUPRC: 0.948365, Freq: 0.191806
+      217: GO0051345[4], AUROC: 0.98686, AUPRC: 0.948154, Freq: 0.189944
+      218: GO0043547[5], AUROC: 0.98686, AUPRC: 0.948154, Freq: 0.189944
+      219: GO0050790[2], AUROC: 0.988437, AUPRC: 0.955433, Freq: 0.195531
+      220: GO0051336[3], AUROC: 0.988342, AUPRC: 0.955109, Freq: 0.193669
+      221: GO0043087[4], AUROC: 0.98686, AUPRC: 0.948154, Freq: 0.189944
+      222: GO0071840[0], AUROC: 0.971161, AUPRC: 0.870323, Freq: 0.122905
+
+Validation error
+----------------
+
+Number of examples: 179
+Hierarchical accuracy by class
+   Pruned         : precision: 0.305183, recall: 1, coverage: 1, TP: 12182, FP: 27735, nbPos: 12182
+      GO0002376[0], def: 0.0503, prec: 0.0503, rec: 1, TP: 9, FP: 170, nbPos: 9
+      GO0006955[1], def: 0.0447, prec: 0.0447, rec: 1, TP: 8, FP: 171, nbPos: 8
+      GO0045087[2;3], def: 0.0391, prec: 0.0391, rec: 1, TP: 7, FP: 172, nbPos: 7
+      GO0008152[0], def: 0.9832, prec: 0.9832, rec: 1, TP: 176, FP: 3, nbPos: 176
+      GO0006807[1], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0034641[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006139[2;3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0034654[3;4], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0032774[4;6], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0097659[5;7], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006351[4;8], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006366[5;9], def: 0.1341, prec: 0.1341, rec: 1, TP: 24, FP: 155, nbPos: 24
+      GO0090304[3;4], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006259[3;5], def: 0.1117, prec: 0.1117, rec: 1, TP: 20, FP: 159, nbPos: 20
+      GO0006260[4;6], def: 0.067, prec: 0.067, rec: 1, TP: 12, FP: 167, nbPos: 12
+      GO0006281[4;6], def: 0.1117, prec: 0.1117, rec: 1, TP: 20, FP: 159, nbPos: 20
+      GO0006310[4;6], def: 0.0559, prec: 0.0559, rec: 1, TP: 10, FP: 169, nbPos: 10
+      GO0016070[3;5], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006396[4;6], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0006397[5;7], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0000398[6;10], def: 0.0726, prec: 0.0726, rec: 1, TP: 13, FP: 166, nbPos: 13
+      GO0008380[5;7], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0000375[6;8], def: 0.0726, prec: 0.0726, rec: 1, TP: 13, FP: 166, nbPos: 13
+      GO0000377[7;9], def: 0.0726, prec: 0.0726, rec: 1, TP: 13, FP: 166, nbPos: 13
+      GO0034470[5;7], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0006364[6;8], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0016071[4;6], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0034660[4;6], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0016072[5;7], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0043603[3], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0006518[3;4], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0043043[4;5], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0006412[4;6], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0043604[4], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0044271[3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO1901564[2], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO1901566[3], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0009056[1], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0044248[2], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0044265[3;4], def: 0.0726, prec: 0.0726, rec: 1, TP: 13, FP: 166, nbPos: 13
+      GO0043632[4;5], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0019941[5;6], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0006511[6;7], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0043161[5;8], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO1901575[2], def: 0.0726, prec: 0.0726, rec: 1, TP: 13, FP: 166, nbPos: 13
+      GO0009057[3], def: 0.0726, prec: 0.0726, rec: 1, TP: 13, FP: 166, nbPos: 13
+      GO0030163[3;4], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0010498[4;6], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0009058[1], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0044249[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0018130[3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0019438[3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0034645[3;4], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO1901576[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0009059[3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO1901362[3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0032259[1], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0044237[1], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006725[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0006793[2], def: 0.4637, prec: 0.4637, rec: 1, TP: 83, FP: 96, nbPos: 83
+      GO0006796[3], def: 0.4637, prec: 0.4637, rec: 1, TP: 83, FP: 96, nbPos: 83
+      GO0016310[4], def: 0.4637, prec: 0.4637, rec: 1, TP: 83, FP: 96, nbPos: 83
+      GO0006468[5;6], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0016311[4], def: 0.0056, prec: 0.0056, rec: 1, TP: 1, FP: 178, nbPos: 1
+      GO0044260[2;3], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0044267[3;4], def: 0.2346, prec: 0.2346, rec: 1, TP: 42, FP: 137, nbPos: 42
+      GO0006464[4;5], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0018193[5;6], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0018205[6;7], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0016925[7;8], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0070647[5;6], def: 0.1341, prec: 0.1341, rec: 1, TP: 24, FP: 155, nbPos: 24
+      GO0032446[6;7], def: 0.1341, prec: 0.1341, rec: 1, TP: 24, FP: 155, nbPos: 24
+      GO0016567[7;8], def: 0.1341, prec: 0.1341, rec: 1, TP: 24, FP: 155, nbPos: 24
+      GO0000209[8;9], def: 0.0335, prec: 0.0335, rec: 1, TP: 6, FP: 173, nbPos: 6
+      GO0046483[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0044238[1], def: 0.9721, prec: 0.9721, rec: 1, TP: 174, FP: 5, nbPos: 174
+      GO0005975[2], def: 0.0168, prec: 0.0168, rec: 1, TP: 3, FP: 176, nbPos: 3
+      GO0019538[2;3], def: 0.2514, prec: 0.2514, rec: 1, TP: 45, FP: 134, nbPos: 45
+      GO0006508[3;4], def: 0.1453, prec: 0.1453, rec: 1, TP: 26, FP: 153, nbPos: 26
+      GO0051603[4;5], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0036211[3;4], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0071704[1], def: 0.9721, prec: 0.9721, rec: 1, TP: 174, FP: 5, nbPos: 174
+      GO0043170[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0043412[3], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO1901360[2], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0009987[0], def: 0.9665, prec: 0.9665, rec: 1, TP: 173, FP: 6, nbPos: 173
+      GO0007154[1], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0007165[1;3], def: 0.3464, prec: 0.3464, rec: 1, TP: 62, FP: 117, nbPos: 62
+      GO0007166[2;4], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0007186[2;4], def: 0.1117, prec: 0.1117, rec: 1, TP: 20, FP: 159, nbPos: 20
+      GO0035556[2;4], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0016043[1], def: 0.0894, prec: 0.0894, rec: 1, TP: 16, FP: 163, nbPos: 16
+      GO0006996[2], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0048285[3], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0000280[4], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0051276[3], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0007062[2;4], def: 0.0615, prec: 0.0615, rec: 1, TP: 11, FP: 168, nbPos: 11
+      GO0022402[1], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO1903047[2], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0044764[1], def: 0.1061, prec: 0.1061, rec: 1, TP: 19, FP: 160, nbPos: 19
+      GO0016032[2;3], def: 0.1061, prec: 0.1061, rec: 1, TP: 19, FP: 160, nbPos: 19
+      GO0051716[1], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0033554[2], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0006974[3], def: 0.1285, prec: 0.1285, rec: 1, TP: 23, FP: 156, nbPos: 23
+      GO0022414[0], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0048609[1], def: 0.1006, prec: 0.1006, rec: 1, TP: 18, FP: 161, nbPos: 18
+      GO0022610[0], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0007155[1], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0023052[0], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0032501[0], def: 0.2793, prec: 0.2793, rec: 1, TP: 50, FP: 129, nbPos: 50
+      GO0003008[1], def: 0.0335, prec: 0.0335, rec: 1, TP: 6, FP: 173, nbPos: 6
+      GO0050877[2], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0007600[3], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0050953[4], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0007601[5], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0032502[0], def: 0.2793, prec: 0.2793, rec: 1, TP: 50, FP: 129, nbPos: 50
+      GO0048856[1], def: 0.2793, prec: 0.2793, rec: 1, TP: 50, FP: 129, nbPos: 50
+      GO0048513[2], def: 0.0279, prec: 0.0279, rec: 1, TP: 5, FP: 174, nbPos: 5
+      GO0048731[2], def: 0.1397, prec: 0.1397, rec: 1, TP: 25, FP: 154, nbPos: 25
+      GO0007399[3], def: 0.1397, prec: 0.1397, rec: 1, TP: 25, FP: 154, nbPos: 25
+      GO0050896[0], def: 0.1508, prec: 0.1508, rec: 1, TP: 27, FP: 152, nbPos: 27
+      GO0006950[1], def: 0.1508, prec: 0.1508, rec: 1, TP: 27, FP: 152, nbPos: 27
+      GO0006952[2], def: 0.0503, prec: 0.0503, rec: 1, TP: 9, FP: 170, nbPos: 9
+      GO0006954[3], def: 0.0335, prec: 0.0335, rec: 1, TP: 6, FP: 173, nbPos: 6
+      GO0042221[1], def: 0.0168, prec: 0.0168, rec: 1, TP: 3, FP: 176, nbPos: 3
+      GO0042493[2], def: 0.0112, prec: 0.0112, rec: 1, TP: 2, FP: 177, nbPos: 2
+      GO0051179[0], def: 0.4637, prec: 0.4637, rec: 1, TP: 83, FP: 96, nbPos: 83
+      GO0033036[1], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0008104[2], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0045184[2;3], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0015031[3;6], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0006886[3;7], def: 0.0838, prec: 0.0838, rec: 1, TP: 15, FP: 164, nbPos: 15
+      GO0051234[1], def: 0.4637, prec: 0.4637, rec: 1, TP: 83, FP: 96, nbPos: 83
+      GO0006810[2], def: 0.4637, prec: 0.4637, rec: 1, TP: 83, FP: 96, nbPos: 83
+      GO0006811[3], def: 0.1844, prec: 0.1844, rec: 1, TP: 33, FP: 146, nbPos: 33
+      GO0034220[4], def: 0.0391, prec: 0.0391, rec: 1, TP: 7, FP: 172, nbPos: 7
+      GO0016192[3], def: 0.0223, prec: 0.0223, rec: 1, TP: 4, FP: 175, nbPos: 4
+      GO0046907[2;3], def: 0.0894, prec: 0.0894, rec: 1, TP: 16, FP: 163, nbPos: 16
+      GO0055085[3], def: 0.1229, prec: 0.1229, rec: 1, TP: 22, FP: 157, nbPos: 22
+      GO0071702[3], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0015833[4;5], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0071705[3], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0042886[4], def: 0.1564, prec: 0.1564, rec: 1, TP: 28, FP: 151, nbPos: 28
+      GO0051649[2], def: 0.0894, prec: 0.0894, rec: 1, TP: 16, FP: 163, nbPos: 16
+      GO0051641[1], def: 0.0894, prec: 0.0894, rec: 1, TP: 16, FP: 163, nbPos: 16
+      GO0051704[0], def: 0.1061, prec: 0.1061, rec: 1, TP: 19, FP: 160, nbPos: 19
+      GO0044419[1], def: 0.1061, prec: 0.1061, rec: 1, TP: 19, FP: 160, nbPos: 19
+      GO0044403[2], def: 0.1061, prec: 0.1061, rec: 1, TP: 19, FP: 160, nbPos: 19
+      GO0065007[0], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0050789[1], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0019222[2], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0009889[3], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0009890[4], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0010558[5], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO1902679[6;7], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO1903507[7;8], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0045892[6;9], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0000122[7;10], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO2000113[6], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0031327[5], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0009891[4], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0010557[5], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO1902680[6;7], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO1903508[7;8], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0045893[6;9], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0045944[7;10], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0031328[5], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0010556[4], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO2000112[5], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0006355[5;8], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0006357[6;9], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO2001141[5;6], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO1903506[6;7], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0031326[4], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0009892[3], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0010605[4], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0010629[5], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0051253[5;6], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0031324[4], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0045934[5], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0051172[4], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0009893[3], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0010604[4], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0010628[5], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0051254[5;6], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0031325[4], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0045935[5], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0051173[4], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0031323[3], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0019219[4], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0051252[4;5], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0051171[3], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0060255[3], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0010468[4], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0080090[3], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0048518[2], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0048522[3], def: 0.2291, prec: 0.2291, rec: 1, TP: 41, FP: 138, nbPos: 41
+      GO0008284[4], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0010942[4], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0043068[5], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0043065[6], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0048519[2], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0048523[3], def: 0.1732, prec: 0.1732, rec: 1, TP: 31, FP: 148, nbPos: 31
+      GO0008285[4], def: 0.0782, prec: 0.0782, rec: 1, TP: 14, FP: 165, nbPos: 14
+      GO0060548[4], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0043069[5], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0043066[6], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0048583[2], def: 0.0223, prec: 0.0223, rec: 1, TP: 4, FP: 175, nbPos: 4
+      GO0050794[2], def: 0.9609, prec: 0.9609, rec: 1, TP: 172, FP: 7, nbPos: 172
+      GO0010941[3], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0043067[4], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0042981[5], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0042127[3], def: 0.095, prec: 0.095, rec: 1, TP: 17, FP: 162, nbPos: 17
+      GO0051726[3], def: 0.0447, prec: 0.0447, rec: 1, TP: 8, FP: 171, nbPos: 8
+      GO0065009[1], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0044093[2], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0043085[3], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0051345[4], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0043547[5], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0050790[2], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0051336[3], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0043087[4], def: 0.1676, prec: 0.1676, rec: 1, TP: 30, FP: 149, nbPos: 30
+      GO0071840[0], def: 0.0894, prec: 0.0894, rec: 1, TP: 16, FP: 163, nbPos: 16
+Hierarchical error measures
+   Original: 
+      Average AUROC:            0.8852913484571505
+      Average AUPRC:            0.7906176352690761
+      Average AUPRC (weighted): 0.9279463100295721
+      Pooled AUPRC:             0.9551016052047502
+      0: GO0002376[0], AUROC: 0.941503, AUPRC: 0.380352, Freq: 0.050279
+      1: GO0006955[1], AUROC: 0.892178, AUPRC: 0.338382, Freq: 0.044693
+      2: GO0045087[2;3], AUROC: 0.879983, AUPRC: 0.304548, Freq: 0.039106
+      3: GO0008152[0], AUROC: 0.589962, AUPRC: 0.985893, Freq: 0.98324
+      4: GO0006807[1], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      5: GO0034641[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      6: GO0006139[2;3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      7: GO0034654[3;4], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      8: GO0032774[4;6], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      9: GO0097659[5;7], AUROC: 0.66763, AUPRC: 0.977845, Freq: 0.96648
+      10: GO0006351[4;8], AUROC: 0.66763, AUPRC: 0.977845, Freq: 0.96648
+      11: GO0006366[5;9], AUROC: 0.950269, AUPRC: 0.861021, Freq: 0.134078
+      12: GO0090304[3;4], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      13: GO0006259[3;5], AUROC: 0.988208, AUPRC: 0.924576, Freq: 0.111732
+      14: GO0006260[4;6], AUROC: 0.990519, AUPRC: 0.827927, Freq: 0.067039
+      15: GO0006281[4;6], AUROC: 0.988208, AUPRC: 0.924576, Freq: 0.111732
+      16: GO0006310[4;6], AUROC: 0.831953, AUPRC: 0.646823, Freq: 0.055866
+      17: GO0016070[3;5], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      18: GO0006396[4;6], AUROC: 0.983835, AUPRC: 0.906104, Freq: 0.128492
+      19: GO0006397[5;7], AUROC: 0.984392, AUPRC: 0.907705, Freq: 0.128492
+      20: GO0000398[6;10], AUROC: 0.968026, AUPRC: 0.724305, Freq: 0.072626
+      21: GO0008380[5;7], AUROC: 0.983609, AUPRC: 0.900062, Freq: 0.100559
+      22: GO0000375[6;8], AUROC: 0.968026, AUPRC: 0.724305, Freq: 0.072626
+      23: GO0000377[7;9], AUROC: 0.968026, AUPRC: 0.724305, Freq: 0.072626
+      24: GO0034470[5;7], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      25: GO0006364[6;8], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      26: GO0016071[4;6], AUROC: 0.983835, AUPRC: 0.906104, Freq: 0.128492
+      27: GO0034660[4;6], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      28: GO0016072[5;7], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      29: GO0043603[3], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      30: GO0006518[3;4], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      31: GO0043043[4;5], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      32: GO0006412[4;6], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      33: GO0043604[4], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      34: GO0044271[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      35: GO1901564[2], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      36: GO1901566[3], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      37: GO0009056[1], AUROC: 0.887446, AUPRC: 0.626623, Freq: 0.078212
+      38: GO0044248[2], AUROC: 0.887446, AUPRC: 0.626623, Freq: 0.078212
+      39: GO0044265[3;4], AUROC: 0.922845, AUPRC: 0.665265, Freq: 0.072626
+      40: GO0043632[4;5], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      41: GO0019941[5;6], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      42: GO0006511[6;7], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      43: GO0043161[5;8], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      44: GO1901575[2], AUROC: 0.922845, AUPRC: 0.665265, Freq: 0.072626
+      45: GO0009057[3], AUROC: 0.922845, AUPRC: 0.665265, Freq: 0.072626
+      46: GO0030163[3;4], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      47: GO0010498[4;6], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      48: GO0009058[1], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      49: GO0044249[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      50: GO0018130[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      51: GO0019438[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      52: GO0034645[3;4], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      53: GO1901576[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      54: GO0009059[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      55: GO1901362[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      56: GO0032259[1], AUROC: 0.975974, AUPRC: 0.770236, Freq: 0.078212
+      57: GO0044237[1], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      58: GO0006725[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      59: GO0006793[2], AUROC: 0.885354, AUPRC: 0.897861, Freq: 0.463687
+      60: GO0006796[3], AUROC: 0.885354, AUPRC: 0.897861, Freq: 0.463687
+      61: GO0016310[4], AUROC: 0.885354, AUPRC: 0.897861, Freq: 0.463687
+      62: GO0006468[5;6], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      63: GO0016311[4], AUROC: 0.952247, AUPRC: 0.05, Freq: 0.005587
+      64: GO0044260[2;3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      65: GO0044267[3;4], AUROC: 0.93309, AUPRC: 0.841453, Freq: 0.234637
+      66: GO0006464[4;5], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      67: GO0018193[5;6], AUROC: 0.991379, AUPRC: 0.625, Freq: 0.027933
+      68: GO0018205[6;7], AUROC: 0.991379, AUPRC: 0.625, Freq: 0.027933
+      69: GO0016925[7;8], AUROC: 0.991379, AUPRC: 0.625, Freq: 0.027933
+      70: GO0070647[5;6], AUROC: 0.977554, AUPRC: 0.891037, Freq: 0.134078
+      71: GO0032446[6;7], AUROC: 0.977554, AUPRC: 0.891037, Freq: 0.134078
+      72: GO0016567[7;8], AUROC: 0.977554, AUPRC: 0.891037, Freq: 0.134078
+      73: GO0000209[8;9], AUROC: 0.880058, AUPRC: 0.319074, Freq: 0.03352
+      74: GO0046483[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      75: GO0044238[1], AUROC: 0.605172, AUPRC: 0.978017, Freq: 0.972067
+      76: GO0005975[2], AUROC: 0.938447, AUPRC: 0.122904, Freq: 0.01676
+      77: GO0019538[2;3], AUROC: 0.939386, AUPRC: 0.864358, Freq: 0.251397
+      78: GO0006508[3;4], AUROC: 0.971342, AUPRC: 0.849791, Freq: 0.145251
+      79: GO0051603[4;5], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      80: GO0036211[3;4], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      81: GO0071704[1], AUROC: 0.605172, AUPRC: 0.978017, Freq: 0.972067
+      82: GO0043170[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      83: GO0043412[3], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      84: GO1901360[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      85: GO0009987[0], AUROC: 0.66185, AUPRC: 0.977651, Freq: 0.96648
+      86: GO0007154[1], AUROC: 0.913793, AUPRC: 0.164301, Freq: 0.027933
+      87: GO0007165[1;3], AUROC: 0.926592, AUPRC: 0.908986, Freq: 0.346369
+      88: GO0007166[2;4], AUROC: 0.914368, AUPRC: 0.260537, Freq: 0.027933
+      89: GO0007186[2;4], AUROC: 0.872956, AUPRC: 0.402364, Freq: 0.111732
+      90: GO0035556[2;4], AUROC: 0.977007, AUPRC: 0.889251, Freq: 0.128492
+      91: GO0016043[1], AUROC: 0.986771, AUPRC: 0.907729, Freq: 0.089385
+      92: GO0006996[2], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      93: GO0048285[3], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      94: GO0000280[4], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      95: GO0051276[3], AUROC: 0.947511, AUPRC: 0.805228, Freq: 0.061453
+      96: GO0007062[2;4], AUROC: 0.947511, AUPRC: 0.805228, Freq: 0.061453
+      97: GO0022402[1], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      98: GO1903047[2], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      99: GO0044764[1], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      100: GO0016032[2;3], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      101: GO0051716[1], AUROC: 0.982999, AUPRC: 0.87475, Freq: 0.128492
+      102: GO0033554[2], AUROC: 0.982999, AUPRC: 0.87475, Freq: 0.128492
+      103: GO0006974[3], AUROC: 0.982999, AUPRC: 0.87475, Freq: 0.128492
+      104: GO0022414[0], AUROC: 0.982402, AUPRC: 0.921994, Freq: 0.100559
+      105: GO0048609[1], AUROC: 0.982402, AUPRC: 0.921994, Freq: 0.100559
+      106: GO0022610[0], AUROC: 0.949976, AUPRC: 0.784116, Freq: 0.156425
+      107: GO0007155[1], AUROC: 0.949976, AUPRC: 0.784116, Freq: 0.156425
+      108: GO0023052[0], AUROC: 0.913793, AUPRC: 0.164301, Freq: 0.027933
+      109: GO0032501[0], AUROC: 0.952093, AUPRC: 0.894221, Freq: 0.27933
+      110: GO0003008[1], AUROC: 0.957611, AUPRC: 0.337753, Freq: 0.03352
+      111: GO0050877[2], AUROC: 0.948276, AUPRC: 0.34403, Freq: 0.027933
+      112: GO0007600[3], AUROC: 0.948276, AUPRC: 0.34403, Freq: 0.027933
+      113: GO0050953[4], AUROC: 0.966667, AUPRC: 0.353075, Freq: 0.027933
+      114: GO0007601[5], AUROC: 0.966667, AUPRC: 0.353075, Freq: 0.027933
+      115: GO0032502[0], AUROC: 0.952093, AUPRC: 0.894221, Freq: 0.27933
+      116: GO0048856[1], AUROC: 0.952093, AUPRC: 0.894221, Freq: 0.27933
+      117: GO0048513[2], AUROC: 0.928736, AUPRC: 0.171658, Freq: 0.027933
+      118: GO0048731[2], AUROC: 0.955195, AUPRC: 0.875629, Freq: 0.139665
+      119: GO0007399[3], AUROC: 0.955195, AUPRC: 0.875629, Freq: 0.139665
+      120: GO0050896[0], AUROC: 0.979167, AUPRC: 0.875927, Freq: 0.150838
+      121: GO0006950[1], AUROC: 0.979167, AUPRC: 0.875927, Freq: 0.150838
+      122: GO0006952[2], AUROC: 0.941503, AUPRC: 0.380352, Freq: 0.050279
+      123: GO0006954[3], AUROC: 0.934489, AUPRC: 0.316987, Freq: 0.03352
+      124: GO0042221[1], AUROC: 0.903409, AUPRC: 0.074597, Freq: 0.01676
+      125: GO0042493[2], AUROC: 0.94774, AUPRC: 0.11375, Freq: 0.011173
+      126: GO0051179[0], AUROC: 0.8969, AUPRC: 0.896288, Freq: 0.463687
+      127: GO0033036[1], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      128: GO0008104[2], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      129: GO0045184[2;3], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      130: GO0015031[3;6], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      131: GO0006886[3;7], AUROC: 0.940447, AUPRC: 0.737949, Freq: 0.083799
+      132: GO0051234[1], AUROC: 0.8969, AUPRC: 0.896288, Freq: 0.463687
+      133: GO0006810[2], AUROC: 0.8969, AUPRC: 0.896288, Freq: 0.463687
+      134: GO0006811[3], AUROC: 0.92912, AUPRC: 0.789004, Freq: 0.184358
+      135: GO0034220[4], AUROC: 0.965947, AUPRC: 0.438028, Freq: 0.039106
+      136: GO0016192[3], AUROC: 0.781429, AUPRC: 0.07478, Freq: 0.022346
+      137: GO0046907[2;3], AUROC: 0.948236, AUPRC: 0.840644, Freq: 0.089385
+      138: GO0055085[3], AUROC: 0.947018, AUPRC: 0.779364, Freq: 0.122905
+      139: GO0071702[3], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      140: GO0015833[4;5], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      141: GO0071705[3], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      142: GO0042886[4], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      143: GO0051649[2], AUROC: 0.948236, AUPRC: 0.840644, Freq: 0.089385
+      144: GO0051641[1], AUROC: 0.948236, AUPRC: 0.840644, Freq: 0.089385
+      145: GO0051704[0], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      146: GO0044419[1], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      147: GO0044403[2], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      148: GO0065007[0], AUROC: 0.613787, AUPRC: 0.969827, Freq: 0.960894
+      149: GO0050789[1], AUROC: 0.613787, AUPRC: 0.969827, Freq: 0.960894
+      150: GO0019222[2], AUROC: 0.619186, AUPRC: 0.97004, Freq: 0.960894
+      151: GO0009889[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      152: GO0009890[4], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      153: GO0010558[5], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      154: GO1902679[6;7], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      155: GO1903507[7;8], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      156: GO0045892[6;9], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      157: GO0000122[7;10], AUROC: 0.950783, AUPRC: 0.86038, Freq: 0.167598
+      158: GO2000113[6], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      159: GO0031327[5], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      160: GO0009891[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      161: GO0010557[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      162: GO1902680[6;7], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      163: GO1903508[7;8], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      164: GO0045893[6;9], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      165: GO0045944[7;10], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      166: GO0031328[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      167: GO0010556[4], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      168: GO2000112[5], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      169: GO0006355[5;8], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      170: GO0006357[6;9], AUROC: 0.948038, AUPRC: 0.904375, Freq: 0.22905
+      171: GO2001141[5;6], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      172: GO1903506[6;7], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      173: GO0031326[4], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      174: GO0009892[3], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      175: GO0010605[4], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      176: GO0010629[5], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      177: GO0051253[5;6], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      178: GO0031324[4], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      179: GO0045934[5], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      180: GO0051172[4], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      181: GO0009893[3], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      182: GO0010604[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      183: GO0010628[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      184: GO0051254[5;6], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      185: GO0031325[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      186: GO0045935[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      187: GO0051173[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      188: GO0031323[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      189: GO0019219[4], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      190: GO0051252[4;5], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      191: GO0051171[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      192: GO0060255[3], AUROC: 0.619186, AUPRC: 0.97004, Freq: 0.960894
+      193: GO0010468[4], AUROC: 0.619186, AUPRC: 0.97004, Freq: 0.960894
+      194: GO0080090[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      195: GO0048518[2], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      196: GO0048522[3], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      197: GO0008284[4], AUROC: 0.888707, AUPRC: 0.59308, Freq: 0.094972
+      198: GO0010942[4], AUROC: 0.958442, AUPRC: 0.688018, Freq: 0.078212
+      199: GO0043068[5], AUROC: 0.958442, AUPRC: 0.688018, Freq: 0.078212
+      200: GO0043065[6], AUROC: 0.958442, AUPRC: 0.688018, Freq: 0.078212
+      201: GO0048519[2], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      202: GO0048523[3], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      203: GO0008285[4], AUROC: 0.960823, AUPRC: 0.72015, Freq: 0.078212
+      204: GO0060548[4], AUROC: 0.918664, AUPRC: 0.62494, Freq: 0.094972
+      205: GO0043069[5], AUROC: 0.918664, AUPRC: 0.62494, Freq: 0.094972
+      206: GO0043066[6], AUROC: 0.918664, AUPRC: 0.62494, Freq: 0.094972
+      207: GO0048583[2], AUROC: 0.827857, AUPRC: 0.268071, Freq: 0.022346
+      208: GO0050794[2], AUROC: 0.612957, AUPRC: 0.969795, Freq: 0.960894
+      209: GO0010941[3], AUROC: 0.920479, AUPRC: 0.629043, Freq: 0.094972
+      210: GO0043067[4], AUROC: 0.920479, AUPRC: 0.629043, Freq: 0.094972
+      211: GO0042981[5], AUROC: 0.920479, AUPRC: 0.629043, Freq: 0.094972
+      212: GO0042127[3], AUROC: 0.899601, AUPRC: 0.657783, Freq: 0.094972
+      213: GO0051726[3], AUROC: 0.99269, AUPRC: 0.756597, Freq: 0.044693
+      214: GO0065009[1], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      215: GO0044093[2], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      216: GO0043085[3], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      217: GO0051345[4], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      218: GO0043547[5], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      219: GO0050790[2], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      220: GO0051336[3], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      221: GO0043087[4], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      222: GO0071840[0], AUROC: 0.986771, AUPRC: 0.907729, Freq: 0.089385
+   Pruned: 
+      Average AUROC:            0.8852913484571505
+      Average AUPRC:            0.7906176352690761
+      Average AUPRC (weighted): 0.9279463100295721
+      Pooled AUPRC:             0.9551016052047502
+      0: GO0002376[0], AUROC: 0.941503, AUPRC: 0.380352, Freq: 0.050279
+      1: GO0006955[1], AUROC: 0.892178, AUPRC: 0.338382, Freq: 0.044693
+      2: GO0045087[2;3], AUROC: 0.879983, AUPRC: 0.304548, Freq: 0.039106
+      3: GO0008152[0], AUROC: 0.589962, AUPRC: 0.985893, Freq: 0.98324
+      4: GO0006807[1], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      5: GO0034641[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      6: GO0006139[2;3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      7: GO0034654[3;4], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      8: GO0032774[4;6], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      9: GO0097659[5;7], AUROC: 0.66763, AUPRC: 0.977845, Freq: 0.96648
+      10: GO0006351[4;8], AUROC: 0.66763, AUPRC: 0.977845, Freq: 0.96648
+      11: GO0006366[5;9], AUROC: 0.950269, AUPRC: 0.861021, Freq: 0.134078
+      12: GO0090304[3;4], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      13: GO0006259[3;5], AUROC: 0.988208, AUPRC: 0.924576, Freq: 0.111732
+      14: GO0006260[4;6], AUROC: 0.990519, AUPRC: 0.827927, Freq: 0.067039
+      15: GO0006281[4;6], AUROC: 0.988208, AUPRC: 0.924576, Freq: 0.111732
+      16: GO0006310[4;6], AUROC: 0.831953, AUPRC: 0.646823, Freq: 0.055866
+      17: GO0016070[3;5], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      18: GO0006396[4;6], AUROC: 0.983835, AUPRC: 0.906104, Freq: 0.128492
+      19: GO0006397[5;7], AUROC: 0.984392, AUPRC: 0.907705, Freq: 0.128492
+      20: GO0000398[6;10], AUROC: 0.968026, AUPRC: 0.724305, Freq: 0.072626
+      21: GO0008380[5;7], AUROC: 0.983609, AUPRC: 0.900062, Freq: 0.100559
+      22: GO0000375[6;8], AUROC: 0.968026, AUPRC: 0.724305, Freq: 0.072626
+      23: GO0000377[7;9], AUROC: 0.968026, AUPRC: 0.724305, Freq: 0.072626
+      24: GO0034470[5;7], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      25: GO0006364[6;8], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      26: GO0016071[4;6], AUROC: 0.983835, AUPRC: 0.906104, Freq: 0.128492
+      27: GO0034660[4;6], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      28: GO0016072[5;7], AUROC: 0.924138, AUPRC: 0.138823, Freq: 0.027933
+      29: GO0043603[3], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      30: GO0006518[3;4], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      31: GO0043043[4;5], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      32: GO0006412[4;6], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      33: GO0043604[4], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      34: GO0044271[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      35: GO1901564[2], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      36: GO1901566[3], AUROC: 0.958247, AUPRC: 0.790629, Freq: 0.100559
+      37: GO0009056[1], AUROC: 0.887446, AUPRC: 0.626623, Freq: 0.078212
+      38: GO0044248[2], AUROC: 0.887446, AUPRC: 0.626623, Freq: 0.078212
+      39: GO0044265[3;4], AUROC: 0.922845, AUPRC: 0.665265, Freq: 0.072626
+      40: GO0043632[4;5], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      41: GO0019941[5;6], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      42: GO0006511[6;7], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      43: GO0043161[5;8], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      44: GO1901575[2], AUROC: 0.922845, AUPRC: 0.665265, Freq: 0.072626
+      45: GO0009057[3], AUROC: 0.922845, AUPRC: 0.665265, Freq: 0.072626
+      46: GO0030163[3;4], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      47: GO0010498[4;6], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      48: GO0009058[1], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      49: GO0044249[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      50: GO0018130[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      51: GO0019438[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      52: GO0034645[3;4], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      53: GO1901576[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      54: GO0009059[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      55: GO1901362[3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      56: GO0032259[1], AUROC: 0.975974, AUPRC: 0.770236, Freq: 0.078212
+      57: GO0044237[1], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      58: GO0006725[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      59: GO0006793[2], AUROC: 0.885354, AUPRC: 0.897861, Freq: 0.463687
+      60: GO0006796[3], AUROC: 0.885354, AUPRC: 0.897861, Freq: 0.463687
+      61: GO0016310[4], AUROC: 0.885354, AUPRC: 0.897861, Freq: 0.463687
+      62: GO0006468[5;6], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      63: GO0016311[4], AUROC: 0.952247, AUPRC: 0.05, Freq: 0.005587
+      64: GO0044260[2;3], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      65: GO0044267[3;4], AUROC: 0.93309, AUPRC: 0.841453, Freq: 0.234637
+      66: GO0006464[4;5], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      67: GO0018193[5;6], AUROC: 0.991379, AUPRC: 0.625, Freq: 0.027933
+      68: GO0018205[6;7], AUROC: 0.991379, AUPRC: 0.625, Freq: 0.027933
+      69: GO0016925[7;8], AUROC: 0.991379, AUPRC: 0.625, Freq: 0.027933
+      70: GO0070647[5;6], AUROC: 0.977554, AUPRC: 0.891037, Freq: 0.134078
+      71: GO0032446[6;7], AUROC: 0.977554, AUPRC: 0.891037, Freq: 0.134078
+      72: GO0016567[7;8], AUROC: 0.977554, AUPRC: 0.891037, Freq: 0.134078
+      73: GO0000209[8;9], AUROC: 0.880058, AUPRC: 0.319074, Freq: 0.03352
+      74: GO0046483[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      75: GO0044238[1], AUROC: 0.605172, AUPRC: 0.978017, Freq: 0.972067
+      76: GO0005975[2], AUROC: 0.938447, AUPRC: 0.122904, Freq: 0.01676
+      77: GO0019538[2;3], AUROC: 0.939386, AUPRC: 0.864358, Freq: 0.251397
+      78: GO0006508[3;4], AUROC: 0.971342, AUPRC: 0.849791, Freq: 0.145251
+      79: GO0051603[4;5], AUROC: 0.917749, AUPRC: 0.673187, Freq: 0.061453
+      80: GO0036211[3;4], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      81: GO0071704[1], AUROC: 0.605172, AUPRC: 0.978017, Freq: 0.972067
+      82: GO0043170[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      83: GO0043412[3], AUROC: 0.945652, AUPRC: 0.86096, Freq: 0.22905
+      84: GO1901360[2], AUROC: 0.669557, AUPRC: 0.977908, Freq: 0.96648
+      85: GO0009987[0], AUROC: 0.66185, AUPRC: 0.977651, Freq: 0.96648
+      86: GO0007154[1], AUROC: 0.913793, AUPRC: 0.164301, Freq: 0.027933
+      87: GO0007165[1;3], AUROC: 0.926592, AUPRC: 0.908986, Freq: 0.346369
+      88: GO0007166[2;4], AUROC: 0.914368, AUPRC: 0.260537, Freq: 0.027933
+      89: GO0007186[2;4], AUROC: 0.872956, AUPRC: 0.402364, Freq: 0.111732
+      90: GO0035556[2;4], AUROC: 0.977007, AUPRC: 0.889251, Freq: 0.128492
+      91: GO0016043[1], AUROC: 0.986771, AUPRC: 0.907729, Freq: 0.089385
+      92: GO0006996[2], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      93: GO0048285[3], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      94: GO0000280[4], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      95: GO0051276[3], AUROC: 0.947511, AUPRC: 0.805228, Freq: 0.061453
+      96: GO0007062[2;4], AUROC: 0.947511, AUPRC: 0.805228, Freq: 0.061453
+      97: GO0022402[1], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      98: GO1903047[2], AUROC: 0.992424, AUPRC: 0.945798, Freq: 0.078212
+      99: GO0044764[1], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      100: GO0016032[2;3], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      101: GO0051716[1], AUROC: 0.982999, AUPRC: 0.87475, Freq: 0.128492
+      102: GO0033554[2], AUROC: 0.982999, AUPRC: 0.87475, Freq: 0.128492
+      103: GO0006974[3], AUROC: 0.982999, AUPRC: 0.87475, Freq: 0.128492
+      104: GO0022414[0], AUROC: 0.982402, AUPRC: 0.921994, Freq: 0.100559
+      105: GO0048609[1], AUROC: 0.982402, AUPRC: 0.921994, Freq: 0.100559
+      106: GO0022610[0], AUROC: 0.949976, AUPRC: 0.784116, Freq: 0.156425
+      107: GO0007155[1], AUROC: 0.949976, AUPRC: 0.784116, Freq: 0.156425
+      108: GO0023052[0], AUROC: 0.913793, AUPRC: 0.164301, Freq: 0.027933
+      109: GO0032501[0], AUROC: 0.952093, AUPRC: 0.894221, Freq: 0.27933
+      110: GO0003008[1], AUROC: 0.957611, AUPRC: 0.337753, Freq: 0.03352
+      111: GO0050877[2], AUROC: 0.948276, AUPRC: 0.34403, Freq: 0.027933
+      112: GO0007600[3], AUROC: 0.948276, AUPRC: 0.34403, Freq: 0.027933
+      113: GO0050953[4], AUROC: 0.966667, AUPRC: 0.353075, Freq: 0.027933
+      114: GO0007601[5], AUROC: 0.966667, AUPRC: 0.353075, Freq: 0.027933
+      115: GO0032502[0], AUROC: 0.952093, AUPRC: 0.894221, Freq: 0.27933
+      116: GO0048856[1], AUROC: 0.952093, AUPRC: 0.894221, Freq: 0.27933
+      117: GO0048513[2], AUROC: 0.928736, AUPRC: 0.171658, Freq: 0.027933
+      118: GO0048731[2], AUROC: 0.955195, AUPRC: 0.875629, Freq: 0.139665
+      119: GO0007399[3], AUROC: 0.955195, AUPRC: 0.875629, Freq: 0.139665
+      120: GO0050896[0], AUROC: 0.979167, AUPRC: 0.875927, Freq: 0.150838
+      121: GO0006950[1], AUROC: 0.979167, AUPRC: 0.875927, Freq: 0.150838
+      122: GO0006952[2], AUROC: 0.941503, AUPRC: 0.380352, Freq: 0.050279
+      123: GO0006954[3], AUROC: 0.934489, AUPRC: 0.316987, Freq: 0.03352
+      124: GO0042221[1], AUROC: 0.903409, AUPRC: 0.074597, Freq: 0.01676
+      125: GO0042493[2], AUROC: 0.94774, AUPRC: 0.11375, Freq: 0.011173
+      126: GO0051179[0], AUROC: 0.8969, AUPRC: 0.896288, Freq: 0.463687
+      127: GO0033036[1], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      128: GO0008104[2], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      129: GO0045184[2;3], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      130: GO0015031[3;6], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      131: GO0006886[3;7], AUROC: 0.940447, AUPRC: 0.737949, Freq: 0.083799
+      132: GO0051234[1], AUROC: 0.8969, AUPRC: 0.896288, Freq: 0.463687
+      133: GO0006810[2], AUROC: 0.8969, AUPRC: 0.896288, Freq: 0.463687
+      134: GO0006811[3], AUROC: 0.92912, AUPRC: 0.789004, Freq: 0.184358
+      135: GO0034220[4], AUROC: 0.965947, AUPRC: 0.438028, Freq: 0.039106
+      136: GO0016192[3], AUROC: 0.781429, AUPRC: 0.07478, Freq: 0.022346
+      137: GO0046907[2;3], AUROC: 0.948236, AUPRC: 0.840644, Freq: 0.089385
+      138: GO0055085[3], AUROC: 0.947018, AUPRC: 0.779364, Freq: 0.122905
+      139: GO0071702[3], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      140: GO0015833[4;5], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      141: GO0071705[3], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      142: GO0042886[4], AUROC: 0.98368, AUPRC: 0.929186, Freq: 0.156425
+      143: GO0051649[2], AUROC: 0.948236, AUPRC: 0.840644, Freq: 0.089385
+      144: GO0051641[1], AUROC: 0.948236, AUPRC: 0.840644, Freq: 0.089385
+      145: GO0051704[0], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      146: GO0044419[1], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      147: GO0044403[2], AUROC: 0.982401, AUPRC: 0.892271, Freq: 0.106145
+      148: GO0065007[0], AUROC: 0.613787, AUPRC: 0.969827, Freq: 0.960894
+      149: GO0050789[1], AUROC: 0.613787, AUPRC: 0.969827, Freq: 0.960894
+      150: GO0019222[2], AUROC: 0.619186, AUPRC: 0.97004, Freq: 0.960894
+      151: GO0009889[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      152: GO0009890[4], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      153: GO0010558[5], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      154: GO1902679[6;7], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      155: GO1903507[7;8], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      156: GO0045892[6;9], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      157: GO0000122[7;10], AUROC: 0.950783, AUPRC: 0.86038, Freq: 0.167598
+      158: GO2000113[6], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      159: GO0031327[5], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      160: GO0009891[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      161: GO0010557[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      162: GO1902680[6;7], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      163: GO1903508[7;8], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      164: GO0045893[6;9], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      165: GO0045944[7;10], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      166: GO0031328[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      167: GO0010556[4], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      168: GO2000112[5], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      169: GO0006355[5;8], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      170: GO0006357[6;9], AUROC: 0.948038, AUPRC: 0.904375, Freq: 0.22905
+      171: GO2001141[5;6], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      172: GO1903506[6;7], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      173: GO0031326[4], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      174: GO0009892[3], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      175: GO0010605[4], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      176: GO0010629[5], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      177: GO0051253[5;6], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      178: GO0031324[4], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      179: GO0045934[5], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      180: GO0051172[4], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      181: GO0009893[3], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      182: GO0010604[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      183: GO0010628[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      184: GO0051254[5;6], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      185: GO0031325[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      186: GO0045935[5], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      187: GO0051173[4], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      188: GO0031323[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      189: GO0019219[4], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      190: GO0051252[4;5], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      191: GO0051171[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      192: GO0060255[3], AUROC: 0.619186, AUPRC: 0.97004, Freq: 0.960894
+      193: GO0010468[4], AUROC: 0.619186, AUPRC: 0.97004, Freq: 0.960894
+      194: GO0080090[3], AUROC: 0.617525, AUPRC: 0.969976, Freq: 0.960894
+      195: GO0048518[2], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      196: GO0048522[3], AUROC: 0.946801, AUPRC: 0.902361, Freq: 0.22905
+      197: GO0008284[4], AUROC: 0.888707, AUPRC: 0.59308, Freq: 0.094972
+      198: GO0010942[4], AUROC: 0.958442, AUPRC: 0.688018, Freq: 0.078212
+      199: GO0043068[5], AUROC: 0.958442, AUPRC: 0.688018, Freq: 0.078212
+      200: GO0043065[6], AUROC: 0.958442, AUPRC: 0.688018, Freq: 0.078212
+      201: GO0048519[2], AUROC: 0.971011, AUPRC: 0.883423, Freq: 0.173184
+      202: GO0048523[3], AUROC: 0.953357, AUPRC: 0.869171, Freq: 0.173184
+      203: GO0008285[4], AUROC: 0.960823, AUPRC: 0.72015, Freq: 0.078212
+      204: GO0060548[4], AUROC: 0.918664, AUPRC: 0.62494, Freq: 0.094972
+      205: GO0043069[5], AUROC: 0.918664, AUPRC: 0.62494, Freq: 0.094972
+      206: GO0043066[6], AUROC: 0.918664, AUPRC: 0.62494, Freq: 0.094972
+      207: GO0048583[2], AUROC: 0.827857, AUPRC: 0.268071, Freq: 0.022346
+      208: GO0050794[2], AUROC: 0.612957, AUPRC: 0.969795, Freq: 0.960894
+      209: GO0010941[3], AUROC: 0.920479, AUPRC: 0.629043, Freq: 0.094972
+      210: GO0043067[4], AUROC: 0.920479, AUPRC: 0.629043, Freq: 0.094972
+      211: GO0042981[5], AUROC: 0.920479, AUPRC: 0.629043, Freq: 0.094972
+      212: GO0042127[3], AUROC: 0.899601, AUPRC: 0.657783, Freq: 0.094972
+      213: GO0051726[3], AUROC: 0.99269, AUPRC: 0.756597, Freq: 0.044693
+      214: GO0065009[1], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      215: GO0044093[2], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      216: GO0043085[3], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      217: GO0051345[4], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      218: GO0043547[5], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      219: GO0050790[2], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      220: GO0051336[3], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      221: GO0043087[4], AUROC: 0.953356, AUPRC: 0.879349, Freq: 0.167598
+      222: GO0071840[0], AUROC: 0.986771, AUPRC: 0.907729, Freq: 0.089385
+
+Testing error
+-------------
+
+Number of examples: 90
+Hierarchical accuracy by class
+   Pruned         : precision: 0.309666, recall: 1, coverage: 1, TP: 6215, FP: 13855, nbPos: 6215
+      GO0002376[0], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0006955[1], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0045087[2;3], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0008152[0], def: 0.9556, prec: 0.9556, rec: 1, TP: 86, FP: 4, nbPos: 86
+      GO0006807[1], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0034641[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006139[2;3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0034654[3;4], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0032774[4;6], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0097659[5;7], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006351[4;8], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006366[5;9], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0090304[3;4], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006259[3;5], def: 0.1111, prec: 0.1111, rec: 1, TP: 10, FP: 80, nbPos: 10
+      GO0006260[4;6], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0006281[4;6], def: 0.1111, prec: 0.1111, rec: 1, TP: 10, FP: 80, nbPos: 10
+      GO0006310[4;6], def: 0.0556, prec: 0.0556, rec: 1, TP: 5, FP: 85, nbPos: 5
+      GO0016070[3;5], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006396[4;6], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0006397[5;7], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0000398[6;10], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0008380[5;7], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0000375[6;8], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0000377[7;9], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0034470[5;7], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0006364[6;8], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0016071[4;6], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0034660[4;6], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0016072[5;7], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0043603[3], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0006518[3;4], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0043043[4;5], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0006412[4;6], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0043604[4], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0044271[3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO1901564[2], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO1901566[3], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0009056[1], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0044248[2], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0044265[3;4], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0043632[4;5], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0019941[5;6], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0006511[6;7], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0043161[5;8], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO1901575[2], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0009057[3], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0030163[3;4], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0010498[4;6], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0009058[1], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0044249[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0018130[3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0019438[3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0034645[3;4], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO1901576[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0009059[3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO1901362[3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0032259[1], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0044237[1], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006725[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0006793[2], def: 0.5333, prec: 0.5333, rec: 1, TP: 48, FP: 42, nbPos: 48
+      GO0006796[3], def: 0.5333, prec: 0.5333, rec: 1, TP: 48, FP: 42, nbPos: 48
+      GO0016310[4], def: 0.5333, prec: 0.5333, rec: 1, TP: 48, FP: 42, nbPos: 48
+      GO0006468[5;6], def: 0.2556, prec: 0.2556, rec: 1, TP: 23, FP: 67, nbPos: 23
+      GO0016311[4], def: 0.0333, prec: 0.0333, rec: 1, TP: 3, FP: 87, nbPos: 3
+      GO0044260[2;3], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0044267[3;4], def: 0.2556, prec: 0.2556, rec: 1, TP: 23, FP: 67, nbPos: 23
+      GO0006464[4;5], def: 0.2556, prec: 0.2556, rec: 1, TP: 23, FP: 67, nbPos: 23
+      GO0018193[5;6], def: 0.0556, prec: 0.0556, rec: 1, TP: 5, FP: 85, nbPos: 5
+      GO0018205[6;7], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0016925[7;8], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0070647[5;6], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0032446[6;7], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0016567[7;8], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0000209[8;9], def: 0.0333, prec: 0.0333, rec: 1, TP: 3, FP: 87, nbPos: 3
+      GO0046483[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0044238[1], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0005975[2], def: 0.0556, prec: 0.0556, rec: 1, TP: 5, FP: 85, nbPos: 5
+      GO0019538[2;3], def: 0.2667, prec: 0.2667, rec: 1, TP: 24, FP: 66, nbPos: 24
+      GO0006508[3;4], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0051603[4;5], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0036211[3;4], def: 0.2556, prec: 0.2556, rec: 1, TP: 23, FP: 67, nbPos: 23
+      GO0071704[1], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0043170[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0043412[3], def: 0.2556, prec: 0.2556, rec: 1, TP: 23, FP: 67, nbPos: 23
+      GO1901360[2], def: 0.9444, prec: 0.9444, rec: 1, TP: 85, FP: 5, nbPos: 85
+      GO0009987[0], def: 0.9556, prec: 0.9556, rec: 1, TP: 86, FP: 4, nbPos: 86
+      GO0007154[1], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0007165[1;3], def: 0.3333, prec: 0.3333, rec: 1, TP: 30, FP: 60, nbPos: 30
+      GO0007166[2;4], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0007186[2;4], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0035556[2;4], def: 0.1556, prec: 0.1556, rec: 1, TP: 14, FP: 76, nbPos: 14
+      GO0016043[1], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0006996[2], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0048285[3], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0000280[4], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0051276[3], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0007062[2;4], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0022402[1], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO1903047[2], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0044764[1], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0016032[2;3], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0051716[1], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0033554[2], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0006974[3], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0022414[0], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0048609[1], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0022610[0], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0007155[1], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0023052[0], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0032501[0], def: 0.2667, prec: 0.2667, rec: 1, TP: 24, FP: 66, nbPos: 24
+      GO0003008[1], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0050877[2], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0007600[3], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0050953[4], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0007601[5], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0032502[0], def: 0.2667, prec: 0.2667, rec: 1, TP: 24, FP: 66, nbPos: 24
+      GO0048856[1], def: 0.2667, prec: 0.2667, rec: 1, TP: 24, FP: 66, nbPos: 24
+      GO0048513[2], def: 0.0444, prec: 0.0444, rec: 1, TP: 4, FP: 86, nbPos: 4
+      GO0048731[2], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0007399[3], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0050896[0], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0006950[1], def: 0.1556, prec: 0.1556, rec: 1, TP: 14, FP: 76, nbPos: 14
+      GO0006952[2], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0006954[3], def: 0.0222, prec: 0.0222, rec: 1, TP: 2, FP: 88, nbPos: 2
+      GO0042221[1], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0042493[2], def: 0.0556, prec: 0.0556, rec: 1, TP: 5, FP: 85, nbPos: 5
+      GO0051179[0], def: 0.4444, prec: 0.4444, rec: 1, TP: 40, FP: 50, nbPos: 40
+      GO0033036[1], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0008104[2], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0045184[2;3], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0015031[3;6], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0006886[3;7], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0051234[1], def: 0.4444, prec: 0.4444, rec: 1, TP: 40, FP: 50, nbPos: 40
+      GO0006810[2], def: 0.4444, prec: 0.4444, rec: 1, TP: 40, FP: 50, nbPos: 40
+      GO0006811[3], def: 0.1889, prec: 0.1889, rec: 1, TP: 17, FP: 73, nbPos: 17
+      GO0034220[4], def: 0.0556, prec: 0.0556, rec: 1, TP: 5, FP: 85, nbPos: 5
+      GO0016192[3], def: 0.0222, prec: 0.0222, rec: 1, TP: 2, FP: 88, nbPos: 2
+      GO0046907[2;3], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0055085[3], def: 0.1222, prec: 0.1222, rec: 1, TP: 11, FP: 79, nbPos: 11
+      GO0071702[3], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0015833[4;5], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0071705[3], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0042886[4], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+      GO0051649[2], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0051641[1], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0051704[0], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0044419[1], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0044403[2], def: 0.1444, prec: 0.1444, rec: 1, TP: 13, FP: 77, nbPos: 13
+      GO0065007[0], def: 0.9889, prec: 0.9889, rec: 1, TP: 89, FP: 1, nbPos: 89
+      GO0050789[1], def: 0.9889, prec: 0.9889, rec: 1, TP: 89, FP: 1, nbPos: 89
+      GO0019222[2], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0009889[3], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0009890[4], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0010558[5], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO1902679[6;7], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO1903507[7;8], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0045892[6;9], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0000122[7;10], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO2000113[6], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0031327[5], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0009891[4], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0010557[5], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO1902680[6;7], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO1903508[7;8], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0045893[6;9], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0045944[7;10], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0031328[5], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0010556[4], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO2000112[5], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0006355[5;8], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0006357[6;9], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO2001141[5;6], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO1903506[6;7], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0031326[4], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0009892[3], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0010605[4], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0010629[5], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0051253[5;6], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0031324[4], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0045934[5], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0051172[4], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0009893[3], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0010604[4], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0010628[5], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0051254[5;6], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0031325[4], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0045935[5], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0051173[4], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0031323[3], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0019219[4], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0051252[4;5], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0051171[3], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0060255[3], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0010468[4], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0080090[3], def: 0.9778, prec: 0.9778, rec: 1, TP: 88, FP: 2, nbPos: 88
+      GO0048518[2], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0048522[3], def: 0.2111, prec: 0.2111, rec: 1, TP: 19, FP: 71, nbPos: 19
+      GO0008284[4], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0010942[4], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0043068[5], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0043065[6], def: 0.0889, prec: 0.0889, rec: 1, TP: 8, FP: 82, nbPos: 8
+      GO0048519[2], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0048523[3], def: 0.1667, prec: 0.1667, rec: 1, TP: 15, FP: 75, nbPos: 15
+      GO0008285[4], def: 0.0778, prec: 0.0778, rec: 1, TP: 7, FP: 83, nbPos: 7
+      GO0060548[4], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0043069[5], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0043066[6], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0048583[2], def: 0.0556, prec: 0.0556, rec: 1, TP: 5, FP: 85, nbPos: 5
+      GO0050794[2], def: 0.9889, prec: 0.9889, rec: 1, TP: 89, FP: 1, nbPos: 89
+      GO0010941[3], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0043067[4], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0042981[5], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0042127[3], def: 0.1, prec: 0.1, rec: 1, TP: 9, FP: 81, nbPos: 9
+      GO0051726[3], def: 0.0667, prec: 0.0667, rec: 1, TP: 6, FP: 84, nbPos: 6
+      GO0065009[1], def: 0.1889, prec: 0.1889, rec: 1, TP: 17, FP: 73, nbPos: 17
+      GO0044093[2], def: 0.1889, prec: 0.1889, rec: 1, TP: 17, FP: 73, nbPos: 17
+      GO0043085[3], def: 0.1889, prec: 0.1889, rec: 1, TP: 17, FP: 73, nbPos: 17
+      GO0051345[4], def: 0.1778, prec: 0.1778, rec: 1, TP: 16, FP: 74, nbPos: 16
+      GO0043547[5], def: 0.1778, prec: 0.1778, rec: 1, TP: 16, FP: 74, nbPos: 16
+      GO0050790[2], def: 0.1889, prec: 0.1889, rec: 1, TP: 17, FP: 73, nbPos: 17
+      GO0051336[3], def: 0.1778, prec: 0.1778, rec: 1, TP: 16, FP: 74, nbPos: 16
+      GO0043087[4], def: 0.1778, prec: 0.1778, rec: 1, TP: 16, FP: 74, nbPos: 16
+      GO0071840[0], def: 0.1333, prec: 0.1333, rec: 1, TP: 12, FP: 78, nbPos: 12
+Hierarchical error measures
+   Original: 
+      Average AUROC:            0.9081977921834797
+      Average AUPRC:            0.8029889220080308
+      Average AUPRC (weighted): 0.9305836629238285
+      Pooled AUPRC:             0.9568063844642206
+      0: GO0002376[0], AUROC: 0.758384, AUPRC: 0.216837, Freq: 0.088889
+      1: GO0006955[1], AUROC: 0.725198, AUPRC: 0.134473, Freq: 0.066667
+      2: GO0045087[2;3], AUROC: 0.725198, AUPRC: 0.134473, Freq: 0.066667
+      3: GO0008152[0], AUROC: 0.813953, AUPRC: 0.984588, Freq: 0.955556
+      4: GO0006807[1], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      5: GO0034641[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      6: GO0006139[2;3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      7: GO0034654[3;4], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      8: GO0032774[4;6], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      9: GO0097659[5;7], AUROC: 0.834118, AUPRC: 0.983488, Freq: 0.944444
+      10: GO0006351[4;8], AUROC: 0.834118, AUPRC: 0.983488, Freq: 0.944444
+      11: GO0006366[5;9], AUROC: 0.932567, AUPRC: 0.874229, Freq: 0.144444
+      12: GO0090304[3;4], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      13: GO0006259[3;5], AUROC: 0.943125, AUPRC: 0.928056, Freq: 0.111111
+      14: GO0006260[4;6], AUROC: 0.91136, AUPRC: 0.726219, Freq: 0.077778
+      15: GO0006281[4;6], AUROC: 0.943125, AUPRC: 0.928056, Freq: 0.111111
+      16: GO0006310[4;6], AUROC: 0.994118, AUPRC: 0.833333, Freq: 0.055556
+      17: GO0016070[3;5], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      18: GO0006396[4;6], AUROC: 0.980437, AUPRC: 0.916982, Freq: 0.122222
+      19: GO0006397[5;7], AUROC: 0.978136, AUPRC: 0.911932, Freq: 0.122222
+      20: GO0000398[6;10], AUROC: 0.965278, AUPRC: 0.614286, Freq: 0.066667
+      21: GO0008380[5;7], AUROC: 0.960219, AUPRC: 0.72728, Freq: 0.1
+      22: GO0000375[6;8], AUROC: 0.965278, AUPRC: 0.614286, Freq: 0.066667
+      23: GO0000377[7;9], AUROC: 0.965278, AUPRC: 0.614286, Freq: 0.066667
+      24: GO0034470[5;7], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      25: GO0006364[6;8], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      26: GO0016071[4;6], AUROC: 0.980437, AUPRC: 0.916982, Freq: 0.122222
+      27: GO0034660[4;6], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      28: GO0016072[5;7], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      29: GO0043603[3], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      30: GO0006518[3;4], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      31: GO0043043[4;5], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      32: GO0006412[4;6], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      33: GO0043604[4], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      34: GO0044271[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      35: GO1901564[2], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      36: GO1901566[3], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      37: GO0009056[1], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      38: GO0044248[2], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      39: GO0044265[3;4], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      40: GO0043632[4;5], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      41: GO0019941[5;6], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      42: GO0006511[6;7], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      43: GO0043161[5;8], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      44: GO1901575[2], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      45: GO0009057[3], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      46: GO0030163[3;4], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      47: GO0010498[4;6], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      48: GO0009058[1], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      49: GO0044249[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      50: GO0018130[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      51: GO0019438[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      52: GO0034645[3;4], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      53: GO1901576[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      54: GO0009059[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      55: GO1901362[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      56: GO0032259[1], AUROC: 0.916159, AUPRC: 0.72691, Freq: 0.088889
+      57: GO0044237[1], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      58: GO0006725[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      59: GO0006793[2], AUROC: 0.899554, AUPRC: 0.920385, Freq: 0.533333
+      60: GO0006796[3], AUROC: 0.899554, AUPRC: 0.920385, Freq: 0.533333
+      61: GO0016310[4], AUROC: 0.899554, AUPRC: 0.920385, Freq: 0.533333
+      62: GO0006468[5;6], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      63: GO0016311[4], AUROC: 0.942529, AUPRC: 0.284967, Freq: 0.033333
+      64: GO0044260[2;3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      65: GO0044267[3;4], AUROC: 0.879299, AUPRC: 0.768557, Freq: 0.255556
+      66: GO0006464[4;5], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      67: GO0018193[5;6], AUROC: 0.857647, AUPRC: 0.396389, Freq: 0.055556
+      68: GO0018205[6;7], AUROC: 0.844477, AUPRC: 0.405556, Freq: 0.044444
+      69: GO0016925[7;8], AUROC: 0.844477, AUPRC: 0.405556, Freq: 0.044444
+      70: GO0070647[5;6], AUROC: 0.946553, AUPRC: 0.910343, Freq: 0.144444
+      71: GO0032446[6;7], AUROC: 0.946553, AUPRC: 0.910343, Freq: 0.144444
+      72: GO0016567[7;8], AUROC: 0.946553, AUPRC: 0.910343, Freq: 0.144444
+      73: GO0000209[8;9], AUROC: 0.789272, AUPRC: 0.247386, Freq: 0.033333
+      74: GO0046483[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      75: GO0044238[1], AUROC: 0.831765, AUPRC: 0.983359, Freq: 0.944444
+      76: GO0005975[2], AUROC: 0.875294, AUPRC: 0.562418, Freq: 0.055556
+      77: GO0019538[2;3], AUROC: 0.884785, AUPRC: 0.777203, Freq: 0.266667
+      78: GO0006508[3;4], AUROC: 0.941059, AUPRC: 0.889209, Freq: 0.144444
+      79: GO0051603[4;5], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      80: GO0036211[3;4], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      81: GO0071704[1], AUROC: 0.831765, AUPRC: 0.983359, Freq: 0.944444
+      82: GO0043170[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      83: GO0043412[3], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      84: GO1901360[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      85: GO0009987[0], AUROC: 0.819767, AUPRC: 0.984849, Freq: 0.955556
+      86: GO0007154[1], AUROC: 0.925872, AUPRC: 0.21577, Freq: 0.044444
+      87: GO0007165[1;3], AUROC: 0.928333, AUPRC: 0.880604, Freq: 0.333333
+      88: GO0007166[2;4], AUROC: 0.773256, AUPRC: 0.127218, Freq: 0.044444
+      89: GO0007186[2;4], AUROC: 0.859756, AUPRC: 0.489475, Freq: 0.088889
+      90: GO0035556[2;4], AUROC: 0.950658, AUPRC: 0.918074, Freq: 0.155556
+      91: GO0016043[1], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      92: GO0006996[2], AUROC: 0.939637, AUPRC: 0.88074, Freq: 0.133333
+      93: GO0048285[3], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      94: GO0000280[4], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      95: GO0051276[3], AUROC: 0.909722, AUPRC: 0.759524, Freq: 0.066667
+      96: GO0007062[2;4], AUROC: 0.909722, AUPRC: 0.759524, Freq: 0.066667
+      97: GO0022402[1], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      98: GO1903047[2], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      99: GO0044764[1], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      100: GO0016032[2;3], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      101: GO0051716[1], AUROC: 0.899101, AUPRC: 0.853793, Freq: 0.144444
+      102: GO0033554[2], AUROC: 0.899101, AUPRC: 0.853793, Freq: 0.144444
+      103: GO0006974[3], AUROC: 0.899101, AUPRC: 0.853793, Freq: 0.144444
+      104: GO0022414[0], AUROC: 0.958573, AUPRC: 0.867667, Freq: 0.122222
+      105: GO0048609[1], AUROC: 0.958573, AUPRC: 0.867667, Freq: 0.122222
+      106: GO0022610[0], AUROC: 0.979167, AUPRC: 0.916842, Freq: 0.133333
+      107: GO0007155[1], AUROC: 0.979167, AUPRC: 0.916842, Freq: 0.133333
+      108: GO0023052[0], AUROC: 0.925872, AUPRC: 0.21577, Freq: 0.044444
+      109: GO0032501[0], AUROC: 0.916035, AUPRC: 0.869312, Freq: 0.266667
+      110: GO0003008[1], AUROC: 0.962995, AUPRC: 0.748131, Freq: 0.077778
+      111: GO0050877[2], AUROC: 0.969019, AUPRC: 0.761289, Freq: 0.077778
+      112: GO0007600[3], AUROC: 0.969019, AUPRC: 0.761289, Freq: 0.077778
+      113: GO0050953[4], AUROC: 0.962995, AUPRC: 0.748131, Freq: 0.077778
+      114: GO0007601[5], AUROC: 0.962995, AUPRC: 0.748131, Freq: 0.077778
+      115: GO0032502[0], AUROC: 0.916035, AUPRC: 0.869312, Freq: 0.266667
+      116: GO0048856[1], AUROC: 0.916035, AUPRC: 0.869312, Freq: 0.266667
+      117: GO0048513[2], AUROC: 0.925872, AUPRC: 0.21577, Freq: 0.044444
+      118: GO0048731[2], AUROC: 0.989643, AUPRC: 0.937638, Freq: 0.122222
+      119: GO0007399[3], AUROC: 0.989643, AUPRC: 0.937638, Freq: 0.122222
+      120: GO0050896[0], AUROC: 0.859556, AUPRC: 0.790806, Freq: 0.166667
+      121: GO0006950[1], AUROC: 0.894267, AUPRC: 0.829514, Freq: 0.155556
+      122: GO0006952[2], AUROC: 0.777778, AUPRC: 0.149761, Freq: 0.066667
+      123: GO0006954[3], AUROC: 0.84375, AUPRC: 0.055952, Freq: 0.022222
+      124: GO0042221[1], AUROC: 0.843254, AUPRC: 0.245018, Freq: 0.066667
+      125: GO0042493[2], AUROC: 0.88, AUPRC: 0.569658, Freq: 0.055556
+      126: GO0051179[0], AUROC: 0.86875, AUPRC: 0.853196, Freq: 0.444444
+      127: GO0033036[1], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      128: GO0008104[2], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      129: GO0045184[2;3], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      130: GO0015031[3;6], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      131: GO0006886[3;7], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      132: GO0051234[1], AUROC: 0.86875, AUPRC: 0.853196, Freq: 0.444444
+      133: GO0006810[2], AUROC: 0.86875, AUPRC: 0.853196, Freq: 0.444444
+      134: GO0006811[3], AUROC: 0.937953, AUPRC: 0.862536, Freq: 0.188889
+      135: GO0034220[4], AUROC: 0.862353, AUPRC: 0.412991, Freq: 0.055556
+      136: GO0016192[3], AUROC: 0.605114, AUPRC: 0.033333, Freq: 0.022222
+      137: GO0046907[2;3], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      138: GO0055085[3], AUROC: 0.897583, AUPRC: 0.707601, Freq: 0.122222
+      139: GO0071702[3], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      140: GO0015833[4;5], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      141: GO0071705[3], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      142: GO0042886[4], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      143: GO0051649[2], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      144: GO0051641[1], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      145: GO0051704[0], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      146: GO0044419[1], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      147: GO0044403[2], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      148: GO0065007[0], AUROC: 0.870787, AUPRC: 0.998455, Freq: 0.988889
+      149: GO0050789[1], AUROC: 0.870787, AUPRC: 0.998455, Freq: 0.988889
+      150: GO0019222[2], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      151: GO0009889[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      152: GO0009890[4], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      153: GO0010558[5], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      154: GO1902679[6;7], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      155: GO1903507[7;8], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      156: GO0045892[6;9], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      157: GO0000122[7;10], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      158: GO2000113[6], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      159: GO0031327[5], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      160: GO0009891[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      161: GO0010557[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      162: GO1902680[6;7], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      163: GO1903508[7;8], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      164: GO0045893[6;9], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      165: GO0045944[7;10], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      166: GO0031328[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      167: GO0010556[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      168: GO2000112[5], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      169: GO0006355[5;8], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      170: GO0006357[6;9], AUROC: 0.926612, AUPRC: 0.895123, Freq: 0.211111
+      171: GO2001141[5;6], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      172: GO1903506[6;7], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      173: GO0031326[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      174: GO0009892[3], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      175: GO0010605[4], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      176: GO0010629[5], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      177: GO0051253[5;6], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      178: GO0031324[4], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      179: GO0045934[5], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      180: GO0051172[4], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      181: GO0009893[3], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      182: GO0010604[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      183: GO0010628[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      184: GO0051254[5;6], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      185: GO0031325[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      186: GO0045935[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      187: GO0051173[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      188: GO0031323[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      189: GO0019219[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      190: GO0051252[4;5], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      191: GO0051171[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      192: GO0060255[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      193: GO0010468[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      194: GO0080090[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      195: GO0048518[2], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      196: GO0048522[3], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      197: GO0008284[4], AUROC: 0.914266, AUPRC: 0.696671, Freq: 0.1
+      198: GO0010942[4], AUROC: 0.957317, AUPRC: 0.685425, Freq: 0.088889
+      199: GO0043068[5], AUROC: 0.957317, AUPRC: 0.685425, Freq: 0.088889
+      200: GO0043065[6], AUROC: 0.957317, AUPRC: 0.685425, Freq: 0.088889
+      201: GO0048519[2], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      202: GO0048523[3], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      203: GO0008285[4], AUROC: 0.984509, AUPRC: 0.795238, Freq: 0.077778
+      204: GO0060548[4], AUROC: 0.907407, AUPRC: 0.680954, Freq: 0.1
+      205: GO0043069[5], AUROC: 0.907407, AUPRC: 0.680954, Freq: 0.1
+      206: GO0043066[6], AUROC: 0.907407, AUPRC: 0.680954, Freq: 0.1
+      207: GO0048583[2], AUROC: 0.822353, AUPRC: 0.195948, Freq: 0.055556
+      208: GO0050794[2], AUROC: 0.870787, AUPRC: 0.998455, Freq: 0.988889
+      209: GO0010941[3], AUROC: 0.91358, AUPRC: 0.694819, Freq: 0.1
+      210: GO0043067[4], AUROC: 0.91358, AUPRC: 0.694819, Freq: 0.1
+      211: GO0042981[5], AUROC: 0.91358, AUPRC: 0.694819, Freq: 0.1
+      212: GO0042127[3], AUROC: 0.918381, AUPRC: 0.717633, Freq: 0.1
+      213: GO0051726[3], AUROC: 0.992063, AUPRC: 0.826389, Freq: 0.066667
+      214: GO0065009[1], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      215: GO0044093[2], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      216: GO0043085[3], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      217: GO0051345[4], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      218: GO0043547[5], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      219: GO0050790[2], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      220: GO0051336[3], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      221: GO0043087[4], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      222: GO0071840[0], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+   Pruned: 
+      Average AUROC:            0.9081977921834797
+      Average AUPRC:            0.8029889220080308
+      Average AUPRC (weighted): 0.9305836629238285
+      Pooled AUPRC:             0.9568063844642206
+      0: GO0002376[0], AUROC: 0.758384, AUPRC: 0.216837, Freq: 0.088889
+      1: GO0006955[1], AUROC: 0.725198, AUPRC: 0.134473, Freq: 0.066667
+      2: GO0045087[2;3], AUROC: 0.725198, AUPRC: 0.134473, Freq: 0.066667
+      3: GO0008152[0], AUROC: 0.813953, AUPRC: 0.984588, Freq: 0.955556
+      4: GO0006807[1], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      5: GO0034641[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      6: GO0006139[2;3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      7: GO0034654[3;4], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      8: GO0032774[4;6], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      9: GO0097659[5;7], AUROC: 0.834118, AUPRC: 0.983488, Freq: 0.944444
+      10: GO0006351[4;8], AUROC: 0.834118, AUPRC: 0.983488, Freq: 0.944444
+      11: GO0006366[5;9], AUROC: 0.932567, AUPRC: 0.874229, Freq: 0.144444
+      12: GO0090304[3;4], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      13: GO0006259[3;5], AUROC: 0.943125, AUPRC: 0.928056, Freq: 0.111111
+      14: GO0006260[4;6], AUROC: 0.91136, AUPRC: 0.726219, Freq: 0.077778
+      15: GO0006281[4;6], AUROC: 0.943125, AUPRC: 0.928056, Freq: 0.111111
+      16: GO0006310[4;6], AUROC: 0.994118, AUPRC: 0.833333, Freq: 0.055556
+      17: GO0016070[3;5], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      18: GO0006396[4;6], AUROC: 0.980437, AUPRC: 0.916982, Freq: 0.122222
+      19: GO0006397[5;7], AUROC: 0.978136, AUPRC: 0.911932, Freq: 0.122222
+      20: GO0000398[6;10], AUROC: 0.965278, AUPRC: 0.614286, Freq: 0.066667
+      21: GO0008380[5;7], AUROC: 0.960219, AUPRC: 0.72728, Freq: 0.1
+      22: GO0000375[6;8], AUROC: 0.965278, AUPRC: 0.614286, Freq: 0.066667
+      23: GO0000377[7;9], AUROC: 0.965278, AUPRC: 0.614286, Freq: 0.066667
+      24: GO0034470[5;7], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      25: GO0006364[6;8], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      26: GO0016071[4;6], AUROC: 0.980437, AUPRC: 0.916982, Freq: 0.122222
+      27: GO0034660[4;6], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      28: GO0016072[5;7], AUROC: 0.934593, AUPRC: 0.379112, Freq: 0.044444
+      29: GO0043603[3], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      30: GO0006518[3;4], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      31: GO0043043[4;5], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      32: GO0006412[4;6], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      33: GO0043604[4], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      34: GO0044271[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      35: GO1901564[2], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      36: GO1901566[3], AUROC: 0.962652, AUPRC: 0.645346, Freq: 0.088889
+      37: GO0009056[1], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      38: GO0044248[2], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      39: GO0044265[3;4], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      40: GO0043632[4;5], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      41: GO0019941[5;6], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      42: GO0006511[6;7], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      43: GO0043161[5;8], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      44: GO1901575[2], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      45: GO0009057[3], AUROC: 0.909639, AUPRC: 0.735317, Freq: 0.077778
+      46: GO0030163[3;4], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      47: GO0010498[4;6], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      48: GO0009058[1], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      49: GO0044249[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      50: GO0018130[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      51: GO0019438[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      52: GO0034645[3;4], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      53: GO1901576[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      54: GO0009059[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      55: GO1901362[3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      56: GO0032259[1], AUROC: 0.916159, AUPRC: 0.72691, Freq: 0.088889
+      57: GO0044237[1], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      58: GO0006725[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      59: GO0006793[2], AUROC: 0.899554, AUPRC: 0.920385, Freq: 0.533333
+      60: GO0006796[3], AUROC: 0.899554, AUPRC: 0.920385, Freq: 0.533333
+      61: GO0016310[4], AUROC: 0.899554, AUPRC: 0.920385, Freq: 0.533333
+      62: GO0006468[5;6], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      63: GO0016311[4], AUROC: 0.942529, AUPRC: 0.284967, Freq: 0.033333
+      64: GO0044260[2;3], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      65: GO0044267[3;4], AUROC: 0.879299, AUPRC: 0.768557, Freq: 0.255556
+      66: GO0006464[4;5], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      67: GO0018193[5;6], AUROC: 0.857647, AUPRC: 0.396389, Freq: 0.055556
+      68: GO0018205[6;7], AUROC: 0.844477, AUPRC: 0.405556, Freq: 0.044444
+      69: GO0016925[7;8], AUROC: 0.844477, AUPRC: 0.405556, Freq: 0.044444
+      70: GO0070647[5;6], AUROC: 0.946553, AUPRC: 0.910343, Freq: 0.144444
+      71: GO0032446[6;7], AUROC: 0.946553, AUPRC: 0.910343, Freq: 0.144444
+      72: GO0016567[7;8], AUROC: 0.946553, AUPRC: 0.910343, Freq: 0.144444
+      73: GO0000209[8;9], AUROC: 0.789272, AUPRC: 0.247386, Freq: 0.033333
+      74: GO0046483[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      75: GO0044238[1], AUROC: 0.831765, AUPRC: 0.983359, Freq: 0.944444
+      76: GO0005975[2], AUROC: 0.875294, AUPRC: 0.562418, Freq: 0.055556
+      77: GO0019538[2;3], AUROC: 0.884785, AUPRC: 0.777203, Freq: 0.266667
+      78: GO0006508[3;4], AUROC: 0.941059, AUPRC: 0.889209, Freq: 0.144444
+      79: GO0051603[4;5], AUROC: 0.830465, AUPRC: 0.636508, Freq: 0.077778
+      80: GO0036211[3;4], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      81: GO0071704[1], AUROC: 0.831765, AUPRC: 0.983359, Freq: 0.944444
+      82: GO0043170[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      83: GO0043412[3], AUROC: 0.867618, AUPRC: 0.765591, Freq: 0.255556
+      84: GO1901360[2], AUROC: 0.830588, AUPRC: 0.983295, Freq: 0.944444
+      85: GO0009987[0], AUROC: 0.819767, AUPRC: 0.984849, Freq: 0.955556
+      86: GO0007154[1], AUROC: 0.925872, AUPRC: 0.21577, Freq: 0.044444
+      87: GO0007165[1;3], AUROC: 0.928333, AUPRC: 0.880604, Freq: 0.333333
+      88: GO0007166[2;4], AUROC: 0.773256, AUPRC: 0.127218, Freq: 0.044444
+      89: GO0007186[2;4], AUROC: 0.859756, AUPRC: 0.489475, Freq: 0.088889
+      90: GO0035556[2;4], AUROC: 0.950658, AUPRC: 0.918074, Freq: 0.155556
+      91: GO0016043[1], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      92: GO0006996[2], AUROC: 0.939637, AUPRC: 0.88074, Freq: 0.133333
+      93: GO0048285[3], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      94: GO0000280[4], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      95: GO0051276[3], AUROC: 0.909722, AUPRC: 0.759524, Freq: 0.066667
+      96: GO0007062[2;4], AUROC: 0.909722, AUPRC: 0.759524, Freq: 0.066667
+      97: GO0022402[1], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      98: GO1903047[2], AUROC: 0.940736, AUPRC: 0.90066, Freq: 0.122222
+      99: GO0044764[1], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      100: GO0016032[2;3], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      101: GO0051716[1], AUROC: 0.899101, AUPRC: 0.853793, Freq: 0.144444
+      102: GO0033554[2], AUROC: 0.899101, AUPRC: 0.853793, Freq: 0.144444
+      103: GO0006974[3], AUROC: 0.899101, AUPRC: 0.853793, Freq: 0.144444
+      104: GO0022414[0], AUROC: 0.958573, AUPRC: 0.867667, Freq: 0.122222
+      105: GO0048609[1], AUROC: 0.958573, AUPRC: 0.867667, Freq: 0.122222
+      106: GO0022610[0], AUROC: 0.979167, AUPRC: 0.916842, Freq: 0.133333
+      107: GO0007155[1], AUROC: 0.979167, AUPRC: 0.916842, Freq: 0.133333
+      108: GO0023052[0], AUROC: 0.925872, AUPRC: 0.21577, Freq: 0.044444
+      109: GO0032501[0], AUROC: 0.916035, AUPRC: 0.869312, Freq: 0.266667
+      110: GO0003008[1], AUROC: 0.962995, AUPRC: 0.748131, Freq: 0.077778
+      111: GO0050877[2], AUROC: 0.969019, AUPRC: 0.761289, Freq: 0.077778
+      112: GO0007600[3], AUROC: 0.969019, AUPRC: 0.761289, Freq: 0.077778
+      113: GO0050953[4], AUROC: 0.962995, AUPRC: 0.748131, Freq: 0.077778
+      114: GO0007601[5], AUROC: 0.962995, AUPRC: 0.748131, Freq: 0.077778
+      115: GO0032502[0], AUROC: 0.916035, AUPRC: 0.869312, Freq: 0.266667
+      116: GO0048856[1], AUROC: 0.916035, AUPRC: 0.869312, Freq: 0.266667
+      117: GO0048513[2], AUROC: 0.925872, AUPRC: 0.21577, Freq: 0.044444
+      118: GO0048731[2], AUROC: 0.989643, AUPRC: 0.937638, Freq: 0.122222
+      119: GO0007399[3], AUROC: 0.989643, AUPRC: 0.937638, Freq: 0.122222
+      120: GO0050896[0], AUROC: 0.859556, AUPRC: 0.790806, Freq: 0.166667
+      121: GO0006950[1], AUROC: 0.894267, AUPRC: 0.829514, Freq: 0.155556
+      122: GO0006952[2], AUROC: 0.777778, AUPRC: 0.149761, Freq: 0.066667
+      123: GO0006954[3], AUROC: 0.84375, AUPRC: 0.055952, Freq: 0.022222
+      124: GO0042221[1], AUROC: 0.843254, AUPRC: 0.245018, Freq: 0.066667
+      125: GO0042493[2], AUROC: 0.88, AUPRC: 0.569658, Freq: 0.055556
+      126: GO0051179[0], AUROC: 0.86875, AUPRC: 0.853196, Freq: 0.444444
+      127: GO0033036[1], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      128: GO0008104[2], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      129: GO0045184[2;3], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      130: GO0015031[3;6], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      131: GO0006886[3;7], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      132: GO0051234[1], AUROC: 0.86875, AUPRC: 0.853196, Freq: 0.444444
+      133: GO0006810[2], AUROC: 0.86875, AUPRC: 0.853196, Freq: 0.444444
+      134: GO0006811[3], AUROC: 0.937953, AUPRC: 0.862536, Freq: 0.188889
+      135: GO0034220[4], AUROC: 0.862353, AUPRC: 0.412991, Freq: 0.055556
+      136: GO0016192[3], AUROC: 0.605114, AUPRC: 0.033333, Freq: 0.022222
+      137: GO0046907[2;3], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      138: GO0055085[3], AUROC: 0.897583, AUPRC: 0.707601, Freq: 0.122222
+      139: GO0071702[3], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      140: GO0015833[4;5], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      141: GO0071705[3], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      142: GO0042886[4], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+      143: GO0051649[2], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      144: GO0051641[1], AUROC: 0.978052, AUPRC: 0.798521, Freq: 0.1
+      145: GO0051704[0], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      146: GO0044419[1], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      147: GO0044403[2], AUROC: 0.946054, AUPRC: 0.896902, Freq: 0.144444
+      148: GO0065007[0], AUROC: 0.870787, AUPRC: 0.998455, Freq: 0.988889
+      149: GO0050789[1], AUROC: 0.870787, AUPRC: 0.998455, Freq: 0.988889
+      150: GO0019222[2], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      151: GO0009889[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      152: GO0009890[4], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      153: GO0010558[5], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      154: GO1902679[6;7], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      155: GO1903507[7;8], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      156: GO0045892[6;9], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      157: GO0000122[7;10], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      158: GO2000113[6], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      159: GO0031327[5], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      160: GO0009891[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      161: GO0010557[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      162: GO1902680[6;7], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      163: GO1903508[7;8], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      164: GO0045893[6;9], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      165: GO0045944[7;10], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      166: GO0031328[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      167: GO0010556[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      168: GO2000112[5], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      169: GO0006355[5;8], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      170: GO0006357[6;9], AUROC: 0.926612, AUPRC: 0.895123, Freq: 0.211111
+      171: GO2001141[5;6], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      172: GO1903506[6;7], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      173: GO0031326[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      174: GO0009892[3], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      175: GO0010605[4], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      176: GO0010629[5], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      177: GO0051253[5;6], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      178: GO0031324[4], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      179: GO0045934[5], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      180: GO0051172[4], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      181: GO0009893[3], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      182: GO0010604[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      183: GO0010628[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      184: GO0051254[5;6], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      185: GO0031325[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      186: GO0045935[5], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      187: GO0051173[4], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      188: GO0031323[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      189: GO0019219[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      190: GO0051252[4;5], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      191: GO0051171[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      192: GO0060255[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      193: GO0010468[4], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      194: GO0080090[3], AUROC: 0.875, AUPRC: 0.997018, Freq: 0.977778
+      195: GO0048518[2], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      196: GO0048522[3], AUROC: 0.926242, AUPRC: 0.894642, Freq: 0.211111
+      197: GO0008284[4], AUROC: 0.914266, AUPRC: 0.696671, Freq: 0.1
+      198: GO0010942[4], AUROC: 0.957317, AUPRC: 0.685425, Freq: 0.088889
+      199: GO0043068[5], AUROC: 0.957317, AUPRC: 0.685425, Freq: 0.088889
+      200: GO0043065[6], AUROC: 0.957317, AUPRC: 0.685425, Freq: 0.088889
+      201: GO0048519[2], AUROC: 0.984889, AUPRC: 0.933716, Freq: 0.166667
+      202: GO0048523[3], AUROC: 0.950222, AUPRC: 0.908767, Freq: 0.166667
+      203: GO0008285[4], AUROC: 0.984509, AUPRC: 0.795238, Freq: 0.077778
+      204: GO0060548[4], AUROC: 0.907407, AUPRC: 0.680954, Freq: 0.1
+      205: GO0043069[5], AUROC: 0.907407, AUPRC: 0.680954, Freq: 0.1
+      206: GO0043066[6], AUROC: 0.907407, AUPRC: 0.680954, Freq: 0.1
+      207: GO0048583[2], AUROC: 0.822353, AUPRC: 0.195948, Freq: 0.055556
+      208: GO0050794[2], AUROC: 0.870787, AUPRC: 0.998455, Freq: 0.988889
+      209: GO0010941[3], AUROC: 0.91358, AUPRC: 0.694819, Freq: 0.1
+      210: GO0043067[4], AUROC: 0.91358, AUPRC: 0.694819, Freq: 0.1
+      211: GO0042981[5], AUROC: 0.91358, AUPRC: 0.694819, Freq: 0.1
+      212: GO0042127[3], AUROC: 0.918381, AUPRC: 0.717633, Freq: 0.1
+      213: GO0051726[3], AUROC: 0.992063, AUPRC: 0.826389, Freq: 0.066667
+      214: GO0065009[1], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      215: GO0044093[2], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      216: GO0043085[3], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      217: GO0051345[4], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      218: GO0043547[5], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      219: GO0050790[2], AUROC: 0.950443, AUPRC: 0.908589, Freq: 0.188889
+      220: GO0051336[3], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      221: GO0043087[4], AUROC: 0.984797, AUPRC: 0.942807, Freq: 0.177778
+      222: GO0071840[0], AUROC: 0.986645, AUPRC: 0.938352, Freq: 0.133333
+
+Default Model
+*************
+
+[0.054004,0.048417,0.035382,0.973929,0.964618,0.964618,0.964618,0.964618,0.964618,0.962756,0.962756,0.158287,0.964618,0.113594,0.050279,0.113594,0.035382,0.964618,0.13594,0.134078,0.072626,0.102421,0.072626,0.072626,0.031657,0.031657,0.13594,0.031657,0.031657,0.087523,0.087523,0.087523,0.087523,0.087523,0.964618,0.087523,0.087523,0.063315,0.063315,0.061453,0.054004,0.054004,0.054004,0.054004,0.061453,0.061453,0.054004,0.054004,0.964618,0.964618,0.964618,0.964618,0.964618,0.964618,0.964618,0.964618,0.050279,0.964618,0.964618,0.467412,0.467412,0.467412,0.253259,0.014898,0.964618,0.26257,0.256983,0.037244,0.031657,0.031657,0.147114,0.147114,0.147114,0.024209,0.964618,0.968343,0.026071,0.270019,0.165736,0.054004,0.256983,0.968343,0.964618,0.256983,0.964618,0.973929,0.037244,0.35568,0.029795,0.09311,0.162011,0.122905,0.091248,0.091248,0.091248,0.042831,0.042831,0.091248,0.091248,0.132216,0.132216,0.145251,0.143389,0.143389,0.121043,0.117318,0.150838,0.150838,0.037244,0.273743,0.044693,0.042831,0.042831,0.040968,0.040968,0.271881,0.271881,0.054004,0.13594,0.13594,0.182495,0.171322,0.054004,0.040968,0.042831,0.035382,0.43203,0.16946,0.16946,0.16946,0.16946,0.087523,0.43203,0.43203,0.189944,0.042831,0.026071,0.087523,0.141527,0.173184,0.16946,0.16946,0.16946,0.087523,0.087523,0.134078,0.132216,0.132216,0.979516,0.979516,0.972067,0.970205,0.197393,0.197393,0.197393,0.197393,0.197393,0.197393,0.197393,0.197393,0.238361,0.238361,0.238361,0.238361,0.238361,0.238361,0.238361,0.970205,0.970205,0.970205,0.243948,0.970205,0.970205,0.970205,0.204842,0.204842,0.20298,0.197393,0.199255,0.197393,0.197393,0.238361,0.238361,0.238361,0.238361,0.238361,0.238361,0.238361,0.970205,0.970205,0.970205,0.970205,0.972067,0.972067,0.970205,0.238361,0.238361,0.087523,0.067039,0.067039,0.067039,0.204842,0.199255,0.102421,0.089385,0.089385,0.089385,0.027933,0.977654,0.09311,0.09311,0.09311,0.106145,0.044693,0.195531,0.191806,0.191806,0.189944,0.189944,0.195531,0.193669,0.189944,0.122905]: 537
+
+Original Model
+**************
+
+a1 > 0.224359
++--yes: a2 > 0.474511
+|       +--yes: a1 > 0.494041
+|       |       +--yes: a4 > 0.976927
+|       |       |       +--yes: [0,0,0,1,1,1,1,1,1,1,1,1,1,1,0.090909,1,0,1,1,1,0.090909,0.454545,0.090909,0.090909,0,0,1,0,0,0.545455,0.545455,0.545455,0.545455,0.545455,1,0.545455,0.545455,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0.090909,1,1,1,1,1,1,0,1,1,1,0.090909,0.090909,0.090909,1,1,1,0,1,1,0,1,1,0,1,1,1,1,1,1,0,1,0,0,1,1,1,1,1,0,0,1,1,0.909091,0.909091,1,1,1,1,1,0.909091,0.909091,0,1,0.181818,0.181818,0.181818,0.181818,0.181818,1,1,0,1,1,1,1,0,0,0,0,1,1,1,1,1,0.818182,1,1,1,0.181818,0,0.818182,1,1,1,1,1,0.818182,0.818182,0.909091,0.909091,0.909091,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.272727,0.090909,0.090909,0.090909,1,1,0.454545,0.181818,0.181818,0.181818,0,1,0.272727,0.272727,0.272727,0.454545,0.272727,1,1,1,1,1,1,1,1,1]: 11
+|       |       |       +--no:  [0.217391,0.173913,0.173913,1,1,1,1,1,1,1,1,1,1,1,0.956522,1,0.782609,1,1,1,0.73913,0.956522,0.73913,0.73913,0.26087,0.26087,1,0.26087,0.26087,0.956522,0.956522,0.956522,0.956522,0.956522,1,0.956522,0.956522,0.869565,0.869565,0.826087,0.826087,0.826087,0.826087,0.826087,0.826087,0.826087,0.826087,0.826087,1,1,1,1,1,1,1,1,0.956522,1,1,1,1,1,1,0.217391,1,1,1,0.652174,0.608696,0.608696,1,1,1,0.26087,1,1,0.26087,1,1,0.826087,1,1,1,1,1,1,0.086957,1,0.173913,0.478261,1,1,1,1,1,0.869565,0.869565,1,1,1,1,1,1,1,1,1,1,1,0.086957,1,0.608696,0.608696,0.608696,0.608696,0.608696,1,1,0.347826,1,1,1,1,0.173913,0.043478,0.26087,0.26087,1,1,1,1,1,1,1,1,1,0.304348,0.173913,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.956522,0.956522,0.956522,0.956522,1,1,1,0.913043,0.913043,0.913043,0.26087,1,0.956522,0.956522,0.956522,1,0.869565,1,1,1,1,1,1,1,1,1]: 23
+|       |       +--no:  [0,0,0,1,1,1,1,1,1,1,1,0.866667,1,0.8,0.2,0.8,0,1,0.733333,0.733333,0.4,0.4,0.4,0.4,0.066667,0.066667,0.733333,0.066667,0.066667,0.133333,0.133333,0.133333,0.133333,0.133333,1,0.133333,0.133333,0.066667,0.066667,0.066667,0.066667,0.066667,0.066667,0.066667,0.066667,0.066667,0.066667,0.066667,1,1,1,1,1,1,1,1,0.066667,1,1,1,1,1,1,0,1,1,1,0,0,0,0.8,0.8,0.8,0,1,1,0,1,1,0.066667,1,1,1,1,1,1,0,1,0,0,0.866667,0.666667,0.6,0.6,0.6,0.2,0.2,0.6,0.6,0.6,0.6,1,1,1,0.866667,0.866667,0.333333,0.333333,0,1,0,0,0,0,0,1,1,0.066667,0.6,0.6,1,1,0,0,0,0,1,0.933333,0.933333,0.933333,0.933333,0.2,1,1,0.533333,0,0.066667,0.2,0.466667,0.933333,0.933333,0.933333,0.933333,0.2,0.2,0.6,0.6,0.6,1,1,1,1,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.133333,0.066667,0.066667,0.066667,0.933333,0.933333,0.266667,0.266667,0.266667,0.266667,0,1,0.266667,0.266667,0.266667,0.333333,0,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,0.933333,0.666667]: 15
+|       +--no:  [0.32,0.32,0.22,1,1,1,1,1,1,1,1,0.6,1,0.24,0.02,0.24,0.02,1,0.42,0.42,0.22,0.34,0.22,0.22,0.1,0.1,0.42,0.1,0.1,0.22,0.22,0.22,0.22,0.22,1,0.22,0.22,0.16,0.16,0.16,0.14,0.14,0.14,0.14,0.16,0.16,0.14,0.14,1,1,1,1,1,1,1,1,0.06,1,1,0.94,0.94,0.94,0.84,0.04,1,0.88,0.88,0.06,0.04,0.04,0.54,0.54,0.54,0.1,1,1,0.14,0.94,0.66,0.14,0.88,1,1,0.88,1,1,0.32,1,0.14,0.38,0.62,0.3,0.08,0.08,0.08,0,0,0.08,0.08,0.52,0.52,0.44,0.42,0.42,0.22,0.18,0.7,0.7,0.32,1,0.06,0.04,0.04,0.04,0.04,1,1,0.38,0.54,0.54,0.66,0.62,0.36,0.28,0.3,0.24,0.98,0.64,0.64,0.64,0.64,0.14,0.98,0.98,0.64,0.26,0.16,0.14,0.48,0.68,0.64,0.64,0.64,0.14,0.14,0.54,0.52,0.52,1,1,1,1,0.74,0.74,0.74,0.74,0.74,0.74,0.74,0.74,0.98,0.98,0.98,0.98,0.98,0.98,0.98,1,1,1,0.98,1,1,1,0.76,0.76,0.74,0.74,0.76,0.74,0.74,0.98,0.98,0.98,0.98,0.98,0.98,0.98,1,1,1,1,1,1,1,0.98,0.98,0.34,0.18,0.18,0.18,0.76,0.76,0.42,0.36,0.36,0.36,0.12,1,0.36,0.36,0.36,0.42,0.02,0.88,0.84,0.84,0.84,0.84,0.88,0.88,0.84,0.3]: 50
++--no:  a3 > 0.463846
+        +--yes: a1 > 0.116912
+        |       +--yes: a26 > 0.553421
+        |       |       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.833333,0.833333,0.833333,0.833333,0,1,0.833333,0.833333,0,0,0,0,0,0,0,1,1,0,0.833333,0,0,0.833333,1,1,0.833333,1,1,0,0.666667,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.583333,0,0,0,0,0,0.583333,0.583333,0,0,0,0,0,0,0,0,0,0.916667,0,0,0,0,0,0.916667,0.916667,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 12
+        |       |       +--no:  a35 > 0.573639
+        |       |               +--yes: [0,0,0,0.8,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0,0.6,0,0,0,0,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0,0.6,0.6,0.6,0.6,0.6,0.4,0,0.6,0.4,0.4,0,0,0,0,0,0,0,0.6,0.8,0,0.4,0,0,0.4,0.8,0.6,0.4,0.6,0.8,0,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0.2,0.2,0,0,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0.8,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0.8,0.6,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0.6,0.6,0,0.6,0.6,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 5
+        |       |               +--no:  a33 > 0.524764
+        |       |                       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.366667,0.366667,0.366667,0.033333,0,1,0.033333,0.033333,0,0,0,0,0,0,0,1,1,0,0.033333,0,0,0.033333,1,1,0.033333,1,1,0,0.033333,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.033333,0,0,0,0,0,0.033333,0.033333,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 30
+        |       |                       +--no:  a1 > 0.122467
+        |       |                               +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.928571,0.928571,0.928571,0.214286,0,1,0.214286,0.214286,0,0,0,0,0,0,0,1,1,0,0.214286,0,0,0.214286,1,1,0.214286,1,1,0,0.035714,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.035714,0.035714,0,0,0,0.035714,0,0,0,0,0,0.035714,0.035714,0,0,0,0,0,0,0,0,0,0.535714,0,0,0,0,0,0.535714,0.535714,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 28
+        |       |                               +--no:  a3 > 0.623359
+        |       |                                       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 38
+        |       |                                       +--no:  [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0.2,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0.8,0.8,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0.8,0.8,0,0.8,0.8,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0.8,0.8,0.8,0.8,0.8,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 5
+        |       +--no:  a30 > 0.556067
+        |               +--yes: [0,0,0,0.8,0.6,0.6,0.6,0.6,0.6,0.4,0.4,0,0.6,0,0,0,0,0.6,0.4,0.2,0.2,0.2,0.2,0.2,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.6,0.4,0.4,0.4,0.4,0.4,0,0,0,0,0.4,0.4,0,0,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0,0.6,0.6,0,0,0,0,0,0.6,0.4,0,0,0,0,0,0,0,0,0.6,0.8,0,0.4,0,0,0,0.8,0.6,0,0.6,0.6,0,0,0,0,0,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0.4,0.4,0.4,0.4,0.4,0.6,0.6,0,0,0,0.4,0,0.4,0.4,0.4,0.4,0.4,0.4,0,0,0,0.6,0.6,0.6,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0.4,0.4,0,0.4,0.4,0.4,0.4,0.4,0.4,0,0,0,0,0,0,0,0,0,0,0,0.4,0.4,0.4,0.4,0.6,0.6,0.4,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2]: 5
+        |               +--no:  a11 > 0.654057
+        |                       +--yes: [0,0,0,0.615385,0.615385,0.615385,0.615385,0.615385,0.615385,0.615385,0.615385,0,0.615385,0,0,0,0,0.615385,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.615385,0,0,0,0,0,0,0,0,0,0,0,0,0,0.615385,0.615385,0.615385,0.615385,0.615385,0.615385,0.615385,0.615385,0,0.615385,0.615385,0,0,0,0,0,0.615385,0,0,0,0,0,0,0,0,0,0.615385,0.615385,0,0,0,0,0,0.615385,0.615385,0,0.615385,0.692308,0,0.076923,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 13
+        |                       +--no:  a16 > 0.693739
+        |                               +--yes: [0,0,0,0.666667,0.666667,0.666667,0.666667,0.666667,0.666667,0.666667,0.666667,0,0.666667,0,0,0,0,0.666667,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.666667,0,0,0,0,0,0,0,0,0,0,0,0,0,0.666667,0.666667,0.666667,0.666667,0.666667,0.666667,0.666667,0.666667,0,0.666667,0.666667,0,0,0,0,0,0.666667,0,0,0,0,0,0,0,0,0,0.666667,0.666667,0,0,0,0,0,0.666667,0.666667,0,0.666667,0.666667,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.166667,0,0,0,0,0,0.166667,0.166667,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 6
+        |                               +--no:  a9 > 0.613069
+        |                                       +--yes: a10 > 0.473916
+        |                                       |       +--yes: a3 > 0.624739
+        |                                       |       |       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.947368,0.947368,0.947368,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 19
+        |                                       |       |       +--no:  a1 > 0.092899
+        |                                       |       |               +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.428571,0.428571,0.428571,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 7
+        |                                       |       |               +--no:  [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 26
+        |                                       |       +--no:  a30 > 0.533976
+        |                                       |               +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.111111,0,0,0,0,0,0.111111,0.111111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.777778,0.777778,0.777778,0.777778,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.777778,0.777778,0.777778,0,0.777778,0.777778,0.777778,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.777778,0.777778,0.777778,0.777778,0.777778,0.777778,0.777778,0,0,0,0,0,0,0,0,0,0,0,0,0,0.777778,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 9
+        |                                       |               +--no:  a5 > 0.578335
+        |                                       |                       +--yes: a38 > 0.557992
+        |                                       |                       |       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.666667,0,0,0,0,0,0.666667,0.666667,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 9
+        |                                       |                       |       +--no:  [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 15
+        |                                       |                       +--no:  a27 > 0.535924
+        |                                       |                               +--yes: a1 > 0.10844
+        |                                       |                               |       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.8,0.8,0.8,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 5
+        |                                       |                               |       +--no:  [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.058824,0.058824,0.058824,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 17
+        |                                       |                               +--no:  a7 > 0.50959
+        |                                       |                                       +--yes: [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.2,0.2,0.2,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 5
+        |                                       |                                       +--no:  [0,0,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 71
+        |                                       +--no:  [0,0,0,1,1,1,1,1,1,1,1,0.2,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,0.2,0.2,0.2,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,1,1,0,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0.2,0.2,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0.2,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0.6,0.6,0.6,0,0,0,0,0,0,0,0,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.6,0.6,0.6,0.2,0.6,0.6,0.6,0,0,0,0,0,0,0,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.2,0.2,0,0,0,0,0,0,0,0,0,0,0,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0]: 5
+        +--no:  a11 > 0.665566
+                +--yes: [0.6,0.5,0.3,1,1,1,1,1,1,1,1,0.3,1,0.2,0,0.2,0,1,0.3,0.3,0.2,0.3,0.2,0.2,0.2,0.2,0.3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,1,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,1,1,1,1,1,1,1,1,0,1,1,0.7,0.7,0.7,0.7,0.1,1,0.7,0.7,0,0,0,0.3,0.3,0.3,0.2,1,1,0.1,0.8,0.5,0.2,0.7,1,1,0.7,1,1,0,1,0.3,0.3,0.5,0.2,0.2,0.2,0.2,0,0,0.2,0.2,0.3,0.3,0.2,0.2,0.2,0,0,0.4,0.4,0,0.8,0.1,0.1,0.1,0.1,0.1,0.8,0.8,0,0.1,0.1,0.6,0.6,0.5,0.5,0.1,0,0.9,0.4,0.4,0.4,0.4,0.2,0.9,0.9,0.5,0,0.1,0.2,0.2,0.4,0.4,0.4,0.4,0.2,0.2,0.3,0.3,0.3,1,1,1,1,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.8,0.8,0.8,0.8,0.8,0.8,0.8,1,1,1,0.9,1,1,1,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.8,0.8,0.8,0.8,0.8,0.8,0.8,1,1,1,1,1,1,1,0.8,0.8,0.2,0.2,0.2,0.2,0.7,0.7,0.1,0.2,0.2,0.2,0.3,1,0.2,0.2,0.2,0.2,0,0.8,0.8,0.8,0.7,0.7,0.8,0.7,0.7,0.2]: 10
+                +--no:  [0.020408,0.010204,0.010204,0.94898,0.918367,0.918367,0.918367,0.918367,0.918367,0.918367,0.918367,0.040816,0.918367,0.010204,0,0.010204,0,0.918367,0.020408,0.020408,0.010204,0.010204,0.010204,0.010204,0.010204,0.010204,0.020408,0.010204,0.010204,0.020408,0.020408,0.020408,0.020408,0.020408,0.918367,0.020408,0.020408,0.010204,0.010204,0.010204,0,0,0,0,0.010204,0.010204,0,0,0.918367,0.918367,0.918367,0.918367,0.918367,0.918367,0.918367,0.918367,0,0.918367,0.918367,0.27551,0.27551,0.27551,0.193878,0,0.918367,0.204082,0.193878,0.010204,0,0,0.030612,0.030612,0.030612,0,0.918367,0.918367,0,0.204082,0.020408,0,0.193878,0.918367,0.918367,0.193878,0.918367,0.94898,0.020408,0.683673,0.020408,0.173469,0.040816,0.040816,0,0,0,0,0,0,0,0,0,0.05102,0.05102,0.05102,0.061224,0.061224,0.040816,0.040816,0.020408,0.306122,0.040816,0.040816,0.040816,0.030612,0.030612,0.295918,0.295918,0.010204,0.020408,0.020408,0.102041,0.061224,0.020408,0.020408,0.010204,0.010204,0.826531,0.05102,0.05102,0.05102,0.05102,0.010204,0.826531,0.826531,0.234694,0.010204,0,0.010204,0.091837,0.05102,0.05102,0.05102,0.05102,0.010204,0.010204,0,0,0,0.969388,0.969388,0.938776,0.938776,0.142857,0.142857,0.142857,0.142857,0.142857,0.142857,0.142857,0.142857,0.214286,0.214286,0.214286,0.214286,0.214286,0.214286,0.214286,0.938776,0.938776,0.938776,0.234694,0.938776,0.938776,0.938776,0.153061,0.153061,0.153061,0.142857,0.142857,0.142857,0.142857,0.214286,0.214286,0.214286,0.214286,0.214286,0.214286,0.214286,0.938776,0.938776,0.938776,0.938776,0.938776,0.938776,0.938776,0.214286,0.214286,0.010204,0.010204,0.010204,0.010204,0.153061,0.142857,0.010204,0.010204,0.010204,0.010204,0,0.969388,0.010204,0.010204,0.010204,0.010204,0,0.05102,0.05102,0.05102,0.05102,0.05102,0.05102,0.05102,0.05102,0.040816]: 98
+
+Pruned Model
+************
+
+a1 > 0.224359
++--yes: a2 > 0.474511
+|       +--yes: a1 > 0.494041
+|       |       +--yes: a4 > 0.976927
+|       |       |       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [11]
+|       |       |       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [23]
+|       |       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [15]
+|       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [50]
++--no:  a3 > 0.463846
+        +--yes: a1 > 0.116912
+        |       +--yes: a26 > 0.553421
+        |       |       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [12]
+        |       |       +--no:  a35 > 0.573639
+        |       |               +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [5]
+        |       |               +--no:  a33 > 0.524764
+        |       |                       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [30]
+        |       |                       +--no:  a1 > 0.122467
+        |       |                               +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [28]
+        |       |                               +--no:  a3 > 0.623359
+        |       |                                       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [38]
+        |       |                                       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [5]
+        |       +--no:  a30 > 0.556067
+        |               +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [5]
+        |               +--no:  a11 > 0.654057
+        |                       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [13]
+        |                       +--no:  a16 > 0.693739
+        |                               +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [6]
+        |                               +--no:  a9 > 0.613069
+        |                                       +--yes: a10 > 0.473916
+        |                                       |       +--yes: a3 > 0.624739
+        |                                       |       |       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [19]
+        |                                       |       |       +--no:  a1 > 0.092899
+        |                                       |       |               +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [7]
+        |                                       |       |               +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [26]
+        |                                       |       +--no:  a30 > 0.533976
+        |                                       |               +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [9]
+        |                                       |               +--no:  a5 > 0.578335
+        |                                       |                       +--yes: a38 > 0.557992
+        |                                       |                       |       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [9]
+        |                                       |                       |       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [15]
+        |                                       |                       +--no:  a27 > 0.535924
+        |                                       |                               +--yes: a1 > 0.10844
+        |                                       |                               |       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [5]
+        |                                       |                               |       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [17]
+        |                                       |                               +--no:  a7 > 0.50959
+        |                                       |                                       +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [5]
+        |                                       |                                       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [71]
+        |                                       +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [5]
+        +--no:  a11 > 0.665566
+                +--yes: GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [10]
+                +--no:  GO0045087,GO0006366,GO0006260,GO0006281,GO0006310,GO0000398,GO0006364,GO0006412,GO0043161,GO0032259,GO0006468,GO0016311,GO0016925,GO0000209,GO0005975,GO0007154,GO0007166,GO0007186,GO0035556,GO0000280,GO0007062,GO1903047,GO0016032,GO0048609,GO0007155,GO0023052,GO0007601,GO0048513,GO0007399,GO0006954,GO0042493,GO0006886,GO0034220,GO0016192,GO0000122,GO0045944,GO0008284,GO0043065,GO0008285,GO0043066,GO0048583,GO0051726,GO0043547 [98]
+
