@@ -16,18 +16,12 @@ batch_size = 100
 learning_rate = 0.001
 
 # MNIST dataset 
-train_dataset = pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/train_dataset.csv")
+train_dataset = pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/traindataset.csv")
+train_class = pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/trainclass.csv")
 
-test_dataset = pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/test_dataset.csv")
+test_dataset = pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/testdataset.csv")
+test_class = pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/testclass.csv")
 
-# Data loader
-train_loader = torch.utils.data.DataLoader(dataset=train_dataset, 
-                                           batch_size=batch_size, 
-                                           shuffle=True)
-
-test_loader = torch.utils.data.DataLoader(dataset=test_dataset, 
-                                          batch_size=batch_size, 
-                                          shuffle=False)
 
 # Fully connected neural network with one hidden layer
 class NeuralNet(nn.Module):
@@ -50,24 +44,24 @@ criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)  
 
 # Train the model
-total_step = len(train_loader)
 for epoch in range(num_epochs):
-    for i, (data, labels) in enumerate(train_loader):  
+    for data in train_dataset:  
+        for labels in train_class:
         # Move tensors to the configured device
-        data = data.to(device)
-        labels = labels.to(device)
+            data = data.to(device)
+            labels = labels.to(device)
         
         # Forward pass
-        outputs = model(data)
-        loss = criterion(outputs, labels)
+            outputs = model(data)
+            loss = criterion(outputs, labels)
         
         # Backward and optimize
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
         
-        if (i+1) % 100 == 0:
-            print ('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}' 
+            if (i+1) % 100 == 0:
+                print ('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}' 
                    .format(epoch+1, num_epochs, i+1, total_step, loss.item()))
 
 # Test the model
@@ -75,13 +69,14 @@ for epoch in range(num_epochs):
 with torch.no_grad():
     correct = 0
     total = 0
-    for data, labels in test_loader:
-        data = data.to(device)
-        labels = labels.to(device)
-        outputs = model(data)
-        _, predicted = torch.max(outputs.data, 1)
-        total += labels.size(0)
-        correct += (predicted == labels).sum().item()
+    for data in train_dataset:  
+        for labels in train_class:
+            data = data.to(device)
+            labels = labels.to(device)
+            outputs = model(data)
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
 
     print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
 
