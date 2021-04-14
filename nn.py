@@ -48,19 +48,19 @@ for epoch in range(num_epochs):
     for data in train_dataset:  
         for labels in train_class:
         # Move tensors to the configured device
-            data = data.to(device)
-            labels = labels.to(device)
+           """  data = data.to(device)
+            labels = labels.to(device) """
         
         # Forward pass
-            outputs = model(data)
-            loss = criterion(outputs, labels)
+        outputs = model(data)
+        loss = criterion(outputs, labels)
         
         # Backward and optimize
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
         
-            if (i+1) % 100 == 0:
+        if (i+1) % 100 == 0:
                 print ('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}' 
                    .format(epoch+1, num_epochs, i+1, total_step, loss.item()))
 
@@ -71,8 +71,8 @@ with torch.no_grad():
     total = 0
     for data in train_dataset:  
         for labels in train_class:
-            data = data.to(device)
-            labels = labels.to(device)
+            """ data = data.to(device)
+            labels = labels.to(device) """
             outputs = model(data)
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
