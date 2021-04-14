@@ -1,17 +1,17 @@
 ####采用neural netwrok作为基础分类器，运行前需先运行rebuilddataprocess或其他文件，得到数据及类别信息
 ####20171109
 cat('The neural network starts' ,"\n")
-label.length=length(except.root.labels)
+label.length=length(except.root.labels2)
 #label.length=15
 model.list=list()
-nn.predict.labels=matrix(0,nrow(test.select.table),ncol(test.select.table))
-nn.predict.scores=matrix(0,nrow(test.select.table),ncol(test.select.table))
-rownames(nn.predict.labels)=rownames(test.select.table)
-colnames(nn.predict.labels)=colnames(test.select.table)
-rownames(nn.predict.scores)=rownames(test.select.table)
-colnames(nn.predict.scores)=colnames(test.select.table)
-nn.results.evaluation=matrix(0,ncol(test.select.table),6)
-rownames(nn.results.evaluation)=colnames(test.select.table)
+nn.predict.labels=matrix(0,nrow(test.select.table2),ncol(test.select.table2))
+nn.predict.scores=matrix(0,nrow(test.select.table2),ncol(test.select.table2))
+rownames(nn.predict.labels)=rownames(test.select.table2)
+colnames(nn.predict.labels)=colnames(test.select.table2)
+rownames(nn.predict.scores)=rownames(test.select.table2)
+colnames(nn.predict.scores)=colnames(test.select.table2)
+nn.results.evaluation=matrix(0,ncol(test.select.table2),6)
+rownames(nn.results.evaluation)=colnames(test.select.table2)
 colnames(nn.results.evaluation)=c('Prec','Rec','Spe','F','Acc','Npos')
 batch.size=32
 epochs=100
@@ -59,13 +59,13 @@ for (i in 1:label.length)
   nn.predict.labels[,gene.index]=predict_classes(model,test.select.data,batch_size = batch.size)
   nn.predict.scores[,gene.index]=predict_proba(model,test.select.data,batch_size = batch.size)
   model.list[[i]]=model
-  test.true.label=t(t(test.select.table[,i]))
+  test.true.label=t(t(test.select.table2[,i]))
   nn.results.evaluation[i,]=F.measure.single(nn.predict.labels[,i],test.true.label)
 }
-names(model.list)=except.root.labels
+names(model.list)=except.root.labels2
 
-prob.for.genes=matrix(0,nrow(test.select.table),(ncol(test.select.table)*2))
-for(i in 1:nrow(test.select.table))
+prob.for.genes=matrix(0,nrow(test.select.table2),(ncol(test.select.table2)*2))
+for(i in 1:nrow(test.select.table2))
 {
   for(j in 1:label.length)
   {
@@ -74,17 +74,17 @@ for(i in 1:nrow(test.select.table))
   }
 }
 
-measure.result.nn=MHevaluate(nn.predict.labels,test.select.table)
-prauc.result.nn=PRAUCCalculate(nn.predict.scores,test.select.table)
-bn.result=BNcompute(prob.for.genes,except.root.labels,go.for.level,go.leaf.nodes,test.select.table)
+measure.result.nn=MHevaluate(nn.predict.labels,test.select.table2)
+prauc.result.nn=PRAUCCalculate(nn.predict.scores,test.select.table2)
+bn.result=BNcompute(prob.for.genes,except.root.labels22,go.for.level,go.leaf.nodes,test.select.table2)
 bn.first.labels=bn.result[[1]]
 bn.first.scores=bn.result[[2]]
 bn.predict.labels=bn.result[[3]]
 bn.predict.scores=bn.result[[4]]
-prauc.first.bn=PRAUCCalculate(bn.first.scores,test.select.table)
-measure.first.bn=MHevaluate(bn.first.labels,test.select.table)
-prauc.result.bn=PRAUCCalculate(bn.predict.scores,test.select.table)
-measure.result.bn=MHevaluate(bn.predict.labels,test.select.table)
+prauc.first.bn=PRAUCCalculate(bn.first.scores,test.select.table2)
+measure.first.bn=MHevaluate(bn.first.labels,test.select.table2)
+prauc.result.bn=PRAUCCalculate(bn.predict.scores,test.select.table2)
+measure.result.bn=MHevaluate(bn.predict.labels,test.select.table2)
 
 
 result.output.en=TRUE
