@@ -3,7 +3,7 @@ setwd("C:/Users/1231/Desktop/dataprocessing")
 source("dataset_select2.R")
 source("dataset_divide.R")
 ###—°‘Ò—µ¡∑ºØ 1°¢2°¢3°¢4°¢5
-datasetindex <- 1
+datasetindex <- 2
 datasetresult = DatasetSelect(dataset.index = datasetindex)
 select.table <- datasetresult[[1]]
 select.data <- datasetresult[[2]]
