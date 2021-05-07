@@ -5,7 +5,9 @@ from keras.models import Sequential
 from keras.layers import Dense,Dropout,LSTM  #在这里导入dropout
 from keras.optimizers import Adam
 from keras.callbacks import EarlyStopping
+from time import *
 
+start_time = time()
 # input x,y
 x_train = np.array(pd.read_csv("C:/Users/1231/Desktop/dataprocessing/data/204dataset1/traindataset.csv",header=None))
 x_traindata = np.reshape(x_train,(537,1,50))
@@ -58,6 +60,10 @@ model.fit(
     epochs=num_epochs,
     callbacks=EarlyStopping(patience=5,verbose=1,monitor='loss')
 )
+
+end_time = time()
+print('Running time: %s Seconds'%(end_time-start_time))
+
 model.summary()
 
 print("\nValidating ...")
@@ -78,6 +84,7 @@ print("Test accuracy:  ", accuracy)
 predict_labels = (model.predict(x_testdata) > 0.5).astype('int32')
 predict_scores = model.predict(x_testdata)
 np.savetxt('new1.csv', predict_labels, delimiter = ',')
+np.savetxt('new1prob.csv',predict_scores,delimiter=',')
 # Creates a HDF5 file 'lstm_genre_classifier.h5'
 
 model_filename = "lstm.h5py"
