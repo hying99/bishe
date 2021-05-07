@@ -1,0 +1,2 @@
+macro.hprecision , macro.hrecall , macro.hf , micro.hprecision , micro.hrecall , micro.hf
+0.948707784550005 , 0.899785780410818 , 0.908571133173609 , 0.954869816779171 , 0.842866870956759 , 0.89537932905326
