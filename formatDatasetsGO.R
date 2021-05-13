@@ -239,7 +239,7 @@ for(i in 1:length(datasets)){
     dataset <- dataset[,-ncolDataset]
 }
     datasetFinal <- cbind(dataset,dataFrameClasses)
-    write.csv(datasetFinal,"datasetFinal.csv",row.names = FALSE)
+    #write.csv(datasetFinal,"datasetFinal.csv",row.names = FALSE)
     #
      #Separate train, valid and test data
     #  datasetFinalTrain <- datasetFinal[1:indexLastTraining,]

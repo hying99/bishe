@@ -1,8 +1,8 @@
 ####python输出的new.csv####
 
 setwd("C:\\Users\\1231\\Desktop\\dataprocessing")
-new1 <- read.csv("new1.csv",header = FALSE)
-measure.resultnew=MHevaluate(new1,test.select.table2)
+new <- read.csv(paste("new",datasetindex,".csv",sep = ""),header = FALSE)
+measure.resultnew=MHevaluate(new,test.select.table2)
 setwd("C:\\Users\\1231\\Desktop\\dataprocessing\\data\\204result")
 fname <- paste("lstm",datasetindex,".txt",sep = "")
 write.table(measure.resultnew,fname,sep = ",",quote = FALSE,row.names = FALSE)
