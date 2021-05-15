@@ -5,7 +5,7 @@
 # data.path="F://R//DATA"
 # setwd(work.path)
 # source("headfile.R")
-y=matrix(data = 0, nrow = nrow(sigma), ncol = (ncol(sigma)+200)) #y矩阵 列有扩充，用于存放合成的节点
+y=matrix(data = 0, nrow = nrow(sigma), ncol = (ncol(sigma)+300)) #y矩阵 列有扩充，用于存放合成的节点
 y[,ncol(sigma)]=1   #根节点为1
 #生成withroot.nodes.to.children2,withroot.nodes.to.parents2
 with.root.labels2 <- c(except.root.labels2,"GO0008150")
@@ -52,7 +52,7 @@ for(k in 1:nrow(sigma)) #K为样本数
   p=1 #中间变量的初始化 用于合成节点的标号
   list_parentnodes=list() #用于存放待结合的父节点的下角标 
   
-  while((si[find.max,2]>=0)&&(sum(y[k,1:ncol(sigma)])<ncol(sigma))) #sigma最大值小于0或者所有数据都已标记后，退出
+  while((si[find.max,2]>=0)&&(sum(y[k,1:ncol(sigma)])<ncol(sigma))&&length(is.na(si))!=0) #sigma最大值小于0或者所有数据都已标记后，退出
   {
     
     #print(si[find.max,1])
@@ -306,18 +306,21 @@ for(k in 1:nrow(sigma)) #K为样本数
       
     }
     ######k=128,171时，仅有一个si值小于0，最后一步si被掏空得从matrix降级为含有两个num的vector
-    if (is.null(nrow(si)) == FALSE)
+    # if ((nrow(si)) != 0)
+    # {
+    if (is.null(nrow(si)) == FALSE )
     {
       find.max=which(si[,2]==max(si[,2])) #再次寻找最大值
       find.max=sort(find.max,decreasing = F) # #可能有多个值最大且相等，优先取下角标最小的
       find.max=find.max[1]  #sigma最大值的下角标
     }
-    else
+    else 
     {
       si = matrix(si,nrow = 1,ncol = 2)
       find.max = 1
     }
-  }
+    }
+  # }
   #针对每个k值 将合成节点矩阵的信息反馈回y矩阵
   ######k=71时，没有节点合成，relation只有一行
   if (nrow(relation) > 1)
@@ -330,10 +333,12 @@ for(k in 1:nrow(sigma)) #K为样本数
       }
     }
   }
+  #####被多次合成的节点后面放一个！号#####
   if (TRUE %in% duplicated(relation[,1]) )
   {
     cat(paste(k,"!"),"\n")
   }
+
 }
 y=y[,1:(ncol(sigma)-1)]
 #冲突函数

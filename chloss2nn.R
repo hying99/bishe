@@ -1,30 +1,9 @@
-####实现chloss的程序文件 其中pi直接取为svm的输出结果
-####20181218
+####lstm的ch2loss####
 
-
-# #输入带有根结点的节点列表，根结点的序号为0
-# total.index.ch = MakeIndex(select.node, include.root = TRUE)
-# nodes.to.index.ch = total.index.ch[[1]]
-# nodes.to.children.ch = total.index.ch[[2]]
-# nodes.to.ancestors.ch = total.index.ch[[3]]
-# nodes.to.parents.ch = total.index.ch[[4]]
-# nodes.to.descendants.ch = total.index.ch[[5]]
-
-
-# #### 将SVM的概率结果读入
-# file.middle = "0"
-# file.type = ""
-
-#设置mat文件存储路径
-# #setwd(paste(data.path,"//matfile",sep = ""))
-# library(R.matlab)
-# aa <- datasetindex
-# datapath <- paste("204dataset",aa,sep = "")
-# setwd(paste("C:/Users/1231/Desktop/dataprocessing/data/",datapath,sep = ""))
-# mat.file=("newdataset_decision.mat")
-# probability.data2=readMat(mat.file,fixNames = FALSE)
-# #prob.for.genes  存储时，对每个节点来说，第一位是为label1的概率，而后是为0的概率
-# prob.for.genes2=probability.data2$decision_test
+aa <- datasetindex
+fname <- paste("nn",aa,"prob.csv",sep = "")
+setwd("C:/Users/1231/Desktop/dataprocessing")
+prob.is.one=read.csv(fname,header = FALSE)
 w1=1
 w3=1
 w2=2
@@ -64,25 +43,16 @@ for(k in 1:length(go.for.level.index2))
 }
 ###变换节点函数只需要这一块注释/拿走注释
 c.matrix=matrix(1,nodes.total.num,1)
-#提取各节点为1的概率矩阵
-prob.is.one=matrix(0,nrow(prob.for.genes2),(nodes.total.num-1))
-for(i in 1:nrow(prob.for.genes2))
-{
-  for(j in 1:(nodes.total.num-1))
-  {
-    prob.is.one[i,j]=prob.for.genes2[i,(2*j-1)]
-  }
-}
 
 
 #计算pi
-p.matrix=cbind(matrix(1,nrow(prob.for.genes2),1),prob.is.one)
+p.matrix=cbind(matrix(1,nrow(prob.is.one),1),prob.is.one)
 
 
-sigma.one=matrix(0,nrow(prob.for.genes2),nodes.total.num)
-sigma.two=matrix(0,nrow(prob.for.genes2),nodes.total.num)
+sigma.one=matrix(0,nrow(prob.is.one),nodes.total.num)
+sigma.two=matrix(0,nrow(prob.is.one),nodes.total.num)
 #求解sigma(1)
-for(k in 1:nrow(prob.for.genes2))
+for(k in 1:nrow(prob.is.one))
 {
   for(i in 1:nodes.total.num)
   {
@@ -106,7 +76,7 @@ for(k in 1:nrow(prob.for.genes2))
 }
 
 #求解sigma(2)
-for(k in 1:nrow(prob.for.genes2))
+for(k in 1:nrow(prob.is.one))
 {
   for(i in 1:(nodes.total.num))
   {

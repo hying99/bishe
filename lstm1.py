@@ -18,22 +18,22 @@ start_time = time.time()
 # input x,y
 a = '1'
 x_train = np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/traindataset.csv"),header=None))
-x_traindata = np.repeat(x_train, repeats=8, axis=0)
-x_traindata = np.reshape(x_traindata,(-1,8,50))
+x_traindata = np.repeat(x_train, repeats=6, axis=0)
+x_traindata = np.reshape(x_traindata,(-1,6,50))
 y_traindata = np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/trainclass.csv"),header=None))
 #y_traindata = np.repeat(y_train, repeats=11, axis=0)
 #y_traindata = y_traindata.reshape(-1,204)
 
 x_valid = np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/validdataset.csv"),header=None))
-x_validdata = np.repeat(x_valid, repeats=8, axis=0)
-x_validdata = np.reshape(x_validdata,(-1,8,50))
+x_validdata = np.repeat(x_valid, repeats=6, axis=0)
+x_validdata = np.reshape(x_validdata,(-1,6,50))
 y_validdata = np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/validclass.csv"),header=None))
 #y_validdata = np.repeat(y_valid, repeats=11, axis=0)
 #y_validdata = y_validdata.reshape(-1,204)
 
 x_test= np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/testdataset.csv"),header=None))
-x_testdata = np.repeat(x_test, repeats=8,axis=0)
-x_testdata = np.reshape(x_testdata,(-1,8,50))
+x_testdata = np.repeat(x_test, repeats=6,axis=0)
+x_testdata = np.reshape(x_testdata,(-1,6,50))
 y_testdata= np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/testclass.csv"),header=None))
 #y_testdata = np.repeat(y_test, repeats=11, axis=0)
 #y_testdata = y_testdata.reshape(-1,204)
@@ -65,7 +65,7 @@ adam = Adam(lr=0.008)
 model.compile(loss="binary_crossentropy", optimizer=adam, metrics=["binary_accuracy"])
 print("Compiling ...")
 
-batch_size = 1  # num of training examples per minibatch
+batch_size = 1 # num of training examples per minibatch
 num_epochs = 100
 
 print("Training ...")

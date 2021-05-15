@@ -8,7 +8,14 @@ fname <- paste("lstm",datasetindex,".txt",sep = "")
 write.table(measure.resultnew,fname,sep = ",",quote = FALSE,row.names = FALSE)
 
 
+####python输出的nn.csv####
 
+setwd("C:\\Users\\1231\\Desktop\\dataprocessing")
+nn <- read.csv(paste("nn",datasetindex,".csv",sep = ""),header = FALSE)
+measure.resultnn=MHevaluate(nn,test.select.table2)
+setwd("C:\\Users\\1231\\Desktop\\dataprocessing\\data\\204result")
+fname <- paste("nn",datasetindex,".txt",sep = "")
+write.table(measure.resultnn,fname,sep = ",",quote = FALSE,row.names = FALSE)
 
 # setwd("C:\\Users\\1231\\Desktop\\dataprocessing")
 # for (i in 1:5) {

@@ -66,10 +66,11 @@ source("BN_compute.R")#用于实现基于贝叶斯网络修改概率的后期处理方法
 source("BN_compute2.R")#用于实现基于贝叶斯网络修改概率的后期处理方法,先验概率设置为0.5
 source("nn_get_dataset.R")#用于神经网络算法中生成整合父节点标签的数据集
 source("get_ancestor_dataset.R")#用于神经网络算法中生成整合祖先节点标签的数据集
+source("downtop_stepforme.R")
+source("topdown_stepforme.R")
 ####第一步 将SVM的概率结果读入
 
 #设置mat文件存储路径
-library(R.matlab)
 for (datasetindex in 1:5) {
   aa <- datasetindex
   setwd("C:/Users/1231/Desktop/dataprocessing")
@@ -90,14 +91,10 @@ for (datasetindex in 1:5) {
   valid.select.data2 <- selectdatatodivide[[2]]
   test.select.data2 <- selectdatatodivide[[3]]
   
-  datapath <- paste("204dataset",aa,sep = "")
-  setwd(paste("C:/Users/1231/Desktop/dataprocessing/data/",datapath,sep = ""))
-  mat.file=("newdataset_decision.mat")
-  # mat.file2 <- ("decision.mat")
-  probability.data2=readMat(mat.file,fixNames = FALSE)
+  setwd("C:/Users/1231/Desktop/dataprocessing")
   # probability.datahr <- readMat(mat.file2,fixNames = FALSE)
   #prob.for.genes  存储时，对每个节点来说，第一位是为label1的概率，而后是为0的概率
-  prob.for.genes2=probability.data2$decision_test
+  prob.for.genes2 <- read.csv(paste("nn",datasetindex,"prob.csv",sep = ""),header = FALSE)
   # prob.for.geneshr <- probability.datahr$decision
   
   ####第二步 进行TPR规则处理
@@ -109,8 +106,8 @@ for (datasetindex in 1:5) {
   # topdown.w.prob=TopDownStep(go.for.level.3,go.leaf.nodes.3,nodes.to.index,nodes.to.children,downtop.w.prob)
   
   
-  downtop.prob2=DownTopStep(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,prob.for.genes2)
-  topdown.prob2=TopDownStep(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,downtop.prob2)
+  downtop.prob2=DownTopStepForMe(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,prob.for.genes2)
+  topdown.prob2=TopDownStepForMe(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,downtop.prob2)
   # downtop.probhr=DownTopStep(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,prob.for.geneshr)
   # topdown.probhr=TopDownStep(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,downtop.probhr)
   #topdown.prob=NaiveDownTop(go.for.level,go.leaf.nodes,nodes.to.index,nodes.to.parents,downtop.prob)
@@ -162,8 +159,8 @@ for (datasetindex in 1:5) {
     {
       for(j in 1:length(except.root.labels2))
       {
-        predict.scores2[i,j]=topdown.prob2[i,(2*j-1)]
-        if(topdown.prob2[i,(2*j-1)]>0.5)
+        predict.scores2[i,j]=topdown.prob2[i,j]
+        if(topdown.prob2[i,j]>0.5)
         {
           predict.labels2[i,except.root.labels2[j]]=1
         }
@@ -212,8 +209,8 @@ for (datasetindex in 1:5) {
   {
     for(j in 1:length(except.root.labels2))
     {
-      predict.scoresdt[i,j]=downtop.prob2[i,(2*j-1)]
-      if(downtop.prob2[i,(2*j-1)]>0.5)
+      predict.scoresdt[i,j]=downtop.prob2[i,j]
+      if(downtop.prob2[i,j]>0.5)
       {
         predict.labelsdt[i,except.root.labels2[j]]=1
       }
@@ -226,7 +223,7 @@ for (datasetindex in 1:5) {
   prauc_resultdt=PRAUCCalculate(predict.scoresdt,test.select.table2)
   
   #####topdown结果#####
-  topdown.probtd=TopDownStep(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,prob.for.genes2)
+  topdown.probtd=TopDownStepForMe(go.for.level2,go.leaf.nodes2,nodes.to.index2,nodes.to.children2,prob.for.genes2)
   
   predict.labelstd=matrix(0,nrow(test.select.table2),ncol(test.select.table2))
   predict.scorestd=matrix(0,nrow(test.select.table2),ncol(test.select.table2))
@@ -238,8 +235,8 @@ for (datasetindex in 1:5) {
   {
     for(j in 1:length(except.root.labels2))
     {
-      predict.scorestd[i,j]=topdown.probtd[i,(2*j-1)]
-      if(topdown.probtd[i,(2*j-1)]>0.5)
+      predict.scorestd[i,j]=topdown.probtd[i,j]
+      if(topdown.probtd[i,j]>0.5)
       {
         predict.labelstd[i,except.root.labels2[j]]=1
       }
@@ -251,29 +248,29 @@ for (datasetindex in 1:5) {
   F.each.classtd=F.measure.single.over.classes(test.select.table2, predict.labelstd)
   prauc_resulttd=PRAUCCalculate(predict.scorestd,test.select.table2)
   
-  #使用newpathrule方法处理的结果
-  final.result2=NewPathrule(prob.for.genes2,except.root.labels2,go.for.level2,go.leaf.nodes2,test.select.table2)
-  final.predict.labels2=final.result2[[1]]
-  final.predict.scores2=final.result2[[2]]
-  aa2=Pr_Auc_Calculate(final.predict.scores2,test.select.table2,plot.en=TRUE)
-  prauc_result.final2=PRAUCCalculate(final.predict.scores2,test.select.table2)
-  measure.result.final2=MHevaluate(final.predict.labels2,test.select.table2)
-  
-  
-  
-  #使用BN方法处理的结果
-  bn.result2=BNcompute(prob.for.genes2,except.root.labels2,go.for.level2,go.leaf.nodes2,test.select.table2)
-  bn.predict.labels2=bn.result2[[3]]
-  bn.predict.scores2=bn.result2[[4]]
-  prauc_result.bn=PRAUCCalculate(bn.predict.scores2,test.select.table2)
-  measure.result.bn=MHevaluate(bn.predict.labels2,test.select.table2)
-  
-  #使用BN2方法处理的结果
-  bn2.result2=BNcompute2(prob.for.genes2,except.root.labels2,go.for.level2,go.leaf.nodes2,test.select.table2)
-  bn2.predict.labels2=bn2.result2[[1]]
-  bn2.predict.scores2=bn2.result2[[2]]
-  prauc_result.bn2=PRAUCCalculate(bn2.predict.scores2,test.select.table2)
-  measure.result.bn2=MHevaluate(bn2.predict.labels2,test.select.table2)
+  # #使用newpathrule方法处理的结果
+  # final.result2=NewPathrule(prob.for.genes2,except.root.labels2,go.for.level2,go.leaf.nodes2,test.select.table2)
+  # final.predict.labels2=final.result2[[1]]
+  # final.predict.scores2=final.result2[[2]]
+  # aa2=Pr_Auc_Calculate(final.predict.scores2,test.select.table2,plot.en=TRUE)
+  # prauc_result.final2=PRAUCCalculate(final.predict.scores2,test.select.table2)
+  # measure.result.final2=MHevaluate(final.predict.labels2,test.select.table2)
+  # 
+  # 
+  # 
+  # #使用BN方法处理的结果
+  # bn.result2=BNcompute(prob.for.genes2,except.root.labels2,go.for.level2,go.leaf.nodes2,test.select.table2)
+  # bn.predict.labels2=bn.result2[[3]]
+  # bn.predict.scores2=bn.result2[[4]]
+  # prauc_result.bn=PRAUCCalculate(bn.predict.scores2,test.select.table2)
+  # measure.result.bn=MHevaluate(bn.predict.labels2,test.select.table2)
+  # 
+  # #使用BN2方法处理的结果
+  # bn2.result2=BNcompute2(prob.for.genes2,except.root.labels2,go.for.level2,go.leaf.nodes2,test.select.table2)
+  # bn2.predict.labels2=bn2.result2[[1]]
+  # bn2.predict.scores2=bn2.result2[[2]]
+  # prauc_result.bn2=PRAUCCalculate(bn2.predict.scores2,test.select.table2)
+  # measure.result.bn2=MHevaluate(bn2.predict.labels2,test.select.table2)
   
   
   # if(test.en==TRUE)#此部分代码用于实现权值TPR算法
@@ -310,11 +307,12 @@ for (datasetindex in 1:5) {
   setwd(result.savepath)
   today <-Sys.Date()
   run.num=1
-  output.fname=paste("newdataset_result",aa,".txt",sep = "")
-  fname=paste("TPR",aa,".txt",sep = "")
+  pre_name <- "nn"
+  output.fname=paste(pre_name,"_result",aa,".txt",sep = "")
+  fname=paste(pre_name,"TPR",aa,".txt",sep = "")
   # fhrname = paste("HR-SVM",aa,".txt",sep = "")
-  f1name = paste("topdown",aa,".txt",sep = "")
-  f2name = paste("downtop",aa,".txt",sep = "")
+  f1name = paste(pre_name,"topdown",aa,".txt",sep = "")
+  f2name = paste(pre_name,"downtop",aa,".txt",sep = "")
   if(result.output.en==TRUE)
   {
     
