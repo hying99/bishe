@@ -26,9 +26,9 @@ probability.data2=readMat(mat.file,fixNames = FALSE)
 #prob.for.genes  存储时，对每个节点来说，第一位是为label1的概率，而后是为0的概率
 prob.for.genes2=probability.data2$decision_test
 w1=1
-w3=1
+w3=2
 w2=2
-w4=2
+w4=1
 c.matrix=matrix(0,nodes.total.num,1)
 c.matrix[1,1]=1
 
@@ -63,7 +63,7 @@ for(k in 1:length(go.for.level.index2))
     }
   }
 ###变换节点函数只需要这一块注释/拿走注释
-c.matrix=matrix(1,nodes.total.num,1)
+#c.matrix=matrix(1,nodes.total.num,1)
 #提取各节点为1的概率矩阵
 prob.is.one=matrix(0,nrow(prob.for.genes2),(nodes.total.num-1))
 for(i in 1:nrow(prob.for.genes2))

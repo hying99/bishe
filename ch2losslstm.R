@@ -1,13 +1,13 @@
 ####lstm的ch2loss####
 
 aa <- datasetindex
-fname <- paste("new",aa,"prob.csv",sep = "")
+fname <- paste("lstm",aa,"prob.csv",sep = "")
 setwd("C:/Users/1231/Desktop/dataprocessing")
 prob.is.one=read.csv(fname,header = FALSE)
 w1=1
-w3=1
 w2=2
-w4=2
+w3=2
+w4=1
 c.matrix=matrix(0,nodes.total.num,1)
 c.matrix[1,1]=1
 
@@ -36,13 +36,13 @@ for(k in 1:length(go.for.level.index2))
         #current.c=current.c+c.matrix[parentnode.index2,1]/sibling.num2
         current.c=current.c+c.matrix[(parentnode.index2+1),1]/sibling.num2
       }
-      # c.matrix[((go.for.level.index2[[k]][i])+1),1] = current.c
+       #c.matrix[((go.for.level.index2[[k]][i])+1),1] = current.c
       c.matrix[((go.for.level.index2[[k]][i])+1),1]=current.c/parentnode.num2
     }
   }
 }
 ###变换节点函数只需要这一块注释/拿走注释
-c.matrix=matrix(1,nodes.total.num,1)
+#c.matrix=matrix(1,nodes.total.num,1)
 
 
 #计算pi

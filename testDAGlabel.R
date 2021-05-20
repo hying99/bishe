@@ -24,7 +24,7 @@ for (i in 1:length(firstlevelnodes2)) {
 }
 withroot.nodes.to.parents2[[with.root.labels2[length(with.root.labels2)]]] <- NA
 
-for(k in 4) #K为样本数
+for(k in 1:nrow(sigma)) #K为样本数
 {
   cat(k,"\n")
   #每次循环时，初始化
@@ -57,66 +57,74 @@ for(k in 4) #K为样本数
     
     #print(si[find.max,1])
     num_parentnodes=length(nodes_to_parents[[si[find.max,1]]]) #sigma最大的节点的父节点个数
-    num_childnodes=length(nodes_to_children[[si[find.max,1]]])
+    num_childnodes=length(nodes_to_children[[si[find.max,1]]])  #sigma最大的节点的子节点个数
     labeled_countpar=0    #已标记父节点个数
-    labeled_countchi=0
+    labeled_countchi=0    #已标记子节点个数
+    #父节点被标记为1，已标记的父节点个数+1；父节点被标记为0，已标记的父节点个数+1，子节点立刻被标记为0，并从si矩阵中移除
     for(i in 1:num_parentnodes)
     {
-      
+
       if(y[k,nodes_to_parents[[si[find.max,1]]][i]]==1)
       {
         labeled_countpar=labeled_countpar+1
+        si=si[-which(si[,1]==total_si[nodes_to_parents[[si[find.max,1]]][i],1]),]
       }
       if(y[k,nodes_to_parents[[si[find.max,1]]][i]]==0)
       {
-        labeled_countpar=labeled_countpar+1
         y[k,si[find.max,1]] =0
+        si=si[-find.max,]       #移出si矩阵子节点那行
+        si=si[-which(si[,1]==total_si[nodes_to_parents[[si[find.max,1]]][i],1]),]#移出si矩阵父节点那行
       }
     }
+    #如果有子节点
+    #子节点被标注为0，被标记的子节点个数+1，移除子节点；子节点被标记为1，父节点立刻被标记为1
       if(num_childnodes!=0)
       {
-        for (j in 1:num_childnodes) 
+        for (j in 1:num_childnodes)
         {
         if(y[k,nodes_to_children[[si[find.max,1]]][j]]==0)
         {
         labeled_countchi=labeled_countchi+1
+        si=si[-which(si[,1]==total_si[nodes_to_children[[si[find.max,1]]][i],1]),]
         }
         if(y[k,nodes_to_children[[si[find.max,1]]][j]]==1)
         {
-        labeled_countchi=labeled_countchi+1
         y[k,si[find.max,1]]=1
+        si=si[-find.max,]
+        si=si[-which(si[,1]==total_si[nodes_to_children[[si[find.max,1]]][i],1]),]
         }
         }
         }
-    if(labeled_countpar== num_parentnodes)  #所有父节点已经标记
+    if(labeled_countpar== num_parentnodes)  #所有父节点已经标记1
     {
       y[k,si[find.max,1]]=1   #该节点标记为1
       si=si[-find.max,]       #移出si矩阵
-      
-      
+
+
     }
-    if(labeled_countchi== num_childnodes)
+    if(labeled_countchi== num_childnodes) #所有子节点都被标记为0
     {
-      y[k,si[find.max,1]]=0   #该节点标记为1
+      y[k,si[find.max,1]]=0   #该节点标记为0
       si=si[-find.max,]       #移出si矩阵
-    }
-    else   #找到sigma小于0的父节点，一个或一个以上
+    }else   #找到sigma小于0的父节点，一个或一个以上
     {
       #计算父节点中sigma值小于0的个数，当父节点sigma值小于0个数大于等于1的情况，揪出全部sigma小于0的父节点进行操作
       num_combinenodes=0 #待合成父节点的个数
       list_parentnodes=list() #存放父节点的下角标
+      allparentsi <- 0
       for(m in 1:num_parentnodes)
       {
         row_parentnode=which(total_si[,1]==nodes_to_parents[[si[find.max,1]]][m])
-        allparentsi <- 0
+       
         if(total_si[row_parentnode,2] < 0)
         {
           
           allparentsi <- allparentsi + total_si[row_parentnode,2]
         }
       }
-      for(m in 1:num_parentnodes)
+      for(q in 1:num_parentnodes)
       {
+        row_parentnode=which(total_si[,1]==nodes_to_parents[[si[find.max,1]]][q])
         if((total_si[row_parentnode,2]) < 0 &&(abs(allparentsi) >2))
         {
           num_combinenodes=num_combinenodes+1
@@ -126,9 +134,21 @@ for(k in 4) #K为样本数
         if((total_si[row_parentnode,2]) < 0 &&(abs(allparentsi) <2))#和为-2~2分开父子节点1，0
         {
           y[k,total_si[row_parentnode,1]] = 1
-          si <- si[-which(si[,1]==total_si[row_parentnode,1]),] #移除标记为正的节点
+          for (u in 1:length(nodes_to_parents[[row_parentnode]])) {
+            y[k,total_si[nodes_to_parents[[row_parentnode]][u],1]] = 1
+            # si <- si[-which(si[,1]==total_si[row_parentnode,1]),] #移除标记为正的节点
+            # si <- si[-which(si[,1]==total_si[nodes_to_parents[[row_parentnode]][u],1]),]
+          }
+          
           y[k,si[find.max,1]] = 0
-          si <- si[-which(si[,1]==nodes_to_children[[si[find.max,1]]]),]
+          for (v in 1:length(nodes_to_children[[row_parentnode]])) {
+            y[k,total_si[nodes_to_children[[row_parentnode]][v],1]] = 0
+            # si <- si[-find.max,]
+            # si <- si[-which(si[,1]==nodes_to_children[[si[find.max,1]]][v]),]#移除人工标记的节点导致自动被标记的节点
+          }
+          
+          
+          
         }
         }
       

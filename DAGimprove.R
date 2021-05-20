@@ -64,9 +64,9 @@ for (i in 1:nrow(sigma2))
 
 
 measure.result.imp=MHevaluate(label2,test.select.table2)
-setwd("C:/Users/1231/Desktop/dataprocessing/data/204result")
-file.name <- paste("DAGimprove",datasetindex,".txt",sep = "")
-write.table(measure.result.imp,file = file.name,row.names = FALSE,col.names = FALSE,sep = ",")
+# setwd("C:/Users/1231/Desktop/dataprocessing/data/204result")
+# file.name <- paste("DAGimprove",datasetindex,".txt",sep = "")
+# write.table(measure.result.imp,file = file.name,row.names = FALSE,col.names = FALSE,sep = ",")
 ####检测符不符合层级约束####
 prob.labels2 <- data.frame()
 for (i in 1:nrow(prob.is.one)) {

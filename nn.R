@@ -100,7 +100,7 @@ result.savepath=paste(data.path,"//204result",sep = "")
 setwd(result.savepath)
 today <-Sys.Date()
 
-output.fname=paste("nn_result",datasetindex,".txt",sep = "")
+output.fname=paste("pernodenn",datasetindex,".txt",sep = "")
 if(result.output.en==TRUE)
 {
 
