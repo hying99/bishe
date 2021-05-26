@@ -5,8 +5,8 @@ fname <- paste("lstm",aa,"prob.csv",sep = "")
 setwd("C:/Users/1231/Desktop/dataprocessing")
 prob.is.one=read.csv(fname,header = FALSE)
 w1=1
-w2=2
-w3=2
+w2=1
+w3=1
 w4=1
 c.matrix=matrix(0,nodes.total.num,1)
 c.matrix[1,1]=1

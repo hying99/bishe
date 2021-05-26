@@ -7,12 +7,15 @@ from keras.optimizers import Adam,SGD,RMSprop
 from keras.callbacks import EarlyStopping
 import time
 from numpy.random import seed
+from tensorflow.python.keras.callbacks import History
 from tensorflow.python.keras.layers.recurrent_v2 import GRU
 seed(1)
 import tensorflow as tf
 tf.random.set_seed(4)
 physical_devices = tf.config.list_physical_devices('GPU') 
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
+import matplotlib
+from matplotlib import pyplot as plt
 # lstm自动学习
 start_time = time.time()
 # input x,y
@@ -69,16 +72,29 @@ batch_size = 32  # num of training examples per minibatch
 num_epochs = 100
 
 print("Training ...")
-model.fit(
+History = model.fit(
     x_traindata,
     y_traindata,
     batch_size=batch_size,
     shuffle=False,
-    validation_data=(x_validdata,y_validdata),
+    validation_data=(x_testdata,y_testdata),
     epochs=num_epochs,
     callbacks=EarlyStopping(patience=5,verbose=1,monitor='val_loss',mode='auto')
 )
+N = num_epochs # Number of epochs
+plt.style.use("ggplot")
 
+plt.figure()
+plt.plot(History.history["loss"], label="train_loss")
+plt.plot(History.history["val_loss"], label="test_loss")
+plt.plot(History.history["binary_accuracy"], label="train_acc")
+plt.plot(History.history["val_binary_accuracy"], label="test_acc")
+
+plt.title("Training&Testing Loss and Accuracy on Dataset"+a)
+plt.xlabel("Epoch #")
+plt.ylabel("Loss/Accuracy")
+plt.legend(loc="lower left")
+plt.savefig("plot"+a+".png")
 end_time = time.time()
 print('Running time: %s Seconds'%(end_time-start_time))
 
@@ -100,7 +116,7 @@ score, accuracy = model.evaluate(
 )
 print("Test loss:  ", score)
 print("Test accuracy:  ", accuracy)
-
+'''
 predict_labels = (model.predict(x_testdata) > 0.5).astype('int32')
 predict_scores = model.predict(x_testdata)
 np.savetxt(('new'+a+'.csv'), predict_labels, delimiter = ',')
@@ -110,5 +126,5 @@ np.savetxt(('new'+a+'prob.csv'),predict_scores,delimiter=',')
 model_filename = "lstm.h5py"
 print("\nSaving model: " + model_filename)
 model.save(model_filename) 
-
+'''
 #print(predict_labels.shape())

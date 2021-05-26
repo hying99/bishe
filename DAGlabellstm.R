@@ -346,7 +346,7 @@ violate.list.final=ViolateDetectlabel(go.for.level2,go.leaf.nodes2,nodes.to.inde
 measure.result.fin=MHevaluate(y,test.select.table2)
 setwd("C:/Users/1231/Desktop/dataprocessing/data/204result")
 ###根据数据集不同，这里也要改
-file.name <- paste("DAGlabellstm",datasetindex,".txt",sep = "")
+file.name <- paste("DAGlabellstm",datasetindex,"_",w1,w2,w3,w4,".txt",sep = "")
 write.table(measure.result.fin,file = file.name,row.names = FALSE,col.names = FALSE,sep = ",")
 
 
