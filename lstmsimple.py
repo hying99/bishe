@@ -11,15 +11,16 @@ from tensorflow.python.keras.callbacks import History
 from tensorflow.python.keras.layers.recurrent_v2 import GRU
 seed(1)
 import tensorflow as tf
-tf.random.set_seed(4)
+tf.random.set_seed(2)
 physical_devices = tf.config.list_physical_devices('GPU') 
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
 import matplotlib
 from matplotlib import pyplot as plt
 # lstm自动学习
 start_time = time.time()
 # input x,y
-a = '5'
+a = '1'
 x_train = np.array(pd.read_csv(("C:/Users/1231/Desktop/dataprocessing/data/204dataset"+a+"/traindataset.csv"),header=None))
 #x_traindata = np.repeat(x_train, repeats=11, axis=0)
 x_traindata = np.reshape(x_train,(-1,1,50))

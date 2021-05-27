@@ -8,15 +8,17 @@ from keras.callbacks import EarlyStopping
 import time
 from numpy.random import seed
 from keras.wrappers.scikit_learn import KerasClassifier
+import sklearn
 from sklearn.metrics import make_scorer,f1_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import KFold
-from sklearn.preprocessing import LabelEncode
+
 seed(1)
 import tensorflow as tf
 tf.random.set_seed(4)
 physical_devices = tf.config.list_physical_devices('GPU') 
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
 import matplotlib
 from matplotlib import pyplot as plt
 # lstm自动学习
@@ -58,7 +60,7 @@ for num in level:
     print("Compiling ...") """
 # bulid lstm model
 print("Build LSTM RNN model ...")
-def create_model(neurons=200,lr=0.005):
+def create_model(neurons=200,learning_rate=0.005):
     model = Sequential()
     model.add(LSTM(units=neurons,return_sequences=False))
     #model.add(Dropout(0.1))
@@ -68,17 +70,17 @@ def create_model(neurons=200,lr=0.005):
     # Adam   : lr=0.0001, beta_1=0.9,  beta_2=0.999, epsilon=1e-8, decay=0.
     # RMSprop: lr=0.001, rho=0.9,                   epsilon=1e-8, decay=0.
     # SGD    : lr=0.01,  momentum=0.,                             decay=0.
-    adam = Adam(lr=lr)
+    adam = Adam(lr=learning_rate)
     model.compile(loss="binary_crossentropy", optimizer=adam, metrics=["binary_accuracy"])
     return model
 model = KerasClassifier(build_fn=create_model,epochs=100,batch_size=32)
 grid = {}
-grid['neurons']=range(200,1200,100)
-grid['lr']=[0.005,0.008,0.01,0.02,0.05,0.1]
-kfold = KFold(n_splits=5,shuffle=True)
+grid['neurons']=[500,600,800,1000,1200]
+grid['learning_rate']=[0.008,0.01,0.5,0.1]
+#kfold = KFold(n_splits=5,shuffle=True)
 scorer = make_scorer(f1_score,average='macro')  #用不了不知道为什么.......
 # acc_scorer = make_scorer(accuracy_score)
-grid_search = GridSearchCV(estimator=model,param_grid=grid,scoring=scorer,cv=kfold)
+grid_search = GridSearchCV(estimator=model,param_grid=grid,scoring=scorer)
 results = grid_search.fit(x_testdata,y_testdata)
 
 print('Best:%f using %s'%(results.best_score_,results.best_params_))
