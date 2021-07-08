@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClusAL">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClusAL</output-path>
+    <root id="archive" name="ClusAL.jar">
+      <element id="module-output" name="ClusAL.src" />
+    </root>
+  </artifact>
+</component>

@@ -9,7 +9,7 @@ import time
 from numpy.random import seed
 from keras.wrappers.scikit_learn import KerasClassifier
 import sklearn
-from sklearn.metrics import make_scorer,f1_score
+from sklearn.metrics import make_scorer,f1_score,classification_report
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import KFold
 
@@ -74,19 +74,22 @@ def create_model(neurons=200,learning_rate=0.005):
     model.compile(loss="binary_crossentropy", optimizer=adam, metrics=["binary_accuracy"])
     return model
 model = KerasClassifier(build_fn=create_model,epochs=100,batch_size=32)
+
 grid = {}
-grid['neurons']=[500,600,800,1000,1200]
-grid['learning_rate']=[0.008,0.01,0.5,0.1]
-#kfold = KFold(n_splits=5,shuffle=True)
+#grid['neurons']=[500,600,800,1000,1200]
+grid['neurons']=[500,600]
+#grid['learning_rate']=[0.008,0.01,0.5,0.1]
+grid['learning_rate']=[0.008,0.01]
+kfold = KFold(n_splits=5,shuffle=True)
 scorer = make_scorer(f1_score,average='macro')  #用不了不知道为什么.......
 # acc_scorer = make_scorer(accuracy_score)
-grid_search = GridSearchCV(estimator=model,param_grid=grid,scoring=scorer)
-results = grid_search.fit(x_testdata,y_testdata)
+grid_search = GridSearchCV(estimator=model,param_grid=grid,scoring=scorer,cv=kfold)
+grid_search.fit(x_traindata,y_traindata)
+results = grid_search.score(x_testdata,y_testdata)
 
-print('Best:%f using %s'%(results.best_score_,results.best_params_))
+#print('Best:%f using %s'%(results.best_score_,results.best_params_))
+print('Best: using %s'%(results.best_params_))
 
-means = results.cv_results_['mean_test_score']
-stds = results.cv_results_['std_test_score']
 params = results.cv_results_['params']
-for mean,std,param in zip(means,stds,params):
-    print('%f(+-%f) with: %r'%(mean,std,param))
+for param in params:
+    print('%f(+-%f) with: %r'%(param))

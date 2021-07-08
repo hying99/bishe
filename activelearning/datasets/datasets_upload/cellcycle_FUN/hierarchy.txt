@@ -1,0 +1,3 @@
+Hier #nodes: 1
+Hier classes by level: [1, 1]
+1: 13

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_252-8u252-b09-1~16.04-b09 (Private Build)
+Class-Path: lib/commons-math-1.0.jar lib/jgap.jar lib/weka.jar
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: clus.Clus
+

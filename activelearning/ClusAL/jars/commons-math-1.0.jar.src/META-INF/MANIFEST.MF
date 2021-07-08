@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.5.3 
+Created-By: Apache Maven
+Built-By: phil
+Package: org.apache.commons.math
+Build-Jdk: 1.4.2_06
+Extension-Name: commons-math
+Specification-Title: Jakarta Commons Math
+Specification-Vendor: The Apache Software Foundation
+Implementation-Title: org.apache.commons.math
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Version: 1.0
+

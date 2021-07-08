@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ClusAL">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Clus-AL/ClusAL.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
