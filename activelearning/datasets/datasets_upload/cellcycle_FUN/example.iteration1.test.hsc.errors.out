@@ -12,17 +12,17 @@ Induction Time: 0 sec
 Pruning Time: 0 sec
 Model information
      Default: Nodes = 1 (Leaves: 1)
-     Original: Combined model with 499 trees with 80898 nodes
+     Original: Combined model with 499 trees with 80764 nodes
 
 Amount of Labels Answered at this iteration: 10
 Amount of Labels Answered up to this iteration: 10
-Amount of Negative Labels Answered at this iteration: 373
-Amount of Positive Labels Queried at this iteration: 5
-Amount of Positive Labels Queried up to this iteration: 5
-Amount of Negative Labels Queried at this iteration: 5
-Amount of Negative Labels Queried up to this iteration: 5
-Amount of Labels Queried at this iteration: 378
-Amount of Labels Queried up to this iteration: 378
+Amount of Negative Labels Answered at this iteration: 642
+Amount of Positive Labels Queried at this iteration: 2
+Amount of Positive Labels Queried up to this iteration: 2
+Amount of Negative Labels Queried at this iteration: 8
+Amount of Negative Labels Queried up to this iteration: 8
+Amount of Labels Queried at this iteration: 644
+Amount of Labels Queried up to this iteration: 644
 
 Budget Available at this Iteration: 10.0
 Budget Spent on this Iteration: 10.0
@@ -37,7 +37,7 @@ Hierarchical error measures
       Average AUROC:            0.5
       Average AUPRC:            0.02026293378752389
       Average AUPRC (weighted): 0.10232414220322635
-      Pooled AUPRC:             0.14949442021816944
+      Pooled AUPRC:             0.14923772781054384
       0: 01, AUROC: 0.5, AUPRC: 0.35363, Freq: 0.35363
       1: 01/01, AUROC: 0.5, AUPRC: 0.063232, Freq: 0.063232
       2: 01/01/03, AUROC: 0.5, AUPRC: 0.014832, Freq: 0.014832

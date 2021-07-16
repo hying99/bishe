@@ -4,7 +4,8 @@ Author: Rami Aly, E-mail: `rami.aly@outlook.com`
 
 from keras.callbacks import ModelCheckpoint
 import operator
-from data_helpers import load_data, extract_hierarchies, remove_genres_not_level
+from data_helpers import load_data, extract_hierarchies, remove_genres_not_level, adjust_hierarchy, \
+    adjust_hierarchy_threshold
 import numpy as np
 import string
 import math
@@ -37,7 +38,10 @@ args = None
 #the dataset and vocabulary is stored here
 data = {}
 
-
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+sess = tf.Session(config=config)
+K.set_session(sess)
 def mean_confidence_interval(data, confidence=0.95):
     """
     Calculates mean confidence interval
@@ -54,7 +58,7 @@ def save_scores(results, level):
     Stores the scores into a file, one for each level in hierarchy
     """
     filename = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-    '../checkpoints','results_' +  args.filename + "_level_"+ str(level) +'.txt')
+    'results_' +  args.filename + "_level_"+ str(level) +'.txt')
     out_file = open(filename, 'w')
     metrices = ['f1', 'recall', 'precision', 'accuracy']
     out_file.write("Results on level" + str(level) + '\n')
@@ -397,4 +401,4 @@ def init_data(dev, outlier = False):
     data['vocabulary_inv'] = vocabulary_inv
 
 if __name__ == '__main__':
-    main()
+        main()

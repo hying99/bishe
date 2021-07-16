@@ -6,11 +6,14 @@ Author: Rami Aly, E-mail: `rami.aly@outlook.com`
 
 from sklearn.feature_extraction.stop_words import ENGLISH_STOP_WORDS as stopwords
 import string
+
+from main import train
+
 punctuations = string.punctuation
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier, RandomTreesEmbedding, BaggingClassifier
 from sklearn.svm import LinearSVC,SVC
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import f1_score, accuracy_score, recall_score, precision_score
 from sklearn.base import TransformerMixin

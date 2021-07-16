@@ -230,7 +230,7 @@ def pre_embedding(embedding_dim, seq_length, use_static, voc, lang, dev,  input 
         pickle.dump(embedding_matrix, embed_saved_file)
     trainable = not use_static
     if input != None:
-        embedding =  Embedding(input_dim = len(voc) + 1,
+        embedding = Embedding(input_dim = len(voc) + 1,
                                 output_dim = embedding_dim,
                                 weights=[embedding_matrix],
                                 input_length=seq_length,

@@ -1,0 +1,144 @@
+Iteration: 3
+**************
+
+Query Building Time on this iteration: 0 seconds
+Total Query Building Time: 0 seconds
+
+Statistics
+----------
+
+FTValue (FTest): 1.0
+Induction Time: 0 sec
+Pruning Time: 0 sec
+Model information
+     Default: Nodes = 1 (Leaves: 1)
+     Original: Combined model with 102 trees with 6048 nodes
+
+Amount of Labels Answered at this iteration: 10
+Amount of Labels Answered up to this iteration: 30
+Amount of Negative Labels Answered at this iteration: 161
+Amount of Positive Labels Queried at this iteration: 2
+Amount of Positive Labels Queried up to this iteration: 7
+Amount of Negative Labels Queried at this iteration: 8
+Amount of Negative Labels Queried up to this iteration: 23
+Amount of Labels Queried at this iteration: 163
+Amount of Labels Queried up to this iteration: 502
+
+Budget Available at this Iteration: 10.0
+Budget Spent on this Iteration: 10.0
+Budget Spent up to this Iteration: 30.0
+
+Testing error
+-------------
+
+Number of examples: 3000
+Hierarchical error measures
+   Original: 
+      Average AUROC:            0.5
+      Average AUPRC:            0.03183006535947711
+      Average AUPRC (weighted): 0.16406303901437375
+      Pooled AUPRC:             0.24161124195160144
+      0: CCAT, AUROC: 0.5, AUPRC: 0.475667, Freq: 0.475667
+      1: CCAT/C11, AUROC: 0.5, AUPRC: 0.035667, Freq: 0.035667
+      2: CCAT/C12, AUROC: 0.5, AUPRC: 0.017333, Freq: 0.017333
+      3: CCAT/C13, AUROC: 0.5, AUPRC: 0.045333, Freq: 0.045333
+      4: CCAT/C14, AUROC: 0.5, AUPRC: 0.010333, Freq: 0.010333
+      5: CCAT/C15, AUROC: 0.5, AUPRC: 0.182, Freq: 0.182
+      6: CCAT/C15/C151, AUROC: 0.5, AUPRC: 0.097, Freq: 0.097
+      7: CCAT/C15/C151/C1511, AUROC: 0.5, AUPRC: 0.027333, Freq: 0.027333
+      8: CCAT/C15/C152, AUROC: 0.5, AUPRC: 0.089667, Freq: 0.089667
+      9: CCAT/C16, AUROC: 0.5, AUPRC: 0.003667, Freq: 0.003667
+      10: CCAT/C17, AUROC: 0.5, AUPRC: 0.051667, Freq: 0.051667
+      11: CCAT/C17/C171, AUROC: 0.5, AUPRC: 0.024, Freq: 0.024
+      12: CCAT/C17/C172, AUROC: 0.5, AUPRC: 0.013, Freq: 0.013
+      13: CCAT/C17/C173, AUROC: 0.5, AUPRC: 0.002667, Freq: 0.002667
+      14: CCAT/C17/C174, AUROC: 0.5, AUPRC: 0.006333, Freq: 0.006333
+      15: CCAT/C18, AUROC: 0.5, AUPRC: 0.066333, Freq: 0.066333
+      16: CCAT/C18/C181, AUROC: 0.5, AUPRC: 0.056667, Freq: 0.056667
+      17: CCAT/C18/C182, AUROC: 0.5, AUPRC: 0.003667, Freq: 0.003667
+      18: CCAT/C18/C183, AUROC: 0.5, AUPRC: 0.010333, Freq: 0.010333
+      19: CCAT/C21, AUROC: 0.5, AUPRC: 0.032, Freq: 0.032
+      20: CCAT/C22, AUROC: 0.5, AUPRC: 0.008333, Freq: 0.008333
+      21: CCAT/C23, AUROC: 0.5, AUPRC: 0.003, Freq: 0.003
+      22: CCAT/C24, AUROC: 0.5, AUPRC: 0.04, Freq: 0.04
+      23: CCAT/C31, AUROC: 0.5, AUPRC: 0.049667, Freq: 0.049667
+      24: CCAT/C31/C311, AUROC: 0.5, AUPRC: 0.005333, Freq: 0.005333
+      25: CCAT/C31/C312, AUROC: 0.5, AUPRC: 0.009, Freq: 0.009
+      26: CCAT/C31/C313, AUROC: 0.5, AUPRC: 0.001333, Freq: 0.001333
+      27: CCAT/C32, AUROC: 0.5, AUPRC: 0.001667, Freq: 0.001667
+      28: CCAT/C33, AUROC: 0.5, AUPRC: 0.019333, Freq: 0.019333
+      29: CCAT/C33/C331, AUROC: 0.5, AUPRC: 0.002, Freq: 0.002
+      30: CCAT/C34, AUROC: 0.5, AUPRC: 0.004667, Freq: 0.004667
+      31: CCAT/C41, AUROC: 0.5, AUPRC: 0.016333, Freq: 0.016333
+      32: CCAT/C41/C411, AUROC: 0.5, AUPRC: 0.014667, Freq: 0.014667
+      33: CCAT/C42, AUROC: 0.5, AUPRC: 0.019333, Freq: 0.019333
+      34: ECAT, AUROC: 0.5, AUPRC: 0.151333, Freq: 0.151333
+      35: ECAT/E11, AUROC: 0.5, AUPRC: 0.007333, Freq: 0.007333
+      36: ECAT/E12, AUROC: 0.5, AUPRC: 0.030667, Freq: 0.030667
+      37: ECAT/E12/E121, AUROC: 0.5, AUPRC: 0.003333, Freq: 0.003333
+      38: ECAT/E13, AUROC: 0.5, AUPRC: 0.008, Freq: 0.008
+      39: ECAT/E13/E131, AUROC: 0.5, AUPRC: 0.007333, Freq: 0.007333
+      40: ECAT/E13/E132, AUROC: 0.5, AUPRC: 0.001, Freq: 0.001
+      41: ECAT/E14, AUROC: 0.5, AUPRC: 0.002667, Freq: 0.002667
+      42: ECAT/E14/E141, AUROC: 0.5, AUPRC: 0.000667, Freq: 0.000667
+      43: ECAT/E14/E142, AUROC: 0.5, AUPRC: 0.000667, Freq: 0.000667
+      44: ECAT/E14/E143, AUROC: 0.5, AUPRC: 0.001, Freq: 0.001
+      45: ECAT/E21, AUROC: 0.5, AUPRC: 0.051333, Freq: 0.051333
+      46: ECAT/E21/E211, AUROC: 0.5, AUPRC: 0.021, Freq: 0.021
+      47: ECAT/E21/E212, AUROC: 0.5, AUPRC: 0.030667, Freq: 0.030667
+      48: ECAT/E31, AUROC: 0.5, AUPRC: 0.004333, Freq: 0.004333
+      49: ECAT/E31/E311, AUROC: 0.5, AUPRC: 0.003, Freq: 0.003
+      50: ECAT/E31/E312, AUROC: 0.5, AUPRC: 0.000333, Freq: 0.000333
+      51: ECAT/E31/E313, AUROC: 0.5, AUPRC: 0.000333, Freq: 0.000333
+      52: ECAT/E41, AUROC: 0.5, AUPRC: 0.025667, Freq: 0.025667
+      53: ECAT/E41/E411, AUROC: 0.5, AUPRC: 0.003667, Freq: 0.003667
+      54: ECAT/E51, AUROC: 0.5, AUPRC: 0.028333, Freq: 0.028333
+      55: ECAT/E51/E511, AUROC: 0.5, AUPRC: 0.004, Freq: 0.004
+      56: ECAT/E51/E512, AUROC: 0.5, AUPRC: 0.014333, Freq: 0.014333
+      57: ECAT/E51/E513, AUROC: 0.5, AUPRC: 0.001667, Freq: 0.001667
+      58: ECAT/E61, AUROC: 0.5, AUPRC: 0.000667, Freq: 0.000667
+      59: ECAT/E71, AUROC: 0.5, AUPRC: 0.008, Freq: 0.008
+      60: GCAT, AUROC: 0.5, AUPRC: 0.31, Freq: 0.31
+      61: GCAT/G15, AUROC: 0.5, AUPRC: 0.027667, Freq: 0.027667
+      62: GCAT/G15/G151, AUROC: 0.5, AUPRC: 0.003333, Freq: 0.003333
+      63: GCAT/G15/G152, AUROC: 0.5, AUPRC: 0.001667, Freq: 0.001667
+      64: GCAT/G15/G153, AUROC: 0.5, AUPRC: 0.004333, Freq: 0.004333
+      65: GCAT/G15/G154, AUROC: 0.5, AUPRC: 0.009, Freq: 0.009
+      66: GCAT/G15/G155, AUROC: 0.5, AUPRC: 0.002, Freq: 0.002
+      67: GCAT/G15/G156, AUROC: 0.5, AUPRC: 0.000333, Freq: 0.000333
+      68: GCAT/G15/G157, AUROC: 0.5, AUPRC: 0.002333, Freq: 0.002333
+      69: GCAT/G15/G158, AUROC: 0.5, AUPRC: 0.006, Freq: 0.006
+      70: GCAT/G15/G159, AUROC: 0.5, AUPRC: 0.000333, Freq: 0.000333
+      71: GCAT/GCRIM, AUROC: 0.5, AUPRC: 0.044, Freq: 0.044
+      72: GCAT/GDEF, AUROC: 0.5, AUPRC: 0.010333, Freq: 0.010333
+      73: GCAT/GDIP, AUROC: 0.5, AUPRC: 0.054, Freq: 0.054
+      74: GCAT/GDIS, AUROC: 0.5, AUPRC: 0.007, Freq: 0.007
+      75: GCAT/GENT, AUROC: 0.5, AUPRC: 0.003333, Freq: 0.003333
+      76: GCAT/GENV, AUROC: 0.5, AUPRC: 0.006667, Freq: 0.006667
+      77: GCAT/GFAS, AUROC: 0.5, AUPRC: 0.000667, Freq: 0.000667
+      78: GCAT/GHEA, AUROC: 0.5, AUPRC: 0.008667, Freq: 0.008667
+      79: GCAT/GJOB, AUROC: 0.5, AUPRC: 0.026667, Freq: 0.026667
+      80: GCAT/GMIL, AUROC: 0.5, AUPRC: 0.000333, Freq: 0.000333
+      81: GCAT/GOBIT, AUROC: 0.5, AUPRC: 0.000333, Freq: 0.000333
+      82: GCAT/GODD, AUROC: 0.5, AUPRC: 0.005, Freq: 0.005
+      83: GCAT/GPOL, AUROC: 0.5, AUPRC: 0.065, Freq: 0.065
+      84: GCAT/GPRO, AUROC: 0.5, AUPRC: 0.006, Freq: 0.006
+      85: GCAT/GREL, AUROC: 0.5, AUPRC: 0.002333, Freq: 0.002333
+      86: GCAT/GSCI, AUROC: 0.5, AUPRC: 0.003333, Freq: 0.003333
+      87: GCAT/GSPO, AUROC: 0.5, AUPRC: 0.042667, Freq: 0.042667
+      88: GCAT/GTOUR, AUROC: 0.5, AUPRC: 0.001667, Freq: 0.001667
+      89: GCAT/GVIO, AUROC: 0.5, AUPRC: 0.044, Freq: 0.044
+      90: GCAT/GVOTE, AUROC: 0.5, AUPRC: 0.013333, Freq: 0.013333
+      91: GCAT/GWEA, AUROC: 0.5, AUPRC: 0.006, Freq: 0.006
+      92: GCAT/GWELF, AUROC: 0.5, AUPRC: 0.002333, Freq: 0.002333
+      93: MCAT, AUROC: 0.5, AUPRC: 0.257, Freq: 0.257
+      94: MCAT/M11, AUROC: 0.5, AUPRC: 0.066667, Freq: 0.066667
+      95: MCAT/M12, AUROC: 0.5, AUPRC: 0.032667, Freq: 0.032667
+      96: MCAT/M13, AUROC: 0.5, AUPRC: 0.070333, Freq: 0.070333
+      97: MCAT/M13/M131, AUROC: 0.5, AUPRC: 0.037, Freq: 0.037
+      98: MCAT/M13/M132, AUROC: 0.5, AUPRC: 0.036, Freq: 0.036
+      99: MCAT/M14, AUROC: 0.5, AUPRC: 0.102, Freq: 0.102
+      100: MCAT/M14/M141, AUROC: 0.5, AUPRC: 0.053, Freq: 0.053
+      101: MCAT/M14/M142, AUROC: 0.5, AUPRC: 0.014667, Freq: 0.014667
+
+

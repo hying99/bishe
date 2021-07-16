@@ -8,7 +8,7 @@ from collections import Counter
 import io
 from loader import Blurb_Loader #load_data_multiLabel, read_relations, load_outlier
 from sklearn.preprocessing import MultiLabelBinarizer
-from predictors import clean_text, spacy_tokenizer,spacy_init, clean_str, spacy_tokenizer_basic
+from predictors import clean_text, spacy_tokenizer, spacy_init, clean_str, spacy_tokenizer_basic
 from sklearn.model_selection import train_test_split
 from keras.preprocessing.sequence import pad_sequences
 import pickle
@@ -131,7 +131,7 @@ def load_data_and_labels(spacy, lowfreq, dataset, level, dev = False):
         data['X_dev'] = X_dev
         data['y_dev'] = y_dev
         pickle.dump(data, fp)
-
+        fp.close()
         if dev:
             X_dev = data['X_dev']
             y_dev = data['y_dev']
@@ -144,18 +144,25 @@ def load_data_and_labels(spacy, lowfreq, dataset, level, dev = False):
         with open(filename, 'rb') as fp:
             data = pickle.load(fp)
             X_train = data['X_train']
+            X_train = X_train[0:int(len(X_train)/50)]
             y_train = data['y_train']
+            y_train = y_train[0:int(len(y_train)/50)]
             X_test = data['X_test']
+            X_test = X_test[0:int(len(X_test)/50)]
             y_test = data['y_test']
+            y_test = y_test[0:int(len(y_test)/50)]
             if dev:
                 X_dev = data['X_dev']
+                X_dev = X_dev[0:int(len(X_dev) / 50)]
                 y_dev = data['y_dev']
+                y_dev = y_dev[0:int(len(y_dev) / 50)]
             else:
                 X_train = data['X_train'] + data['X_dev']
+                X_train = X_train[0:int(len(X_train) / 50)]
                 y_train = data['y_train'] + data['y_dev']
-
+                y_train = y_train[0:int(len(y_train) / 50)]
             print("Finished loading input.")
-    print("Lenght Train data", len(X_train))
+    print("Length Train data", len(X_train))
     print("Length Test data", len(X_test))
     print("Example entry: ", X_train[0])
     y_train = ml.fit_transform(y_train)
@@ -361,18 +368,18 @@ def load_data(spacy=False, lowfreq= True, max_sequence_length = 200, type = 'EN'
 
     if dev:
         X_dev = [[a if a in vocabulary_train else UNSEEN_STRING for a in sentence] for sentence in X_dev]
-        sentences_padded_dev = pad_sequences(X_dev, maxlen=max_sequence_length, dtype='str', padding = 'post', truncating ='post')
+        sentences_padded_dev = pad_sequences(X_dev, maxlen=max_sequence_length, dtype=object, padding = 'post', truncating ='post',value='0')
         x_dev, y_dev = build_input_data(sentences_padded_dev, y_dev, vocabulary_train)
 
     if outlier:
         X_outlier, y_outlier = load_outlier_and_labels(type)
         X_outlier = [[a if a in vocabulary_train else UNSEEN_STRING for a in sentence] for sentence in X_outlier]
-        sentences_padded_outlier = pad_sequences(X_outlier, maxlen=max_sequence_length, dtype='str', padding = 'post', truncating ='post')
+        sentences_padded_outlier = pad_sequences(X_outlier, maxlen=max_sequence_length, dtype=object, padding = 'post', truncating ='post',value='0')
         x_outlier, y_outlier = build_input_data(sentences_padded_outlier, y_outlier, vocabulary_train)
 
 
     X_test = [[a if a in vocabulary_train else UNSEEN_STRING for a in sentence] for sentence in X_test]
-    sentences_padded_test = pad_sequences(X_test, maxlen=max_sequence_length, dtype='str', padding = 'post', truncating ='post')
+    sentences_padded_test = pad_sequences(X_test, maxlen=max_sequence_length, dtype=object, padding = 'post', truncating ='post',value='0')
     sentences_padded_test = [sentence[:max_sequence_length] + ['0.0'] * (max_sequence_length - len(sentence)) for sentence in X_test]
     x_test, y_test = build_input_data(sentences_padded_test, y_test, vocabulary_train)
 

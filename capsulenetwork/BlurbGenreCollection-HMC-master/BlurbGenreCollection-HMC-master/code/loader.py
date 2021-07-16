@@ -69,7 +69,7 @@ class Blurb_Loader(Loader_Interface):
         Loads low-frequency dataset
         """
         outlier_directory = join(os.path.dirname(os.path.abspath(__file__)), '../resources', 'EN_outlier')
-        return multi_label_atomic(outlier_directory)
+        return self.multi_label_atomic(outlier_directory)
 
 
 
@@ -78,7 +78,7 @@ class Blurb_Loader(Loader_Interface):
         Loads labels and blurbs of dataset
         """
         data = []
-        soup = BeautifulSoup(open(join(directory), 'rt').read(), "html.parser")
+        soup = BeautifulSoup(open(directory, 'rt',encoding='utf-8').read(), "html.parser")
         for book in soup.findAll('book'):
             categories = set([])
             book_soup = BeautifulSoup(str(book), "html.parser")
