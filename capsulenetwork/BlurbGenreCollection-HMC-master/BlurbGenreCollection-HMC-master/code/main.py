@@ -270,7 +270,7 @@ def main():
     global args
     parser = argparse.ArgumentParser(description="CNN for blurbs")
     parser.add_argument('--mode', type=str, default='train_validation', choices=['train_validation', 'train_test_n_runs', 'train_test'], help="Mode of the system.")
-    parser.add_argument('--classifier', type=str, default='cnn', choices=['cnn','lstm', 'capsule'], help="Classifier architecture of the system.")
+    parser.add_argument('--classifier', type=str, default='capsule', choices=['cnn','lstm', 'capsule'], help="Classifier architecture of the system.")
     parser.add_argument('--lang', type=str, default='EN',  help="Which dataset to use")
     parser.add_argument('--dense_capsule_dim', type=int, default=16, help = 'Capsule dim of dense layer')
     parser.add_argument('--n_channels', type=int, default=50, help = 'number channels of primary capsules')
@@ -278,7 +278,7 @@ def main():
     parser.add_argument('--level', type=int, default=1, help = "Max Genre Level hierarchy")
     parser.add_argument('--use_static', action='store_true', default=False, help = "Use static embeddings")
     parser.add_argument('--sequence_length', type=int, default=100, help = "Maximum sequence length")
-    parser.add_argument('--epochs', type=int, default=60, help = "Number of epochs to run")
+    parser.add_argument('--epochs', type=int, default=5, help = "Number of epochs to run")
     parser.add_argument('--activation_th', type=float, default=0.5, help = "Activation Threshold of output")
     parser.add_argument('--lstm_units', type=int, default=700, help = "Number of units in LSTM")
     parser.add_argument('--num_filters', type=int, default=500, help = "Number of filters in CNN and Capsule")
@@ -286,7 +286,7 @@ def main():
      help = "Postprocessing hierarchy correction")
     parser.add_argument('--correction_th', type=float, default=0.5, help = "Threshold for Hierarchy adjust, in threshold type")
     parser.add_argument('--init_layer', action='store_true', default=False, help = "Init final layer with cooccurence")
-    parser.add_argument('--iterations', type=int, default=3, help = "Number of iterations for training")
+    parser.add_argument('--iterations', type=int, default=2, help = "Number of iterations for training")
     parser.add_argument('--embed_dim', type=int, default=300, help = "Embedding dim size")
     parser.add_argument('--use_early_stop', action='store_true', default = False , help = 'Activate early stopping')
     parser.add_argument('--learning_decay', type=float, default = 1., help = 'Use decay in learning, 1 is None')
@@ -301,7 +301,6 @@ def main():
     params = vars(args)
     print(json.dumps(params, indent = 2))
     run()
-
 
 
 def run():
@@ -365,13 +364,13 @@ def create_model(dev = False, preload = True):
     + str(args.correction_th) + "__learningRate_" + str(args.learning_rate) + "__decay_"
     + str(args.learning_decay) + "__lang_" + args.lang)
     if args.classifier == 'lstm':
-        args.filename = ('lstm__lstmUnits_' + str(args.lstm_units) + general_name)
+        args.filename = ('lstm__lstmUnits_' + str(args.lstm_units))
         return model_lstm(dev, preload)
     elif args.classifier == 'cnn':
-        args.filename = ('cnn__filters_' + str(args.num_filters) + general_name)
+        args.filename = ('cnn__filters_' + str(args.num_filters))
         return model_cnn(dev, preload)
     elif args.classifier == 'capsule':
-        args.filename = ('capsule__filters_' + str(args.num_filters) + general_name)
+        args.filename = ('capsule__filters_' + str(args.num_filters))
         return model_capsule(dev, preload)
     print(args.filename)
 
