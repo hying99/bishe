@@ -2,6 +2,7 @@
 setwd("C:/Users/1231/Desktop/dataprocessing")
 source("dataset_select2.R")
 source("dataset_divide.R")
+prefix <- paste(length(except.root.labels2),"dataset",sep = "")
 ###选择训练集 1、2、3、4、5
 datasetindex <- 1
 datasetresult = DatasetSelect(dataset.index = datasetindex)
@@ -22,7 +23,7 @@ test.select.data2 <- selectdatatodivide[[3]]
 
 #######下面的都运行过了为了产生数据不需要每次都运行一遍#######
 #####设定存储路径，204个节点的就是204dataset#####
-datapath <- paste("204dataset",datasetindex,sep = "")
+datapath <- paste(prefix,datasetindex,sep = "")
 setwd(paste("C:/Users/1231/Desktop/dataprocessing/data/",datapath,sep = ""))
 ###生成csv文件
 write.table(train.select.data2,"traindataset.csv",sep=",",row.names = FALSE,col.names = FALSE)

@@ -144,23 +144,23 @@ def load_data_and_labels(spacy, lowfreq, dataset, level, dev = False):
         with open(filename, 'rb') as fp:
             data = pickle.load(fp)
             X_train = data['X_train']
-            X_train = X_train[0:int(len(X_train)/50)]
+            X_train = X_train[0:int(len(X_train)/60)]
             y_train = data['y_train']
-            y_train = y_train[0:int(len(y_train)/50)]
+            y_train = y_train[0:int(len(y_train)/60)]
             X_test = data['X_test']
-            X_test = X_test[0:int(len(X_test)/50)]
+            X_test = X_test[0:int(len(X_test)/60)]
             y_test = data['y_test']
-            y_test = y_test[0:int(len(y_test)/50)]
+            y_test = y_test[0:int(len(y_test)/60)]
             if dev:
                 X_dev = data['X_dev']
-                X_dev = X_dev[0:int(len(X_dev) / 50)]
+                X_dev = X_dev[0:int(len(X_dev) / 60)]
                 y_dev = data['y_dev']
-                y_dev = y_dev[0:int(len(y_dev) / 50)]
+                y_dev = y_dev[0:int(len(y_dev) / 60)]
             else:
                 X_train = data['X_train'] + data['X_dev']
-                X_train = X_train[0:int(len(X_train) / 50)]
+                X_train = X_train[0:int(len(X_train) / 60)]
                 y_train = data['y_train'] + data['y_dev']
-                y_train = y_train[0:int(len(y_train) / 50)]
+                y_train = y_train[0:int(len(y_train) / 60)]
             print("Finished loading input.")
     print("Length Train data", len(X_train))
     print("Length Test data", len(X_test))

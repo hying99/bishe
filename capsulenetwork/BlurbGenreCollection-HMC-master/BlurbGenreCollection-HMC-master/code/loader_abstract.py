@@ -61,6 +61,7 @@ class Loader_Interface:
                     frequency.append(1)
             co_occurence_file = open(co_occurences_path, 'wb')
             pickle.dump([occurences,frequency], co_occurence_file)
+            co_occurence_file.close()
 
         occurences = zip(occurences, frequency)
         occurences = sorted(occurences, key=operator.itemgetter(1), reverse = True)

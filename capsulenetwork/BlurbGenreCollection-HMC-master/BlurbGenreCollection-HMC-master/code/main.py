@@ -274,7 +274,7 @@ def main():
     parser.add_argument('--lang', type=str, default='EN',  help="Which dataset to use")
     parser.add_argument('--dense_capsule_dim', type=int, default=16, help = 'Capsule dim of dense layer')
     parser.add_argument('--n_channels', type=int, default=50, help = 'number channels of primary capsules')
-    parser.add_argument('--batch_size', type=int, default=32, help = 'Set minibatch size')
+    parser.add_argument('--batch_size', type=int, default=16, help = 'Set minibatch size')
     parser.add_argument('--level', type=int, default=1, help = "Max Genre Level hierarchy")
     parser.add_argument('--use_static', action='store_true', default=False, help = "Use static embeddings")
     parser.add_argument('--sequence_length', type=int, default=100, help = "Maximum sequence length")
