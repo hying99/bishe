@@ -49,19 +49,19 @@ class Blurb_Loader(Loader_Interface):
         Loads hierarchy file and returns set of relations
         """
         relations = set([])
-        singeltons = set([])
+        singletons = set([])
         REL_FILE =  join(os.path.dirname(os.path.abspath(__file__)), '../datasets', 'hierarchy.txt')
-        with open(REL_FILE, 'r') as f:
+        with open(REL_FILE, 'r',encoding='utf-8') as f:
             lines = f.readlines()
             for line in lines:
                 rel = line.split('\t')
                 if len(rel) > 1:
                     rel = (rel[0], rel[1][:-1])
                 else:
-                    singeltons.add(rel[0][:-1])
+                    singletons.add(rel[0][:-1])
                     continue
                 relations.add(rel)
-        return [relations, singeltons]
+        return [relations, singletons]
 
 
     def load_outlier(self):
