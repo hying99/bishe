@@ -270,7 +270,7 @@ def main():
     global args
     parser = argparse.ArgumentParser(description="CNN for blurbs")
     parser.add_argument('--mode', type=str, default='train_validation', choices=['train_validation', 'train_test_n_runs', 'train_test'], help="Mode of the system.")
-    parser.add_argument('--classifier', type=str, default='cnn', choices=['cnn','lstm', 'capsule'], help="Classifier architecture of the system.")
+    parser.add_argument('--classifier', type=str, default='capsule', choices=['cnn','lstm', 'capsule'], help="Classifier architecture of the system.")
     parser.add_argument('--lang', type=str, default='EN',  help="Which dataset to use")
     parser.add_argument('--dense_capsule_dim', type=int, default=16, help = 'Capsule dim of dense layer')
     parser.add_argument('--n_channels', type=int, default=50, help = 'number channels of primary capsules')
